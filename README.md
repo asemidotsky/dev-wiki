@@ -19,7 +19,7 @@ Languages, technologies, practices and other things related to software developm
 
 ## Technologies, Frameworks
 
-* [NodeJS](/AlekseiSemidotskii/dev-wiki/wiki/NodeJS)
+* [NodeJS](https://github.com/AlekseiSemidotskii/dev-wiki/wiki/NodeJS)
 * AngularJS (1.x)
 * Angular 2
 * WPF
