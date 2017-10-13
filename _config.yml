@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+title: "Software development wiki"
+description: "Languages, technologies, practices and other interesting things related to software development."
+show_downloads: false
