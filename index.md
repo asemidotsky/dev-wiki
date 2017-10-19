@@ -7,7 +7,7 @@
 
 ## Languages
 
-* C#
+* [C#](pages/languages/csharp/csharp-index)
 * JavaScript
 * TypeScript
 
