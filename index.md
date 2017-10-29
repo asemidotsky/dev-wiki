@@ -41,7 +41,7 @@
 
 * IDE
 * Source control
-* [Blogging](/pages/toolss/blogging)
+* [Blogging](/pages/tools/blogging)
 
 ## Code style guides
 
