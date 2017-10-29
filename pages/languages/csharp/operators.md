@@ -20,6 +20,7 @@ x as T|Return x typed as T, or null if x is not a T
 (T x) => y | Anonymous function (lambda expression)
 
 ## Logical, Conditional, and Null Operators
+
 Category     | Expression   | Description
 ------------ | -------------| ------------
 Logical AND | x & y |	Integer bitwise AND, Boolean logical AND
