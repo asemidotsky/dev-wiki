@@ -1,1 +1,1 @@
-* [Jekyll](/blogging/jekyll)
+* [Jekyll](blogging/jekyll)
