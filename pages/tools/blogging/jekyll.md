@@ -1,21 +1,21 @@
 # [Installation](https://jekyllrb.com/docs/installation/)
 
-* **Ruby** version 2.1 or above\
+* **Ruby** version 2.1 or above:
 `$ sudo apt-get install ruby-full`
-* **RubyGems** (upgrade to the latest RubyGems)\
+* **RubyGems** (upgrade to the latest RubyGems):
 `gem update --system`
 * **GCC** and **Make** (check is installed *gcc -v* and *make -v*)
-* Install with RubyGems\
+* Install with RubyGems:
 `gem install jekyll`
-* That's all.Check version\
+* That's all.Check version:
 `jekill -v`
 
 # Let's get started!
 
-* To start a new project named my_blog\
-`jekyll new my_blog`
-
 ```bash
+jekyll new my_blog
+# To start a new project named my_blog
+
 jekyll build
 # => The current folder will be generated into ./_site
 
