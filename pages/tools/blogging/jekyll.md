@@ -8,7 +8,7 @@
 * Install with RubyGems:
 `gem install jekyll`
 * That's all.Check version:
-`jekill -v`
+`jekyll -v`
 
 # Let's get started!
 
