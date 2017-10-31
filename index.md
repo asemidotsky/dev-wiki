@@ -19,7 +19,7 @@
 
 ## Technologies, Frameworks
 
-* [NodeJS](pages/frameworks/nodejs)
+* [NodeJS](pages/frameworks/nodejs/nodejs-index)
 * AngularJS (1.x)
 * Angular
 * React
