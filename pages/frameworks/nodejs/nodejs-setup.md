@@ -16,4 +16,19 @@ sudo apt-get install nodejs
 sudo apt-get install build-essential
 ```
 
-# Windows setup
+## Install using NVM
+
+```bash
+# install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+# install node 8
+nvm install 8
+
+# to make node 8 the default
+nvm alias default 8
+```
+
+# Main tooling
+
+* nodemon - monitoring for changes and restart app
