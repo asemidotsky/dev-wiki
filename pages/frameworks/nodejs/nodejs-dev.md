@@ -4,6 +4,7 @@
 * TypeScript
 * Express - web api
 * Winston - logger
+* 
 
 Language features:
 
@@ -12,13 +13,32 @@ Language features:
 
 # Project structure
 
+## TypeScript based project
+
+```bash
+.
+|-- src
+|   |-- config
+|   |-- public 
+|       |-- feature-1
+|       |-- feature-2
+|       |-- feature-3
+|-- test
+|-- views
+|-- package.json
+```
+
+[example](https://github.com/Microsoft/TypeScript-Node-Starter)
+
+## Pure js based project
+
 ```bash
 .
 |-- config
 |   |-- components
 |   |   |-- common.js
 |   |   |-- logger.js
-|   |   |-- rabbitmq.js
+|   |   |-- rabbitmq.js 
 |   |   |-- server.js
 |   |-- index.js
 |   |-- social-preprocessor-worker.js
@@ -62,14 +82,23 @@ Language features:
 `-- package.json
 ```
 
-
 # Web api
 
-# Unit testing
+# Tests
 
-# Integration testing
+* Jest (.test.ts) - integration, api testing
+* Jasmine (.spec.ts)
+
+* test runner: [mocha](https://www.npmjs.com/package/mocha), alternatively [tape](https://www.npmjs.com/package/tape)
+* assertion library: [chai](http://chaijs.com/), alternatively the assert module (for asserting)
+* test spies, stubs and mocks: [sinon](http://sinonjs.org/) (for test setup).
+* code coverage: [istanbul](https://github.com/gotwarlost/istanbul)
+
+[detailed on RisingStack](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
 
 # Deploy
+
+[Setup for production](https://ru.godaddy.com/help/set-up-nodejs-application-for-production-ubuntu-17352)
 
 # Run
 
