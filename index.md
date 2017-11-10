@@ -38,6 +38,8 @@
 
 ## Practices and Methodologies
 
+* [Testing](pages/practices/testing/testing-index)
+
 ## Tools
 
 * IDE
