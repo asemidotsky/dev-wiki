@@ -5,14 +5,15 @@
 * Design Patters
 * Enterprise Patterns
 * General application design concepts
+* [Design great advices](pages/architecture/great-advices)
 
 ## Languages
 
 * [C#](pages/languages/csharp/csharp-index)
 * Java
 * JavaScript
-  * ES6
-* TypeScript
+  * [ES6](pages/languages/js/es6)
+* [TypeScript](pages/languages/typescript/ts-index)
 * PowerShell
 * Python
 * Go
