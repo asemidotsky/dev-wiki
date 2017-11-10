@@ -29,6 +29,8 @@ nvm install 8
 nvm alias default 8
 ```
 
+[more](https://ru.godaddy.com/help/install-nodejs-ubuntu-17395)
+
 # Main tooling
 
 * nodemon - monitoring for changes and restart app
