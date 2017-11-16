@@ -17,9 +17,24 @@ $ kill -9 3553
 # Mount windows network share folder
 
 ```bash
+# 1. mount
+
 sudo mount -t cifs //192.168.1.1/win-share-name /mnt/ubuntu-dir-name -o username=USERNAME,password=PASSWORD,iocharset=utf8,sec=ntlm
 
 # win-share-name - share name on windows
 # ubuntu-dir-name - directory on ubuntu
+
+# 2. unmount
+umount /mnt/ubuntu-dir-name
+
+# 3. find mounted shares
+mount -v | grep 'type cifs'
+
 ```
 [more](https://wiki.ubuntu.com/MountWindowsSharesPermanently)
+
+# Extract zip
+
+```bash
+tar -xvzf robomongo-0.9.0-linux-x86_64-0786489.tar.gz
+```
