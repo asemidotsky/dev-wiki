@@ -28,8 +28,8 @@
 
 ## Databases
 
-* MS SQL Server
-* MongoDB
+* [MS SQL Server](pages/databases/mssql/mssql-index)
+* [MongoDB](pages/databases/mongodb/mongo-index)
 
 ## Alghoritms and Data Structures
 
