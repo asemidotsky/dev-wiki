@@ -29,6 +29,13 @@ sudo snap install remmina
 
 ## Skype
 
+```bash
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo dpkg -i skypeforlinux-64.deb
+apt-get update
+sudo apt-get install skype
+```
+
 ## Mail client
 
 ### Outlook calendar
