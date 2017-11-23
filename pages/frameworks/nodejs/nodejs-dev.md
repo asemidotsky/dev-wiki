@@ -82,6 +82,10 @@ Language features:
 `-- package.json
 ```
 
+# Client & Server are both in TypeScript, one repository
+
+[Creating a MEAN Stack with Angular 2 and TypeScript](https://medium.com/@tsmith18256/creating-a-mean-stack-with-angular-2-and-typescript-3dd23b3e717f)
+
 # Web api
 
 # Tests
@@ -94,7 +98,11 @@ Language features:
 * test spies, stubs and mocks: [sinon](http://sinonjs.org/) (for test setup).
 * code coverage: [istanbul](https://github.com/gotwarlost/istanbul)
 
-[detailed on RisingStack](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
+[Unit testing - RisingStack](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
+
+Integration testing:
+* SuperTest
+* 
 
 # Deploy
 

@@ -1,5 +1,8 @@
+Package metrics like quality, popularity and maintenance - [npms.io](https://npms.io). 
+
 Package      | Purpose
 ------------ | -------------
+[joi](https://www.npmjs.com/package/joi)| Object schema description language and validator for JavaScript objects
 
 TODO:
 
@@ -9,8 +12,14 @@ TODO:
 
 # Logging
 
+* [winston](https://www.npmjs.com/package/winston)
+
 # MS SQL
 
 # MongoDB
 
 # RabbitMQ
+
+# Links
+
+* [Useful Node Packages You Might Not Know About](http://stackabuse.com/useful-node-packages-you-might-not-know-about/)
