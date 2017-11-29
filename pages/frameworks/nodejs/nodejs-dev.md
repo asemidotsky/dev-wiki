@@ -99,6 +99,8 @@ Language features:
 * code coverage: [istanbul](https://github.com/gotwarlost/istanbul)
 
 [Unit testing - RisingStack](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
+[Unit testing node applications with TypeScript — using mocha and chai](https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2)
+[Debugging Mocha Tests Written in TypeScript with Visual Studio Code](https://saravanaj.github.io/2017/02/05/debugging-mocha-tests-written-in-typescript-with-visual-studio-code/)
 
 Integration testing:
 * SuperTest

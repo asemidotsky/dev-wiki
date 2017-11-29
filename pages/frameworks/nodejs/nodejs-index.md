@@ -1,6 +1,7 @@
 * [Setup](nodejs-setup)
 * [Core](nodejs-core)
 * [Developing guide](nodejs-dev)
+* [Testing](nodejs-testing)
 * [Great packages](nodejs-packages)
 
 # Links
