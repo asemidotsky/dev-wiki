@@ -42,7 +42,7 @@
 
 ## Tools
 
-* IDE
+* [IDE](pages/tools/ide/ide-index)
 * Source control
 * [Blogging](pages/tools/blogging-index)
 
