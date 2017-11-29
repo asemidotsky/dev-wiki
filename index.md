@@ -21,8 +21,8 @@
 ## Technologies, Frameworks
 
 * [NodeJS](pages/frameworks/nodejs/nodejs-index)
+* [Angular](pages/frameworks/angular/angular-index)
 * AngularJS (1.x)
-* Angular
 * React
 * WPF
 
