@@ -38,3 +38,17 @@ mount -v | grep 'type cifs'
 ```bash
 tar -xvzf robomongo-0.9.0-linux-x86_64-0786489.tar.gz
 ```
+
+# Transfer files to server
+
+[Using SFPT](https://www.computerhope.com/unix/sftp.htm)
+
+Copy file.txt from current directory to home dir for *semidotsky* user
+```bash
+sftp semidotsky@192.168.1.1
+put file.txt
+```
+
+# Links
+
+* [SSH/TransferFiles](https://help.ubuntu.com/community/SSH/TransferFiles)
