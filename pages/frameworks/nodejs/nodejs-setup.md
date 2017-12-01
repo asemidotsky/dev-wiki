@@ -19,8 +19,15 @@ sudo apt-get install build-essential
 ## Install using NVM
 
 ```bash
+# install prerequisites
+sudo apt-get install build-essential
+sudo apt-get install libssl-dev
+
 # install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+# list available node versions
+nvm ls-remote
 
 # install node 8
 nvm install 8
@@ -31,6 +38,8 @@ nvm alias default 8
 
 [more](https://ru.godaddy.com/help/install-nodejs-ubuntu-17395)
 
-# Main tooling
+# Production install
 
-* nodemon - monitoring for changes and restart app
+1. Install nvm (see above)
+1. Install NodeJS using nvm
+1. Install [PM2](http://pm2.keymetrics.io/docs/usage/quick-start/)
