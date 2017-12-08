@@ -1,3 +1,5 @@
+[Tools](linux-tools)
+
 # Kill process
 
 ```bash
@@ -48,6 +50,14 @@ Copy file.txt from current directory to home dir for *semidotsky* user
 sftp semidotsky@192.168.1.1
 put file.txt
 ```
+
+# Work with programms, packages
+
+
+```bash
+dpkg-query -L nodejs
+```
+will list the full path to every file belonging to the nodejs package
 
 # Links
 
