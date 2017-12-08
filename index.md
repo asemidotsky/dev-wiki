@@ -43,6 +43,7 @@
 ## Tools
 
 * [IDE](pages/tools/ide/ide-index)
+* [Editors](pages/tools/editors/editors-index)
 * Source control
 * [Blogging](pages/tools/blogging-index)
 
