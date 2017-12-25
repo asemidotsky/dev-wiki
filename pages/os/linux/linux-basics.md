@@ -1,5 +1,35 @@
 [Tools](linux-tools)
 
+# Users
+
+# Groups
+```bash
+# create user group
+sudo groupadd sales
+
+# add user to group
+sudo usermod -a -G sales alex
+
+# see who is in group
+grep sales /etc/group
+# or
+sudo apt-get install members
+members sales
+
+# change group for directory
+chgrp sales sales.report
+```
+
+
+# Permissions
+
+
+```bash
+# see folder items permissions
+ls -la
+```
+
+
 # Kill process
 
 ```bash
@@ -15,6 +45,13 @@ $ kill -9 PID-HERE
 $ kill -9 3553
 ```
 [more](https://www.cyberciti.biz/faq/stop-process-ubuntu-linux-command/)
+
+# Run script as another user
+
+```bash
+su - anotherusername -c "<command>"
+
+```
 
 # Mount windows network share folder
 
@@ -50,6 +87,23 @@ Copy file.txt from current directory to home dir for *semidotsky* user
 sftp semidotsky@192.168.1.1
 put file.txt
 ```
+
+# Get listing on a specific TCP port
+
+Type the following command to see IPv4 port(s), enter: 
+
+`lsof -Pnl +M -i4`
+
+Type the following command to see IPv6 listing port(s), enter: 
+
+`lsof -Pnl +M -i6`
+
+```bash
+netstat -tulpn
+netstat -npl
+```
+
+[more](https://www.cyberciti.biz/faq/find-out-which-service-listening-specific-port/)
 
 # Work with programms, packages
 
