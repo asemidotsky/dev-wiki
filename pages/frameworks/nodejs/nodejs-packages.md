@@ -1,8 +1,9 @@
 Package metrics like quality, popularity and maintenance - [npms.io](https://npms.io). 
 
-Package      | Purpose
------------- | -------------
-[joi](https://www.npmjs.com/package/joi)| Object schema description language and validator for JavaScript objects
+Package      | Purpose       | Links
+------------ | ------------- | --------
+[joi](https://www.npmjs.com/package/joi)| Object schema description language and validator for JavaScript objects | |
+[winston](https://www.npmjs.com/package/winston)| Logger | [Using Winston, a versatile logging library for Node.js](http://thisdavej.com/using-winston-a-versatile-logging-library-for-node-js/)
 
 # HTTP requests
 
@@ -15,6 +16,11 @@ Package      | Purpose
 # MongoDB
 
 # RabbitMQ
+
+# Tests
+
+## Mocha
+[A guide to mocha's describe(), it() and setup hooks](http://samwize.com/2014/02/08/a-guide-to-mochas-describe-it-and-setup-hooks/)
 
 # Links
 

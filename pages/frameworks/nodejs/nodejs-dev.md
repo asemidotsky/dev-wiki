@@ -96,7 +96,7 @@ Language features:
 * test runner: [mocha](https://www.npmjs.com/package/mocha), alternatively [tape](https://www.npmjs.com/package/tape)
 * assertion library: [chai](http://chaijs.com/), alternatively the assert module (for asserting)
 * test spies, stubs and mocks: [sinon](http://sinonjs.org/) (for test setup).
-* code coverage: [istanbul](https://github.com/gotwarlost/istanbul)
+* code coverage: [istanbul](https://github.com/gotwarlost/istanbul), [nyc](https://github.com/istanbuljs/nyc)
 
 [Unit testing - RisingStack](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
 [Unit testing node applications with TypeScript — using mocha and chai](https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2)
@@ -105,6 +105,8 @@ Language features:
 Integration testing (end-to-end) for API:
 * [SuperTest](https://github.com/visionmedia/supertest)
 * [hippie](https://github.com/vesln/hippie)
+
+[All You Need to Know About Integration Testing: SuperTest, Mocha, and Chai](https://www.codementor.io/olatundegaruba/integration-testing-supertest-mocha-chai-6zbh6sefz)
 
 Frontend applications:
 
