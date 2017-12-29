@@ -33,3 +33,7 @@ describe('Issue time tracking', () => {
 * [How to create API service tests in Node using SuperTest](https://www.uvd.co.uk/blog/how-to-create-api-service-tests-in-node-using-supertest/)
 * [MAKE YOUR NODE.JS API BULLETPROOF: HOW TO TEST WITH MOCHA, CHAI, AND SUPERTEST](http://developmentnow.com/2015/02/05/make-your-node-js-api-bulletproof-how-to-test-with-mocha-chai-and-supertest/)
 * [A guide to mocha's describe(), it() and setup hooks](http://samwize.com/2014/02/08/a-guide-to-mochas-describe-it-and-setup-hooks/)
+
+**Jest**
+
+* [Testing typescript classes with Jest and Jest Mocks](http://jonathancreamer.com/testing-typescript-classes-with-jest-and-jest-mocks/)

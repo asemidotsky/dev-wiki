@@ -7,6 +7,10 @@ Package      | Purpose       | Links
 
 # HTTP requests
 
+# Authorization
+
+* [Implementing JWT using Passport](https://blog.jscrambler.com/implementing-jwt-using-passport/)
+
 # Logging
 
 * [winston](https://www.npmjs.com/package/winston)
