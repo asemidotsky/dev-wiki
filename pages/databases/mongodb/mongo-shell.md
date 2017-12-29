@@ -1,4 +1,4 @@
 Connect to instance
 ```
-mongo --host 127.0.0.1:27017 --username admin --password 123456
+mongo --host 127.0.0.1:27017 --username admin --password 123456 --authenticationDatabase "admin"
 ```
