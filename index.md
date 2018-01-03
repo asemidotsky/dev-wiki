@@ -63,4 +63,4 @@
 
 ## Personal
 
-* [Badges wall](pages/badges/_badges-wall)
+* [Badges wall](pages/badges/badges-wall)
