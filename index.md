@@ -60,3 +60,7 @@
   * [Ubuntu](pages/os/ubuntu/ubuntu-index)
 * Windows server
 * Windows
+
+## Personal
+
+* [Badges wall](pages/badges/_badges-wall)
