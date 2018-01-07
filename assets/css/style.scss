@@ -64,3 +64,16 @@ nav {
     // }
   }
 }
+
+/***** badges table styles *****/
+.badges-table div[class^="col"] {
+  height: 110px;
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.badges-table img {
+  max-height: 100%;
+  max-width: 100%;
+}
