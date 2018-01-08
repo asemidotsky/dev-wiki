@@ -5,6 +5,7 @@
 
 {% seo %}
     <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}"/>
+    <meta name="author" content="Aleksei Semidotskii">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="icon" href="/assets/favicon.ico">
@@ -17,24 +18,52 @@
   </head>
   <body>
     <header class="page-header">
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Dev wiki</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">.NET</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Node.js</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Angular</a>
+            </li>
+          </ul> 
+          <!--<form class="form-inline mt-2 mt-md-0" style="margin-bottom: 0px">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div> 
+      </nav>
     </header>
 
-    <div class="main-content">
-      <nav>
-        <a href="/">Home</a>
-        <ul></ul>
-      </nav>
-      <section>
-        {{ content }}
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul id="sidebarNav" class="nav nav-pills flex-column">
+          </ul>
+        </nav>
 
-      </section>
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner">Wiki is maintained by <a href="{{ site.github.owner_url }}">Aleksei Semidotskii</a>.</span>
-        {% endif %}
-      </footer>
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+          {{ content }}
+
+          <footer class="footer">
+            {% if site.github.is_project_page %}
+              <span class="site-footer-owner">Wiki is maintained by <a href="{{ site.github.owner_url }}">Aleksei Semidotskii</a>.</span>
+            {% endif %}
+          </footer>
+        </main>
+      </div>
     </div>
 
     {% if site.google_analytics %}

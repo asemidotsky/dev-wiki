@@ -3,3 +3,7 @@
 **Knowledge is Power.**
 
 Languages, technologies, practices and other interesting things related to software development.
+
+## TODO:
+* Search
+* Сurrent section highlighting in sidebar 
