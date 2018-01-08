@@ -6,4 +6,3 @@ Languages, technologies, practices and other interesting things related to softw
 
 ## TODO:
 * Search
-* Сurrent section highlighting in sidebar 

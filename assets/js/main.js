@@ -1,15 +1,24 @@
 $(document).ready(function(){
+    document.vm = { selectedNavItemId: null };
+
+    /* build nav menu from page headers */
     $("main h1, main h2").each(function(){
-      $("#sidebarNav").append("<li class='nav-item tag-" + this.nodeName.toLowerCase() + "'><a class='nav-link' href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
-      $(this).attr("id",$(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
-      //$("nav ul li:first-child a").parent().addClass("active");
+      $("#sidebarNavList").append("<li class='nav-item tag-" + this.nodeName.toLowerCase() + "'><a class='nav-link' href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
+      var itemId = $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'');
+      $(this).attr("id", itemId);    
     });
-  
-    $("#sidebarNav li").on("click", "a", function(event) {
-      var position = $($(this).attr("href")).offset().top - 190;
+
+    /* set first element active and save it's id */
+    var firstNavItem = $("#sidebarNavList li:first-child a");
+    firstNavItem.addClass("active");
+    document.vm.selectedNavItemId = firstNavItem.attr('href');
+
+    $("#sidebarNavList li").on("click", "a", function(event) {
+      var position = $($(this).attr("href")).offset().top - 51;
       $("html, body").animate({scrollTop: position}, 400);
-      /*$("nav ul li a").parent().removeClass("active");
-      $(this).parent().addClass("active");*/
+      $("a[href='" + document.vm.selectedNavItemId + "']").removeClass("active");
+      document.vm.selectedNavItemId = $(this).attr('href');
+      $(this).addClass("active");
       event.preventDefault();
     });
 
