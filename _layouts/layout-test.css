@@ -48,3 +48,7 @@ h1 {
 .sidebar .nav-link {
   border-radius: 0;
 }
+
+.sidebar .tag-h2 a {
+  margin-left: 15px;
+}
