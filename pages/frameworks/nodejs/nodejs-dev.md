@@ -4,7 +4,6 @@
 * TypeScript
 * Express - web api
 * Winston - logger
-* 
 
 Language features:
 
@@ -98,9 +97,9 @@ Language features:
 * test spies, stubs and mocks: [sinon](http://sinonjs.org/) (for test setup).
 * code coverage: [istanbul](https://github.com/gotwarlost/istanbul), [nyc](https://github.com/istanbuljs/nyc)
 
-[Unit testing - RisingStack](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
-[Unit testing node applications with TypeScript — using mocha and chai](https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2)
-[Debugging Mocha Tests Written in TypeScript with Visual Studio Code](https://saravanaj.github.io/2017/02/05/debugging-mocha-tests-written-in-typescript-with-visual-studio-code/)
+* [Unit testing - RisingStack](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
+* [Unit testing node applications with TypeScript — using mocha and chai](https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2)
+* [Debugging Mocha Tests Written in TypeScript with Visual Studio Code](https://saravanaj.github.io/2017/02/05/debugging-mocha-tests-written-in-typescript-with-visual-studio-code/)
 
 Integration testing (end-to-end) for API:
 * [SuperTest](https://github.com/visionmedia/supertest)
@@ -141,10 +140,10 @@ The following steps can occur:
 
 # Deploy
 
-[Setup for production](https://ru.godaddy.com/help/set-up-nodejs-application-for-production-ubuntu-17352)
-[Automating Node.js Deployments with Docker and Bamboo](https://hnryjms.io/2016/11/automated-deploy/)
-[Continuous Deployment of Node.js Applications](https://blog.risingstack.com/continuous-deployment-of-node-js-applications/)
-[Package Your Node.js Application for Deployment in an Offline Environment](https://dzone.com/articles/how-to-package-your-nodejs-application-for-deploym)
+* [Setup for production](https://ru.godaddy.com/help/set-up-nodejs-application-for-production-ubuntu-17352)
+* [Automating Node.js Deployments with Docker and Bamboo](https://hnryjms.io/2016/11/automated-deploy/)
+* [Continuous Deployment of Node.js Applications](https://blog.risingstack.com/continuous-deployment-of-node-js-applications/)
+* [Package Your Node.js Application for Deployment in an Offline Environment](https://dzone.com/articles/how-to-package-your-nodejs-application-for-deploym)
 
 # Run
 
