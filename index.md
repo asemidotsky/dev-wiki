@@ -1,4 +1,4 @@
-## Acrhitecture and Design
+## Acrhitecture, Design
 
 * Microservices
 * API design
@@ -31,12 +31,12 @@
 * [MS SQL Server](pages/databases/mssql/mssql-index)
 * [MongoDB](pages/databases/mongodb/mongo-index)
 
-## Alghoritms and Data Structures
+## Alghoritms, Data Structures
 
 * General data structures
 * Trees
 
-## Practices and Methodologies
+## Practices, Methodologies
 
 * [Testing](pages/practices/testing/testing-index)
 
@@ -47,7 +47,7 @@
 * Source control
 * [Blogging](pages/tools/blogging-index)
 
-## Code style guides
+## Style guides
 
 * C# style guide
 * SQL style guide
