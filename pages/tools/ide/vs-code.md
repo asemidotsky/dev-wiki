@@ -3,4 +3,5 @@
 * TSLint
 * Code Runner
 * mssql
-* vscode-icons 
+* vscode-icons
+* C# for Visual Studio Code (powered by OmniSharp)
