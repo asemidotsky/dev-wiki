@@ -11,6 +11,7 @@ Package      | Purpose       | Links
 
 * [Implementing JWT using Passport](https://blog.jscrambler.com/implementing-jwt-using-passport/)
 * [Express, Passport and JSON Web Token (jwt) Authentication for Beginners](https://jonathanmh.com/express-passport-json-web-token-jwt-authentication-beginners/)
+* [Token based authentication in Node.js with Passport, JWT and bcrypt](https://jonathas.com/token-based-authentication-in-nodejs-with-passport-jwt-and-bcrypt/)
 
 # Logging
 
