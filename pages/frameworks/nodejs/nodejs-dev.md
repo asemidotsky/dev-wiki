@@ -145,6 +145,10 @@ The following steps can occur:
 * [Continuous Deployment of Node.js Applications](https://blog.risingstack.com/continuous-deployment-of-node-js-applications/)
 * [Package Your Node.js Application for Deployment in an Offline Environment](https://dzone.com/articles/how-to-package-your-nodejs-application-for-deploym)
 
+# API Documentation
+
+* [Documenting your Node.js API with apiDoc](https://jonathas.com/documenting-your-nodejs-api-with-apidoc/)
+
 # Run
 
 When port is accessed in the code as `process.env.PORT` you can run app with selected port using 
