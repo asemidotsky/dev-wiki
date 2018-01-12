@@ -1,4 +1,4 @@
-## Acrhitecture, Design
+## Acrhitecture
 
 * Microservices
 * API design
@@ -18,7 +18,7 @@
 * Python
 * Go
 
-## Technologies, Frameworks
+## Frameworks
 
 * [NodeJS](pages/frameworks/nodejs/nodejs-index)
 * [Angular](pages/frameworks/angular/angular-index)
@@ -36,7 +36,7 @@
 * General data structures
 * Trees
 
-## Practices, Methodologies
+## Practices
 
 * [Testing](pages/practices/testing/testing-index)
 
@@ -60,6 +60,12 @@
   * [Ubuntu](pages/os/ubuntu/ubuntu-index)
 * Windows server
 * Windows
+
+## Learning
+
+* [Technology radar](pages/learning/technology-radar)
+* [Books](pages/learning/books)
+* [Resources](pages/learning/resources)
 
 ## Personal
 
