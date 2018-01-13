@@ -23,9 +23,9 @@ h1 {
 
 .sidebar {
   position: fixed;
-  top: 51px;
+  top: 81px;
   bottom: 0;
-  left: 0;
+  /*left: 0;*/
   z-index: 1000;
   padding: 20px 0;
   overflow-x: hidden;

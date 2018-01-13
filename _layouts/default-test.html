@@ -14,43 +14,53 @@
         <link href="layout-test.css" rel="stylesheet">
     </head>
     
-      <body>
-        <header>
+    <body>
+
+      <header>
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="/">
-                <img src="../assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                Development
-            </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarsDefault">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">.NET</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Node.js</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Angular</a>
-                </li>
-              </ul> 
-              <!--<form class="form-inline mt-2 mt-md-0" style="margin-bottom: 0px">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form> -->
-            </div> 
+            <div class="container d-flex justify-content-between">
+              <a class="navbar-brand" href="/">
+                  <img src="../assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                  Development
+              </a>
+              <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse" id="navbarsDefault">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">.NET</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Node.js</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Angular</a>
+                  </li>
+                </ul>
+                <!--<form class="form-inline mt-2 mt-md-0" style="margin-bottom: 0px">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+              </div> 
+            </div>
           </nav>
         </header>
     
-        <div class="container-fluid">
+        <div class="container mt-4">
           <div class="row">
-            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+            <nav class="col-sm-3 col-md-2 col-lg-2 col-xl-2 d-none d-sm-block bg-light sidebar bd-sidebar">
+              <form class="bd-search d-flex align-items-center">
+                <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
+                <input type="search" class="form-control ds-input" id="search-input" placeholder="Search..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+                </button>
+              </form>
+
               <ul id="sidebarNavList" class="nav nav-pills flex-column">
                <!-- <li class="nav-item">
                   <a class="nav-link active" href="#">Overview</a>
@@ -61,7 +71,7 @@
               </ul>
             </nav>
     
-            <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+            <main role="main" class="col-sm-9 col-md-10 col-xl-10 offset-sm-4 offset-md-3 offset-xl-3">
                 <h1>First h1</h1>
                     <h2>h2 one</h2>
                     Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
@@ -104,9 +114,7 @@
           </div>
  
         </div>
-
-
-    
+  
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
@@ -120,4 +128,5 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
         <script src="../assets/js/main.js"></script>    
     
-    </body></html>
+    </body>
+</html>
