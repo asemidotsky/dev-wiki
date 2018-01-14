@@ -26,6 +26,7 @@ h1 {
   position: -webkit-sticky;
   position: sticky;
   z-index: 1000;
+  top: 4rem;
   /*border: 1px solid #eee;*/
   height: calc(100vh - 4rem);
 
@@ -119,6 +120,7 @@ h1 {
   font-size: .875rem;
 }
 
+/* main content */
 .bd-content {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
@@ -139,6 +141,8 @@ h1 {
   padding: .125rem 1.5rem;
   color: #99979c;
 }
+
+/* fixed navbar in top of the screen */
 
 @media (min-width: 768px) 
 {
