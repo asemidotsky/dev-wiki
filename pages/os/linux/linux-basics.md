@@ -113,6 +113,14 @@ dpkg-query -L nodejs
 ```
 will list the full path to every file belonging to the nodejs package
 
+## Move programs to background
+
+* CTRL+Z puts a job to the background and you get a bash prompt back
+* type `jobs` to seeall jobs
+* `bg #` - run job # in background
+* `fg #` - bring job with # number to foreground
+
+
 # Links
 
 * [SSH/TransferFiles](https://help.ubuntu.com/community/SSH/TransferFiles)
