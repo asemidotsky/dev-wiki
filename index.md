@@ -29,6 +29,9 @@
 * [Angular](pages/frameworks/angular/angular-index)
 * AngularJS (1.x)
 * React
+* Testing
+  * [Mocha](pages/frameworks/mocha)
+  * [Jest](pages/frameworks/jest)
 * WPF
 
 ## Databases
