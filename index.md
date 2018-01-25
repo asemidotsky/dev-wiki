@@ -2,7 +2,7 @@
 
 * Microservices
 * API design
-  * [REST](pages/architecture/rest)
+  * [REST](pages/architecture/rest/index)
 * Design Patters
 * Enterprise Patterns
 * General application design concepts
