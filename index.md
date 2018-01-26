@@ -55,6 +55,7 @@
 * [Editors](pages/tools/editors/editors-index)
 * Source control
 * [Blogging](pages/tools/blogging-index)
+* [ELK Stack](pages/tools/elk.md)
 
 ## Style guides
 
