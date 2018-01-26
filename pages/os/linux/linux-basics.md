@@ -1,5 +1,46 @@
 [Tools](linux-tools)
 
+# Connect
+
+```bash
+ssh remote_username@remote_host
+
+# to exit back into your local session
+exit
+```
+
+# Generate SSH Keys
+
+SSH keys should be generated on the computer you wish to log in from. This is usually your local computer.
+
+```bash
+$ ssh-keygen -t rsa
+```
+
+Press enter to accept the defaults. Your keys will be created at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa.
+
+Change into the .ssh directory by typing: 
+
+```
+cd ~/.ssh
+```
+
+You can copy the public key to the remote server by issuing this command:
+
+```
+ssh-copy-id remote_username@remote_host
+```
+
+# SSH
+
+```bash
+# if you changed the port number in your sshd configuration
+$ ssh -p port_number remote_host
+
+# execute a single command on a remote system
+$ ssh remote_host command_to_run
+```
+
 # Users
 
 # Groups
