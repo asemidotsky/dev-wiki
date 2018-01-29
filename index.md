@@ -14,6 +14,7 @@
 * Java
 * JavaScript
   * [ES6](pages/languages/js/es6)
+  * [OOP](pages/languages/js/oop)
 * [TypeScript](pages/languages/typescript/ts-index)
 * PowerShell
 * Python
