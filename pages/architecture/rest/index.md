@@ -75,3 +75,25 @@ This, in simple terms, is what the famous **hypermedia as the engine of applicat
 follow the links to other pages within our browsers.
 
 For better understanding of the Web as application platform read - [Web](/pages/architecture/web).
+
+# Richardson Maturity Model
+
+Leonard Richardson proposed a classification for services on the Web that is used to quantify discussions on service maturity. Leonard’s model promotes three levels of service maturity based on a service’s support for URIs, HTTP, and hypermedia (and a fourth level where no support is present).
+
+The diagram below shows the three core technologies with which Richardson evaluates service maturity. Each layer builds on the concepts and technologies of the layers below. Generally speaking, the higher up the stack an application sits, and the more it employs instances of the technology in each layer, the more mature it is.
+
+![The levels of maturity according to Richardson’s model](richardson-maturity-model.png)
+
+* **Level Zero Services** -_Services that have a single URI, and which use a single HTTP method (typically POST)_. 
+  * For example, most Web Services (WS-*)-based services use a single URI to identify an endpoint, and HTTP POST to transfer SOAP-based payloads, effectively ignoring the rest of the HTTP verbs
+  * XML-RPC and Plain Old XML (POX) employ similar methods: HTTP POST requests with XML payloads transmitted to a single URI endpoint, with replies delivered in XML as part of the HTTP response
+  * We can say that services tunnel all interactions through a single (large, complex) resource
+* **Level One Services** - _The next level of service maturity employs many URIs but only a single HTTP verb_
+  * The key dividing feature between these kinds of rudimentary services and level zero services is that level one services expose numerous logical resources, while level zero services tunnel all interactions through a single (large, complex) resource. In level one services, however, operations are tunneled by inserting operation names and parameters into a URI, and then transmitting that URI to a remote service, typically via HTTP GET.
+* **Level Two Services**
+  * Level two services host numerous URI-addressable resources. Such services support several of the HTTP verbs on each exposed resource. Included in this level are Create Read Update Delete (CRUD) services, which we cover in Chapter 4, where the state of resources, typically representing business entities, can be manipulated over the network.
+  * Importantly, level two services use HTTP verbs and status codes to coordinate interactions. This suggests that they make use of the Web for robustness.
+* **Level Three Services**
+  * The most web-aware level of service supports the notion of hypermedia as the engine of application state. That is, representations contain URI links to other resources that might be of interest to consumers. The service leads consumers through a trail of resources, causing application state transitions as a result.
+
+  [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html) by Martin Fowler
