@@ -73,3 +73,5 @@ In a hypermedia system, application states are communicated through representati
 
 This, in simple terms, is what the famous **hypermedia as the engine of application state or HATEOAS** constraint is all about. We see it in action every day on the Web, when we
 follow the links to other pages within our browsers.
+
+For better understanding of the Web as application platform read - [Web](/pages/architecture/web).
