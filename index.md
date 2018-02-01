@@ -28,8 +28,10 @@
   * ASP.NET Web Api
   * ASP.NET MVC
 * [NodeJS](pages/frameworks/nodejs/nodejs-index)
-* [Angular](pages/frameworks/angular/angular-index)
-* AngularJS (1.x)
+* Angular
+  * [Angular 2](pages/frameworks/angular/angular-index)
+  * [Migration to Angular 2](pages/frameworks/angular/migration)
+  * AngularJS (1.x)
 * React
 * Testing
   * [Mocha](pages/frameworks/mocha)
