@@ -1,7 +1,18 @@
+# Febrary 2018
+
+Work
+
+Articles
+
+Books
+
+Personal
+
 # January 2018
 
 Work
 
+* Terminal managers: Tmux, Screen
 * 01/22 - api tests with Jest and supertest, shelljs
 * Debug Jest tests with VSCode
 
@@ -11,6 +22,7 @@ Books
 
 Personal
 
+* Migration AngularJS apps to Angular2
 * Working on layout of the dev.semidotsky.com
 
 # December 2017

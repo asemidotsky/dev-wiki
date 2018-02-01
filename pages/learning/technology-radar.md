@@ -15,12 +15,25 @@ On this page you can see the cutting edge and popular technologies.
 
 # Languages
 
+* JavaScript (ES6/ES7)
+* C#
+* Go
+* Python
+* TypeScript
+
 # Databases
+
+* ElasticSearch
 
 # Messaging
 
 * RabbitMQ
 * .NET Service bus: NServiceBus, MassTransit, EasyNetQ
+
+# Cloud
+
+* AWS
+* Azure
 
 # Mobile
 
@@ -34,12 +47,18 @@ On this page you can see the cutting edge and popular technologies.
 
 # Infrastructure
 
+CI/CD: TeamCity, Bamboo;
+Monitoring: Grafana, Kibana;
+Logs: Seq, ElasticSearch, Splunk;
+
+* Docker
 * Bcfg2
 * CFEngine
 * Chef
 * Puppet
 * Ansible
 * Capistrano
+* Octopus
 
 # Patterns & Practices
 
