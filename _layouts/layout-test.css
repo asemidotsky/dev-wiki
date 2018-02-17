@@ -50,6 +50,16 @@ h1 {
   margin-left: 0;
 }
 
+@media (max-width: 991.98px)
+{
+  .bd-navbar .navbar-nav-scroll {
+    max-width: 100%;
+    height: 2.5rem;
+    margin-top: .25rem;
+    overflow: hidden;
+    font-size: .875rem;
+  }
+}
 .sidebar .nav-link {
   border-radius: 0;
 }
