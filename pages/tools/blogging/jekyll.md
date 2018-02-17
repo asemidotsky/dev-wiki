@@ -3,10 +3,10 @@
 * **Ruby** version 2.1 or above:
 `$ sudo apt-get install ruby-full`
 * **RubyGems** (upgrade to the latest RubyGems):
-`gem update --system`
+`sudo gem update --system`
 * **GCC** and **Make** (check is installed *gcc -v* and *make -v*)
 * Install with RubyGems:
-`gem install jekyll`
+`sudo gem install jekyll bundler`
 * That's all.Check version:
 `jekyll -v`
 
