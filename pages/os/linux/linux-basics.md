@@ -1,5 +1,60 @@
 [Tools](linux-tools)
 
+# Connect
+
+```bash
+ssh remote_username@remote_host
+
+# to exit back into your local session
+exit
+```
+
+# Generate SSH Keys
+
+SSH keys should be generated on the computer you wish to log in from. This is usually your local computer.
+
+```bash
+$ ssh-keygen -t rsa
+```
+
+Press enter to accept the defaults. Your keys will be created at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa.
+
+Change into the .ssh directory by typing: 
+
+```
+cd ~/.ssh
+```
+
+You can copy the public key to the remote server by issuing this command:
+
+```
+ssh-copy-id remote_username@remote_host
+```
+
+## Adding SSH key to the ssh-agent
+
+Start the ssh-agent in the background.
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace *id_rsa* in the command with the name of your private key file.
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+# SSH
+
+```bash
+# if you changed the port number in your sshd configuration
+$ ssh -p port_number remote_host
+
+# execute a single command on a remote system
+$ ssh remote_host command_to_run
+```
+
 # Users
 
 # Groups
@@ -112,6 +167,14 @@ netstat -npl
 dpkg-query -L nodejs
 ```
 will list the full path to every file belonging to the nodejs package
+
+## Move programs to background
+
+* CTRL+Z puts a job to the background and you get a bash prompt back
+* type `jobs` to seeall jobs
+* `bg #` - run job # in background
+* `fg #` - bring job with # number to foreground
+
 
 # Links
 

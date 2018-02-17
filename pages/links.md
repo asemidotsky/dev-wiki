@@ -7,6 +7,19 @@
 * [How to Use SSL/TLS with Node.js Related Topics](https://www.sitepoint.com/how-to-use-ssltls-with-node-js/)
 
 
-Monitoring:Grafana;
-Logs:Seq,Kibana,ElasticSearch,Splunk;
-CI/CD:TeamCity + Octopus;
+HackerRank, TopCoder, CodeChef
+
+https://codeblog.jonskeet.uk/
+
+**Read**
+
+* https://habrahabr.ru/users/var_bin/posts/
+
+**Linux**
+
+* Bash - https://habrahabr.ru/post/319670/
+* Автоматизация рутинных задач - https://habrahabr.ru/post/321928/
+
+**Learning**
+
+* https://www.codeschool.com

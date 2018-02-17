@@ -22,3 +22,7 @@ Labs CSRC) the Unix philosophy is the following:
 ## Tests
 
 > Your tests should live together with the tested modules, keeping them in sync.
+
+# Links
+
+* [12factor](https://12factor.net/)

@@ -2,6 +2,7 @@
 
 * Microservices
 * API design
+  * [REST](pages/architecture/rest/index)
 * Design Patters
 * Enterprise Patterns
 * General application design concepts
@@ -13,6 +14,7 @@
 * Java
 * JavaScript
   * [ES6](pages/languages/js/es6)
+  * [OOP](pages/languages/js/oop)
 * [TypeScript](pages/languages/typescript/ts-index)
 * PowerShell
 * Python
@@ -26,9 +28,14 @@
   * ASP.NET Web Api
   * ASP.NET MVC
 * [NodeJS](pages/frameworks/nodejs/nodejs-index)
-* [Angular](pages/frameworks/angular/angular-index)
-* AngularJS (1.x)
+* Angular
+  * [Angular 2](pages/frameworks/angular/angular-index)
+  * [Migration to Angular 2](pages/frameworks/angular/migration)
+  * AngularJS (1.x)
 * React
+* Testing
+  * [Mocha](pages/frameworks/mocha)
+  * [Jest](pages/frameworks/jest)
 * WPF
 
 ## Databases
@@ -51,6 +58,7 @@
 * [Editors](pages/tools/editors/editors-index)
 * Source control
 * [Blogging](pages/tools/blogging-index)
+* [ELK Stack](pages/tools/elk.md)
 
 ## Style guides
 
