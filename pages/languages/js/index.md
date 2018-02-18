@@ -311,6 +311,21 @@ Number properties belongs to the JavaScript's number object wrapper called **Num
 
 These properties can only be accessed as Number.MAX_VALUE
 
+## Random
+
+**Math.random()** returns a random number between 0 (inclusive),  and 1 (exclusive)
+
+```js
+// returns a random number between min (included) and max (excluded)
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+// returns a random number between min and max (both included)
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+```
+
 ## Dates
 
 ## Arrays
