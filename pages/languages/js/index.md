@@ -44,9 +44,6 @@ null === undefined         // false
 null == undefined          // true
 ```
 
-
-
-
 ## String
 
 ### Properties
@@ -182,6 +179,137 @@ txt2.split("");          // Split in characters
 ```
 
 ## Numbers
+
+```js
+var x = 3.14;    // A number with decimals
+var y = 3;       // A number without decimals
+
+var x = 123e5;   // 12300000
+var y = 123e-5;  // 0.00123
+
+// JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x
+var x = 0xFF;    // x will be 255
+```
+
+* JavaScript Numbers are Always 64-bit Floating Point
+* **NaN** is a JavaScript reserved word indicating that a number is not a legal number
+
+You can use the global JavaScript function **isNaN()** to find out if a value is a number
+```js
+var x = 100 / "Apple";
+isNaN(x);              // returns true because x is Not a Number
+
+typeof NaN;            // returns "number"
+```
+
+#### Infinity
+
+Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+
+```js
+var myNumber = 2;
+while (myNumber != Infinity) {          // Execute until Infinity
+    myNumber = myNumber * myNumber;
+}
+
+// Division by 0 (zero) also generates Infinity:
+var x =  2 / 0;         // x will be Infinity
+var y = -2 / 0;         // y will be -Infinity
+
+typeof Infinity;        // returns "number"
+```
+
+By default, JavaScript displays numbers as base 10 decimals.
+
+But you can use the toString() method to output numbers as base 16 (hex), base 8 (octal), or base 2 (binary)
+
+```js
+var myNumber = 128;
+myNumber.toString(16);  // returns 80
+myNumber.toString(8);   // returns 200
+myNumber.toString(2);   // returns 10000000
+```
+
+### Methods
+
+* **toExponential()** returns a string, with a number rounded and written using exponential notation
+* **toFixed()** returns a string, with the number written with a specified number of decimals
+* **toPrecision()** returns a string, with a number written with a specified length
+
+```js
+var x = 9.656;
+x.toExponential(2);     // returns 9.66e+0
+x.toExponential(4);     // returns 9.6560e+0
+x.toExponential(6);     // returns 9.656000e+0
+
+// toFixed()
+var x = 9.656;
+x.toFixed(0);           // returns 10
+x.toFixed(2);           // returns 9.66
+x.toFixed(4);           // returns 9.6560
+x.toFixed(6);           // returns 9.656000
+
+// toPrecision()
+var x = 9.656;
+x.toPrecision();        // returns 9.656
+x.toPrecision(2);       // returns 9.7
+x.toPrecision(4);       // returns 9.656
+x.toPrecision(6);       // returns 9.65600
+```
+
+#### Converting Variables to Numbers
+There are 3 JavaScript methods that can be used to convert variables to numbers:
+
+* The Number() method
+* The parseInt() method
+* The parseFloat() method
+
+These methods are not **number** methods, but **global** JavaScript methods
+
+```js
+// Number()
+Number(true);          // returns 1
+Number(false);         // returns 0
+Number("10");          // returns 10
+Number("  10");        // returns 10
+Number("10  ");        // returns 10
+Number("10 20");       // returns NaN 
+Number("John");        // returns NaN
+
+// parseInt()
+parseInt("10");         // returns 10
+parseInt("10.33");      // returns 10
+parseInt("10 20 30");   // returns 10
+parseInt("10 years");   // returns 10
+parseInt("years 10");   // returns NaN 
+
+// parseFloat()
+parseFloat("10");        // returns 10
+parseFloat("10.33");     // returns 10.33
+parseFloat("10 20 30");  // returns 10
+parseFloat("10 years");  // returns 10
+parseFloat("years 10");  // returns NaN
+```
+
+#### Number properties
+
+* MAX_VALUE
+* MIN_VALUE
+* NEGATIVE_INFINITY
+* NaN
+* POSITIVE_INFINITY
+
+```js
+var x = Number.MAX_VALUE;
+
+// not as below
+var x = 6;
+var y = x.MAX_VALUE;    // y becomes undefined
+```
+
+Number properties belongs to the JavaScript's number object wrapper called **Number**.
+
+These properties can only be accessed as Number.MAX_VALUE
 
 ## Dates
 
