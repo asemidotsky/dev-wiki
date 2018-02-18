@@ -328,6 +328,53 @@ function getRndInteger(min, max) {
 
 ## Dates
 
+Dates written as numbers, specifiy the number of milliseconds since January 1, 1970, 00:00:00
+
+```js
+new Date()
+new Date(milliseconds)
+new Date(dateString)
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+```
+> JavaScript counts months from 0 to 11. January is 0. December is 11
+
+### Date Formats
+
+There are generally 4 types of JavaScript date input formats:
+* ISO Date - "2015-03-25" (The International Standard)
+* Short Date - "03/25/2015"
+* Long Date - "Mar 25 2015" or "25 Mar 2015"
+* Full Date - "Wednesday March 25 2015"
+
+```js
+// ISO dates can be written without specifying the day (YYYY-MM)
+var d = new Date("2015-03");
+// ISO dates can be written without month and day (YYYY)
+var d = new Date("2015");
+// (YYYY-MM-DDTHH:MM:SSZ)
+var d = new Date("2015-03-25T12:00:00Z");
+
+/*
+UTC time is defined with a capital letter Z.
+
+If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead
+*/
+var d = new Date("2015-03-25T12:00:00-06:30");
+
+// Short dates are written with an "MM/DD/YYYY"
+var d = new Date("03/25/2015");
+
+// Long dates are most often written with a "MMM DD YYYY"
+var d = new Date("Mar 25 2015");
+// Month and day can be in any order
+var d = new Date("25 Mar 2015");
+// And, month can be written in full (January), or abbreviated (Jan)
+var d = new Date("January 25 2015");
+var d = new Date("Jan 25 2015");
+// Commas are ignored. Names are case insensitive
+var d = new Date("JANUARY, 25, 2015");
+```
+
 ## Arrays
 
 # Functions
