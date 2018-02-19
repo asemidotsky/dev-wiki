@@ -60,6 +60,10 @@ Logs: Seq, ElasticSearch, Splunk;
 * Capistrano
 * Octopus
 
+# Tools
+
+IDE: VS Code, WebStorm
+
 # Patterns & Practices
 
 * Saga
