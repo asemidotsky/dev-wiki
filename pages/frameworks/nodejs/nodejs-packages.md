@@ -4,8 +4,14 @@ Package      | Purpose       | Links
 ------------ | ------------- | --------
 [joi](https://www.npmjs.com/package/joi)| Object schema description language and validator for JavaScript objects | |
 [winston](https://www.npmjs.com/package/winston)| Logger | [Using Winston, a versatile logging library for Node.js](http://thisdavej.com/using-winston-a-versatile-logging-library-for-node-js/)
+[iconv](https://github.com/bnoordhuis/node-iconv), [iconv-lite](https://github.com/ashtuchkin/iconv-lite) | Convert character encodings | |
+
 
 # HTTP requests
+
+* request
+  * suppots only encodings: ascii, utf8, utf16le (ucs2), base64, binary, hex (which are Buffer.ToString() supports)
+* [needle](https://github.com/tomas/needle)
 
 # Authorization
 
