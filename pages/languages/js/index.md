@@ -328,7 +328,9 @@ function getRndInteger(min, max) {
 
 ## Dates
 
-Dates written as numbers, specifiy the number of milliseconds since January 1, 1970, 00:00:00
+* Dates written as numbers, specifiy the number of milliseconds since January 1, 1970, 00:00:00
+* JavaScript counts months from 0 to 11. January is 0. December is 11
+* In JavaScript, the first day of the week (0) means "Sunday", even if some countries in the world consider the first day of the week to be "Monday"
 
 ```js
 new Date()
@@ -336,7 +338,6 @@ new Date(milliseconds)
 new Date(dateString)
 new Date(year, month, day, hours, minutes, seconds, milliseconds)
 ```
-> JavaScript counts months from 0 to 11. January is 0. December is 11
 
 ### Date Formats
 
@@ -373,6 +374,59 @@ var d = new Date("January 25 2015");
 var d = new Date("Jan 25 2015");
 // Commas are ignored. Names are case insensitive
 var d = new Date("JANUARY, 25, 2015");
+```
+
+### Date Methods
+
+* getDate() - Get the day as a number (1-31)
+* getDay() - returns the weekday as a number (0-6)
+* getFullYear() - Get the four digit year (yyyy)
+* getHours() - Get the hour (0-23)
+* getMilliseconds() - Get the milliseconds (0-999)
+* getMinutes() - Get the minutes (0-59)
+* getMonth() - Get the month (0-11)
+* getSeconds() - Get the seconds (0-59)
+* getTime() - Get the time (milliseconds since January 1, 1970)
+* getUTCDate() - Same as getDate(), but returns the UTC date
+* getUTCDay() ...
+
+Date object has equivalent *Set Methods* in format setDate(), setTime(), ...
+
+```js
+var d = new Date();
+d.setFullYear(2020, 0, 14);
+
+/* 
+The setDate() method can be used to add days to a date:
+If adding days, shifts the month or year, the changes are handled automatically by the Date object.
+*/ 
+d.setDate(d.getDate() + 50);
+```
+
+#### Date Input - Parsing Dates
+
+If you have a valid date string, you can use the **Date.parse()** method to convert it to milliseconds.
+
+Date.parse() returns the number of milliseconds between the date and January 1, 1970
+
+```js
+var msec = Date.parse("March 21, 2012");
+var d = new Date(msec);
+```
+
+#### Compare Dates
+
+```js
+var today, someday, text;
+today = new Date();
+someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+    text = "Today is before January 14, 2100.";
+} else {
+    text = "Today is after January 14, 2100.";
+}
 ```
 
 ## Arrays
