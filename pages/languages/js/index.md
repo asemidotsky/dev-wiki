@@ -431,6 +431,172 @@ if (someday > today) {
 
 ## Arrays
 
+```js
+var cars = ["Saab", "Volvo", "BMW"];
+// You can do
+var cars = new Array("Saab", "Volvo", "BMW"); // bad
+/* 
+The two examples above do exactly the same. There is no need to use new Array().
+For simplicity, readability and execution speed, use the first one (the array literal method).
+*/
+
+var x = cars.length;  // The length property returns the number of elements
+
+cars[1] = "Fiat"; // change "Volvo" element to "Fiat"
+
+cars[cars.length] = "Ford"; // Appends "Ford" to cars
+```
+
+* Array indexes start with 0
+* The **typeof** operator in JavaScript returns "object" for arrays
+
+#### How to Recognize an Array
+
+The problem is that the JavaScript operator typeof returns "object".
+
+* To solve this problem ECMAScript 5 defines a new method **Array.isArray()**
+
+```js
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+typeof fruits;             // returns object
+
+// solution 1
+Array.isArray(fruits);     // returns true
+
+// solution 2 - for older browsers
+function isArray(x) {
+    return x.constructor.toString().indexOf("Array") > -1;
+}
+
+// solution 3
+fruits instanceof Array     // returns true
+```
+
+### Methods
+
+* **join()** - joins all array elements into a string
+* **push()** - adds a new element to an array (at the end)
+* **pop()** - removes the last element from an array
+* **shift()** - removes the first array element and "shifts" all other elements to a lower index
+* **unshift()** - adds a new element to an array (at the beginning), and "unshifts" older elements
+* **splice()** - can be used to add new items to an array
+*  **concat()** - creates a new array by merging (concatenating) existing arrays
+* **slice()** - slices out a piece of an array into a new array
+* **sort()** - sorts an array alphabetically
+* **reverse()** - reverses the elements in an array.
+
+```js
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// join()
+var res = fruits.join(" * "); // Banana * Orange * Apple * Mango
+
+// pop()
+var x = fruits.pop();   // Removes the last element ("Mango") from fruits, the value of x is "Mango"
+
+// push()
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var newLen = fruits.push("Kiwi");    //  Adds a new element ("Kiwi") to fruits, newLen = 5
+
+// shift()
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();             // Returns "Banana" -shifted element
+
+// unshift()
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");    // Returns 5 - new array length
+
+// splice() for Add Elements
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi"); // Banana,Orange,Lemon,Kiwi,Apple,Mango
+
+// splice() to Remove Elements
+fruits.splice(0, 1);        // Removes the first element of fruits
+
+// concat()
+var arr = ["AB", "CD"];
+var arr1 = ["FG", "WE", "sd"];
+var arr2 = ["DS", "SS"];
+var result = arr.concat(arr1, arr2); // Concatenates arr1 with arr2 and arr3
+
+// slice()
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(3); // new array: Apple,Mango
+// selects elements from the start argument, and up to (but not including) the end argument.
+var citrus1 = fruits.slice(1, 3); // new array: Orange,Lemon
+```
+
+#### Sorting an Array
+
+```js
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort(); // Apple,Banana,Mango,Orange
+
+fruits.reverse(); // Orange,Mango,Banana,Apple
+
+// numeric - with using compare function
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+
+// sort an array descending
+points.sort(function(a, b){return b - a});
+
+// sorting in random order
+points.sort(function(a, b){return 0.5 - Math.random()});
+
+// sort objects
+var cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}];
+
+cars.sort(function(a, b){return a.year - b.year});
+
+cars.sort(function(a, b){
+    var x = a.type.toLowerCase();
+    var y = b.type.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+});
+```
+
+#### Min and Max values
+
+```js
+function arrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+// Math.max.apply([1, 2, 3]) is equivalent to Math.max(1, 2, 3)
+
+function arrayMin(arr) {
+    return Math.min.apply(null, arr);
+}
+
+// The fastest solution is to use a "home made" method
+function findArrayMax(arr) {
+    var len = arr.length
+    var max = -Infinity;
+    while (len--) {
+        if (arr[len] > max) {
+            max = arr[len];
+        }
+    }
+    return max;
+}
+
+function findArrayMin(arr) {
+    var len = arr.length
+    var min = Infinity;
+    while (len--) {
+        if (arr[len] < min) {
+            min = arr[len];
+        }
+    }
+    return min;
+}
+```
+
 # Functions
 
 # Objects
