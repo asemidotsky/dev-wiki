@@ -1,3 +1,6 @@
+# CLI
+
+
 # Components
 
 **Purpose:** The main building block for application. The user interface (application) is built by combining components.
@@ -37,6 +40,24 @@ export class UserInfoComponent {
 
 In examples below I will refer to this `user-component`.
 
+## Selectors
+
+Selector actually works like a CSS selector.
+
+```html
+<!-- Element selector - selector: 'app-user-info' -->
+<app-user-info></app-user-info>
+<!-- Attribute selector - selector: '[app-user-info]' -->
+<div app-user-info></div>
+<!-- Class selector - selector: '.app-user-info' -->
+<div class="app-user-info"></div>
+
+<!-- Not work in Angular 
+ - id selector
+ - pseudo
+-->
+```
+
 # Decorators
 
 **Purpose:** Allows to attach some additional information to a class. `@Component(..)` - it is a decorator.
@@ -50,7 +71,25 @@ In examples below I will refer to this `user-component`.
 })
 ```
 
-# String interpolation
+# Templates and Styles
+
+TODO:
+
+# Databinding
+
+Databinding = Communication between TypeScript code (Business Logic) and Template (HTML).
+
+**Code -> Template (Output Data)**:
+* String interpolation: `\{{ data \}}`
+* Property Binding: `[property]="data"`
+
+**Template -> Code (React to (User) Events)**:
+* Event Binding: `(event)="expression"`
+
+**Combination of Both: Two-Way-Binding**
+* `[(ngModel)]="data"`
+
+## String interpolation
 
 **Purpose:** Display model's data in view
 
@@ -58,18 +97,14 @@ In examples below I will refer to this `user-component`.
 
 ```html
 <div>
-    <p>{{ name }}</p>
-    <p>{{ getEmail() }}</p>
-    <p>{{ address }}</p>
+    <p>\{{ name \}}</p>
+    <p>\{{ getEmail() \}}</p>
+    <p>\{{ address \}}</p>
 </div>
 ```
 
-# Templates and Styles
+## Two-Way-Binding
 
-TODO:
+## Property Binding
 
-# Two-Way-Binding
-
-# Property Binding
-
-# Event Binding
+## Event Binding
