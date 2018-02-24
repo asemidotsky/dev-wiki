@@ -40,10 +40,12 @@
 * [MS SQL Server](pages/databases/mssql/mssql-index)
 * [MongoDB](pages/databases/mongodb/mongo-index)
 
-# Alghoritms, Data Structures
+# Data structures
 
 * General data structures
 * Trees
+
+# Alghoritms
 
 # Practices
 
