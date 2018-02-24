@@ -55,6 +55,15 @@ h1 {
   margin-left: 15px;
 }
 
+/*
+ * Tables
+ */
+
+main table th, main table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e9ebec;
+}
+
 /***** badges table styles *****/
 
 .badges-table div[class^="col"] {
