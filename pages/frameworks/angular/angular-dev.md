@@ -1,3 +1,4 @@
+{% raw %}
 # CLI
 
 
@@ -80,7 +81,7 @@ TODO:
 Databinding = Communication between TypeScript code (Business Logic) and Template (HTML).
 
 **Code -> Template (Output Data)**:
-* String interpolation: `\{{ data \}}`
+* String interpolation: `{{ data }}`
 * Property Binding: `[property]="data"`
 
 **Template -> Code (React to (User) Events)**:
@@ -97,9 +98,9 @@ Databinding = Communication between TypeScript code (Business Logic) and Templat
 
 ```html
 <div>
-    <p>\{{ name \}}</p>
-    <p>\{{ getEmail() \}}</p>
-    <p>\{{ address \}}</p>
+    <p>{{ name }}</p>
+    <p>{{ getEmail() }}</p>
+    <p>{{ address }}</p>
 </div>
 ```
 
@@ -108,3 +109,5 @@ Databinding = Communication between TypeScript code (Business Logic) and Templat
 ## Property Binding
 
 ## Event Binding
+
+{% endraw %}
