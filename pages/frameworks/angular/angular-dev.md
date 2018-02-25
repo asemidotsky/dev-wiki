@@ -104,10 +104,49 @@ Databinding = Communication between TypeScript code (Business Logic) and Templat
 </div>
 ```
 
-## Two-Way-Binding
-
 ## Property Binding
 
+```html
+<button [disabled]="!allowAddUser">Add user</button>
+```
+```ts
+export class UsersComponent {
+  allowAddUser = false;
+}
+```
+
 ## Event Binding
+
+```ts
+export class UsersComponent {
+  userCreationStatus = 'No user was created!';
+  userName = '';
+
+  onCreateUser() {
+    this.userCreationStatus = 'User was created!'
+  }
+
+  onUpdateUserName(event: Event) {
+    this.userName = (<HTMLInputElement>event.target).value;
+  }
+}
+```
+```html
+<input type="text" (input)="onUpdateUserName($event)">
+<button (click)="onCreateUser()">Add user</button>
+```
+
+## Two-Way-Binding
+
+```ts
+export class UsersComponent {
+  userName = 'User name';
+}
+```
+```html
+<input type="text" [(ngModel)]="userName">
+```
+
+# Directives
 
 {% endraw %}
