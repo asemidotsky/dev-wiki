@@ -149,4 +149,70 @@ export class UsersComponent {
 
 # Directives
 
+Directives are Instructions in the DOM!
+
+```ts
+@Directive({
+  selector: '[appTurnGreen]'
+})
+export class TurnGreenDirective {
+
+}
+```
+
+Directive types:
+* **Structural directives** - change the DOM, add or remove elements
+* **Attribute directives** - only change the element they were placed on
+
+## ngIf
+
+It is structural directive.
+```html
+<p *ngIf="expression to evaluate">Some text</p>
+```
+The p element added or removed from the DOM (not hided) based on provided expression.
+
+**ngIf with an Else Condition**
+
+```html
+<p *ngIf="serverCreated; else noServer">Server {{ serverName }} was created</p>
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
+```
+
+## ngFor
+
+It is structural directive.
+```html
+<app-server *ngFor="let server of servers"></app-server>
+```
+servers - array property in TypeScript class.
+
+**Getting the Index when using ngFor**
+
+```html
+<div *ngFor="let log of logs; let i = index">
+ Log number {{ i }}
+</div>
+```
+*index* - like a reserved expresssion
+
+## ngStyle
+
+It is attribute directive.
+```html
+<p [ngStyle]="{backgroundColor: getColor()}">Server {{ serverId }} is {{ getServerStatus() }}</p>
+```
+
+## ngClass
+
+It only adds a CSS class if a certain condition is true. It is attribute directive.
+
+```html
+<p [ngClass]="{online: serverStatus === 'online'}">Server {{ serverId }} is {{ getServerStatus() }}</p>
+```
+
+*online* is a CSS class name.
+
 {% endraw %}
