@@ -1,6 +1,21 @@
 {% raw %}
 # CLI
 
+In order to update the angular-cli package installed globally in your system, you need to run:
+
+```bash
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g @angular/cli@latest
+```
+
+Most likely you also want to update your local project version, because inside your project directory it will be selected with higher priority than the global one:
+
+```bash
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
+```
 
 # Components
 
