@@ -3,17 +3,10 @@
 
 @import "{{ site.theme }}";
 
-.page-header {
-  color: $header-heading-color;
-  text-align: center;
-  background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-  padding: 1rem;
-}
-
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
   padding-top: 3.5rem;
+  color: #222;
 }
 
 /*
@@ -32,9 +25,9 @@ h1 {
 
 .sidebar {
   position: fixed;
-  top: 51px;
+  top: 81px;
   bottom: 0;
-  left: 0;
+  /*left: 0;*/
   z-index: 1000;
   padding: 20px 0;
   overflow-x: hidden;
@@ -62,6 +55,14 @@ h1 {
   margin-left: 15px;
 }
 
+/*
+ * Tables
+ */
+
+main table th, main table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e9ebec;
+}
 
 /***** badges table styles *****/
 

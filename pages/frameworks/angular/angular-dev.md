@@ -1,3 +1,22 @@
+{% raw %}
+# CLI
+
+In order to update the angular-cli package installed globally in your system, you need to run:
+
+```bash
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g @angular/cli@latest
+```
+
+Most likely you also want to update your local project version, because inside your project directory it will be selected with higher priority than the global one:
+
+```bash
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
+```
+
 # Components
 
 **Purpose:** The main building block for application. The user interface (application) is built by combining components.
@@ -37,6 +56,24 @@ export class UserInfoComponent {
 
 In examples below I will refer to this `user-component`.
 
+## Selectors
+
+Selector actually works like a CSS selector.
+
+```html
+<!-- Element selector - selector: 'app-user-info' -->
+<app-user-info></app-user-info>
+<!-- Attribute selector - selector: '[app-user-info]' -->
+<div app-user-info></div>
+<!-- Class selector - selector: '.app-user-info' -->
+<div class="app-user-info"></div>
+
+<!-- Not work in Angular 
+ - id selector
+ - pseudo
+-->
+```
+
 # Decorators
 
 **Purpose:** Allows to attach some additional information to a class. `@Component(..)` - it is a decorator.
@@ -50,7 +87,25 @@ In examples below I will refer to this `user-component`.
 })
 ```
 
-# String interpolation
+# Templates and Styles
+
+TODO:
+
+# Databinding
+
+Databinding = Communication between TypeScript code (Business Logic) and Template (HTML).
+
+**Code -> Template (Output Data)**:
+* String interpolation: `{{ data }}`
+* Property Binding: `[property]="data"`
+
+**Template -> Code (React to (User) Events)**:
+* Event Binding: `(event)="expression"`
+
+**Combination of Both: Two-Way-Binding**
+* `[(ngModel)]="data"`
+
+## String interpolation
 
 **Purpose:** Display model's data in view
 
@@ -64,12 +119,115 @@ In examples below I will refer to this `user-component`.
 </div>
 ```
 
-# Templates and Styles
+## Property Binding
 
-TODO:
+```html
+<button [disabled]="!allowAddUser">Add user</button>
+```
+```ts
+export class UsersComponent {
+  allowAddUser = false;
+}
+```
 
-# Two-Way-Binding
+## Event Binding
 
-# Property Binding
+```ts
+export class UsersComponent {
+  userCreationStatus = 'No user was created!';
+  userName = '';
 
-# Event Binding
+  onCreateUser() {
+    this.userCreationStatus = 'User was created!'
+  }
+
+  onUpdateUserName(event: Event) {
+    this.userName = (<HTMLInputElement>event.target).value;
+  }
+}
+```
+```html
+<input type="text" (input)="onUpdateUserName($event)">
+<button (click)="onCreateUser()">Add user</button>
+```
+
+## Two-Way-Binding
+
+```ts
+export class UsersComponent {
+  userName = 'User name';
+}
+```
+```html
+<input type="text" [(ngModel)]="userName">
+```
+
+# Directives
+
+Directives are Instructions in the DOM!
+
+```ts
+@Directive({
+  selector: '[appTurnGreen]'
+})
+export class TurnGreenDirective {
+
+}
+```
+
+Directive types:
+* **Structural directives** - change the DOM, add or remove elements
+* **Attribute directives** - only change the element they were placed on
+
+## ngIf
+
+It is structural directive.
+```html
+<p *ngIf="expression to evaluate">Some text</p>
+```
+The p element added or removed from the DOM (not hided) based on provided expression.
+
+**ngIf with an Else Condition**
+
+```html
+<p *ngIf="serverCreated; else noServer">Server {{ serverName }} was created</p>
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
+```
+
+## ngFor
+
+It is structural directive.
+```html
+<app-server *ngFor="let server of servers"></app-server>
+```
+servers - array property in TypeScript class.
+
+**Getting the Index when using ngFor**
+
+```html
+<div *ngFor="let log of logs; let i = index">
+ Log number {{ i }}
+</div>
+```
+*index* - like a reserved expresssion
+
+## ngStyle
+
+It is attribute directive.
+```html
+<p [ngStyle]="{backgroundColor: getColor()}">Server {{ serverId }} is {{ getServerStatus() }}</p>
+```
+
+## ngClass
+
+It only adds a CSS class if a certain condition is true. It is attribute directive.
+
+```html
+<p [ngClass]="{online: serverStatus === 'online'}">Server {{ serverId }} is {{ getServerStatus() }}</p>
+```
+
+*online* is a CSS class name.
+
+{% endraw %}

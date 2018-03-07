@@ -6,60 +6,66 @@
     <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}"/>
     <meta name="author" content="Aleksei Semidotskii">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#157878">
-    <link rel="icon" href="/assets/favicon.ico">
+    <meta name="theme-color" content="#2288bb">
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
+
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/">
-          <img src="/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="A7">
-          Development
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="/">
+                <img src="{{ '/assets/logo.png' | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="A7">
+                Development
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarsDefault">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">.NET</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/frameworks/nodejs/nodejs-index">Node.js</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/frameworks/angular/angular-index">Angular</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/languages/js/index">JavaScript</a>
+                </li>
+              </ul>
+            </div>
 
-        <div class="collapse navbar-collapse" id="navbarsDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">.NET</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Node.js</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Angular</a>
-            </li>
-          </ul> 
-          <!--<form class="form-inline mt-2 mt-md-0" style="margin-bottom: 0px">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form> -->
-        </div> 
-      </nav>
-    </header>
-
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-          <ul id="sidebarNavList" class="nav nav-pills flex-column">
-          </ul>
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/badges/badges-wall">About Me</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-
-        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+      </header>
+  
+      <div class="container mt-4">
+        <div class="row">
+          <nav class="col-sm-3 col-md-2 col-lg-2 col-xl-2 d-none d-sm-block bg-light sidebar bd-sidebar">
+            <ul id="sidebarNavList" class="nav nav-pills flex-column">
+            </ul>
+          </nav>
+  
+        <main role="main" class="col-sm-9 col-md-10 col-xl-10 offset-sm-4 offset-md-3 offset-xl-4">
           {{ content }}
 
-          <footer class="footer">
-            {% if site.github.is_project_page %}
-              <span class="site-footer-owner">Software development craftsmanship by <a href="{{ site.github.owner_url }}">Aleksei Semidotskii</a>.</span>
-            {% endif %}
+          <footer class="site-footer">
+              <span class="site-footer-credits">Software development craftsmanship by <a href="{{ site.github.owner_url }}">Aleksei Semidotskii</a>.</span>
           </footer>
         </main>
       </div>
@@ -76,7 +82,6 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
       </script>

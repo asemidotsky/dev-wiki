@@ -1,13 +1,13 @@
 # Data Types
 
 ```js
-typeof "John"              // Returns "string"
-typeof 3.14                // Returns "number"
-typeof (3)                 // Returns "number"
-typeof (3 + 4)             // Returns "number"
+typeof "John"  // Returns "string"
+typeof 3.14    // Returns "number"
+typeof (3)     // Returns "number"
+typeof (3 + 4) // Returns "number"
 ```
 
-## Primitive Data
+# Primitive Data
 
 The typeof operator can return one of these primitive types:
 
@@ -25,10 +25,10 @@ The typeof operator returns object for both objects, arrays, and null.
 
 The typeof operator does not return object for functions.
 
-## Undefined 
+# Undefined 
 Variable without a value, has the value undefined. The typeof is also undefined
 
-## Null
+# Null
 In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
 
 Unfortunately, in JavaScript, the data type of null is an object.
@@ -37,14 +37,14 @@ Unfortunately, in JavaScript, the data type of null is an object.
 
 Undefined and null are equal in value but different in type:
 ```js
-typeof undefined           // undefined
-typeof null                // object
+typeof undefined   // undefined
+typeof null        // object
 
-null === undefined         // false
-null == undefined          // true
+null === undefined // false
+null == undefined  // true
 ```
 
-## String
+# String
 
 ### Properties
 
@@ -93,12 +93,12 @@ The indexOf and search are NOT equal. These are the differences:
 var str = "Apple, Banana, Kiwi";
 
 var res = str.slice(7, 13); // Banana
-res = str.slice(-12, -6); // Banana
-res = str.slice(7); // Banana, Kiwi
+res = str.slice(-12, -6);   // Banana
+res = str.slice(7);         // Banana, Kiwi
 
 res = str.substring(7, 13); // Banana
 
-res = str.substr(7, 6); // Banana
+res = str.substr(7, 6);     // Banana
 ```
 #### Replacing String Content
 
@@ -178,7 +178,7 @@ var txt2 = "Hello";
 txt2.split("");          // Split in characters
 ```
 
-## Numbers
+# Numbers
 
 ```js
 var x = 3.14;    // A number with decimals
@@ -213,10 +213,10 @@ while (myNumber != Infinity) {          // Execute until Infinity
 }
 
 // Division by 0 (zero) also generates Infinity:
-var x =  2 / 0;         // x will be Infinity
-var y = -2 / 0;         // y will be -Infinity
+var x =  2 / 0;  // x will be Infinity
+var y = -2 / 0;  // y will be -Infinity
 
-typeof Infinity;        // returns "number"
+typeof Infinity; // returns "number"
 ```
 
 By default, JavaScript displays numbers as base 10 decimals.
@@ -238,23 +238,23 @@ myNumber.toString(2);   // returns 10000000
 
 ```js
 var x = 9.656;
-x.toExponential(2);     // returns 9.66e+0
-x.toExponential(4);     // returns 9.6560e+0
-x.toExponential(6);     // returns 9.656000e+0
+x.toExponential(2);  // returns 9.66e+0
+x.toExponential(4);  // returns 9.6560e+0
+x.toExponential(6);  // returns 9.656000e+0
 
 // toFixed()
 var x = 9.656;
-x.toFixed(0);           // returns 10
-x.toFixed(2);           // returns 9.66
-x.toFixed(4);           // returns 9.6560
-x.toFixed(6);           // returns 9.656000
+x.toFixed(0);        // returns 10
+x.toFixed(2);        // returns 9.66
+x.toFixed(4);        // returns 9.6560
+x.toFixed(6);        // returns 9.656000
 
 // toPrecision()
 var x = 9.656;
-x.toPrecision();        // returns 9.656
-x.toPrecision(2);       // returns 9.7
-x.toPrecision(4);       // returns 9.656
-x.toPrecision(6);       // returns 9.65600
+x.toPrecision();     // returns 9.656
+x.toPrecision(2);    // returns 9.7
+x.toPrecision(4);    // returns 9.656
+x.toPrecision(6);    // returns 9.65600
 ```
 
 #### Converting Variables to Numbers
@@ -311,7 +311,7 @@ Number properties belongs to the JavaScript's number object wrapper called **Num
 
 These properties can only be accessed as Number.MAX_VALUE
 
-## Random
+# Random
 
 **Math.random()** returns a random number between 0 (inclusive),  and 1 (exclusive)
 
@@ -326,7 +326,7 @@ function getRndInteger(min, max) {
 }
 ```
 
-## Boolean
+# Boolean
 
 Everything With a "Value" is True:
 ```js
@@ -350,8 +350,7 @@ Boolean(null);
 Boolean(NaN);
 ```
 
-
-## Dates
+# Dates
 
 * Dates written as numbers, specifiy the number of milliseconds since January 1, 1970, 00:00:00
 * JavaScript counts months from 0 to 11. January is 0. December is 11
@@ -454,7 +453,7 @@ if (someday > today) {
 }
 ```
 
-## Arrays
+# Arrays
 
 ```js
 var cars = ["Saab", "Volvo", "BMW"];
