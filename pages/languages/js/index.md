@@ -326,6 +326,31 @@ function getRndInteger(min, max) {
 }
 ```
 
+## Boolean
+
+Everything With a "Value" is True:
+```js
+100
+3.14
+-15
+"Hello"
+"false"
+7 + 1 + 3.14
+```
+
+Everything Without a "Value" is False
+
+```js
+// all expressions below returns false
+Boolean(0);
+Boolean(-0);
+Boolean("");
+Boolean(undefined);
+Boolean(null);
+Boolean(NaN);
+```
+
+
 ## Dates
 
 * Dates written as numbers, specifiy the number of milliseconds since January 1, 1970, 00:00:00
