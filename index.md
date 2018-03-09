@@ -7,6 +7,10 @@
 * Enterprise Patterns
 * General application design concepts
 * [Design great advices](pages/architecture/great-advices)
+* [Cloud](pages/cloud/index)
+  * Azure
+  * AWS
+  * Google Cloud
 
 # Languages
 
