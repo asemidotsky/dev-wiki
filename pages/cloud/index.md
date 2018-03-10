@@ -54,6 +54,7 @@ IaaS -> PaaS -> SaaS:
 AWS and Azure service models priorities and path.
 * Azure more SaaS and PaaS
 * AWS more IaaS and PaaS
+
 ![Cloud service models](aws-azure-service-models-path.png)
 
 Additional notable service models:

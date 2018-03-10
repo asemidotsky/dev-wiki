@@ -8,7 +8,7 @@
 * General application design concepts
 * [Design great advices](pages/architecture/great-advices)
 * [Cloud](pages/cloud/index)
-  * Azure
+  * [Azure](pages/cloud/azure/index)
   * AWS
   * Google Cloud
 
