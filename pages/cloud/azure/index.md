@@ -108,6 +108,32 @@ Products:
 * Traffic Manager
 * Azure DNS
 
+# Databases
+
+Relational:
+* SQL Database
+* Azure Database MySql
+* Azure Database PostgreSQL
+* SQL Data warehouse
+
+NoSQL:
+* Table Storage
+* Azure Cosmos DB
+* Stretch Database
+* Redis Cache
+* Data factory
+
+# AI & Cognitive Services
+
+* Machine Learning
+* Azure Bot Service
+* Cognitive Services
+    * Vision
+    * Knowledge
+    * Language
+    * Speech
+    * Search
+
 # Resources
 
 ## Virtual Networks
