@@ -59,6 +59,55 @@ A list of **actions**.
 
 # Azure Compute
 
+* Virtual Machines
+    * Type
+    * Size
+* App Service
+    * Runtime environments
+* Cloud Services
+    * Web Roles
+    * Worker Roles
+    * Have much more flexibility in configuration of underlying infrastructure
+* Container Service
+    * Docker
+    * Kubernetes
+* Azure Functions
+* Service Fabric
+* Batch
+
+# Azure Storage
+
+* Blob Storage
+    * For unstructured data
+    * Massive data: media files, images, etc.
+    * Stores objects. Object is like a file.
+    * Object has: key (name), data, metadata
+* Queue Storage
+* File Storage
+* Disk Storage
+
+Charges by two factors: amount of storage or amount of accessing the data
+
+Storage extras:
+* StorSimple
+* Archive Storage
+* Data Lake Store - large scale objects for big data analysis
+
+[Azure Storage Explorer](https://azure.microsoft.com/en-au/features/storage-explorer/)
+
+# Azure Networking
+
+* Virtual Networks (vNet)
+* VPN Gateway
+* ExpressRoute
+* Content Delivery Network
+
+Products:
+* Load Balancer
+* Application Gateway
+* Traffic Manager
+* Azure DNS
+
 # Resources
 
 ## Virtual Networks
