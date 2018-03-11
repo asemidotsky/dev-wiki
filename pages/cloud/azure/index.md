@@ -80,8 +80,10 @@ A list of **actions**.
 * Blob Storage
     * For unstructured data
     * Massive data: media files, images, etc.
-    * Stores objects. Object is like a file.
-    * Object has: key (name), data, metadata
+    * Stores objects. Object is like a file. Object has: key (name), data, metadata
+    * **Block blobs** are used to store files that can be accessed sequentially and are not subject to frequent updates. Some common examples of where Block blobs are leveraged include video files and images.
+    * **Page blobs** are used to store files that need random access or are updated 
+frequently.
 * Queue Storage
 * File Storage
 * Disk Storage
@@ -123,6 +125,21 @@ NoSQL:
 * Redis Cache
 * Data factory
 
+# Web & Mobile
+
+Azure App Service:
+* Web apps
+* Mobile Apps
+* Logic Apps
+* API Apps
+
+Other:
+* Media Services
+* Azure Search
+* API Management
+* Notification Hubs
+* Service Bus
+
 # AI & Cognitive Services
 
 * Machine Learning
@@ -134,6 +151,45 @@ NoSQL:
     * Speech
     * Search
 
+# Big Data & Analytics
+
+* HDInsight
+    * Hadoop and it's ecosystem
+* Data Lake Analytics
+* Azure Analysis Service
+* PowerBI 
+
+# Internet of Things
+
+* IOT Hub
+    * Bidirectional communication with device
+* IOT Edge
+* Stream Analytics
+* Event Grid
+* Event Hubs
+    * Incoming only
+
+# Management & Monitoring
+
+Monitoring:
+* Azure Monitor
+* Log Analytics
+* Application Insights
+Management:
+* Backup
+* Site Recovery
+* Scheduler
+
+# Security & Identity
+
+* Security Centre
+* Role-Based Access Control
+* Key Vault
+* Azure Active Directory
+* Azure Active Directory B2C
+* Azure Active Directory Domain Services
+* Multi-Factor Authentication
+
 # Resources
 
 ## Virtual Networks
@@ -143,3 +199,7 @@ NoSQL:
 * Can be 'subnetted' into smaller *sub-networks*
 * Each of those can have an *IP range*
 * Can be *connected* together
+
+# Links
+
+* [Azure Roadmap](https://azure.microsoft.com/en-us/roadmap/)
