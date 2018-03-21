@@ -46,9 +46,16 @@ h1 {
 }
 
 .sidebar .nav-link {
-  border-radius: 0;
+  border-radius: 1;
+  /*color: #007bff;*/
+  color: #2288bb;
 }
 
 .sidebar .tag-h2 a {
   margin-left: 15px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #2288bb;
 }

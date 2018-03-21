@@ -52,7 +52,13 @@ main h2, main h3, main h4 {
 }
 
 .sidebar .nav-link {
-  border-radius: 0;
+  border-radius: 1;
+  color: #2288bb;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #2288bb;
 }
 
 .sidebar .tag-h2 a {
