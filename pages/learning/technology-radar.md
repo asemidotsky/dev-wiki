@@ -16,13 +16,16 @@ On this page you can see the cutting edge and popular technologies.
 # Languages
 
 * JavaScript (ES6/ES7)
+* TypeScript
 * C#
 * Go
 * Python
-* TypeScript
+* Rust
 
 # Databases
 
+* PostgreSQL
+* MongoDB
 * ElasticSearch
 
 # Messaging
