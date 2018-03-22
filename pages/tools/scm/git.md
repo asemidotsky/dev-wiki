@@ -9,8 +9,8 @@ git log --pretty=format:"%h %s" --graph
 ```
 
 Table 1. Useful options for `git log --pretty=format`
-Option|	Description of Output
-------|----------------------
+Option  | Description of Output
+------- | ----------------------
 %H | Commit hash
 %h | Abbreviated commit hash
 %T | Tree hash
@@ -25,6 +25,6 @@ Option|	Description of Output
 %ce| Committer email
 %cd| Committer date
 %cr| Committer date, relative
-%s| Subject
+%s | Subject
 
 [more](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
