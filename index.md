@@ -1,12 +1,11 @@
 # Acrhitecture
 
+* [Great application design concepts](pages/architecture/great-design)
 * Microservices
 * API design
   * [REST](pages/architecture/rest/index)
 * Design Patters
 * Enterprise Patterns
-* General application design concepts
-* [Design great advices](pages/architecture/great-advices)
 * [Cloud](pages/cloud/index)
   * [Azure](pages/cloud/azure/index)
   * AWS

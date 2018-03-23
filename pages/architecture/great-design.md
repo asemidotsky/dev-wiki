@@ -1,8 +1,6 @@
-# Great advices about software design
+# How to write software
 
-## How to write software
-
-### The UNIX philosophy
+## The UNIX philosophy
 
 According to Doug McIlroy, inventor of the Unix pipe (head of the Bell
 Labs CSRC) the Unix philosophy is the following:
@@ -10,10 +8,12 @@ Labs CSRC) the Unix philosophy is the following:
 * Write programs to work together.
 * Write programs to handle text streams, because that is a universal interface.
 
-## Project structure
-> Organize your Files Around Features, Not Roles
+# Project structure guidelines
 
-## Configuration management
+1. Organize your Files Around Features, Not Roles
+1. Don't get hung up on an exact like-for-like structure but do **justify your structure using consistency, maintainability, and efficiency in mind**
+
+# Configuration management
 
 > Load your deployment specific configurations from environment variables and never add them to the codebase as constants. These are the configurations that can vary between deployments and runtime environments, like CI, staging or production. Basically, you can have the same code running everywhere.
 
