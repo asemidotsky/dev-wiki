@@ -9,6 +9,7 @@ git log --pretty=format:"%h %s" --graph
 ```
 
 Table 1. Useful options for `git log --pretty=format`
+
 Option  | Description of Output
 ------- | ----------------------
 %H | Commit hash
