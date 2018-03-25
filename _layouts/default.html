@@ -55,18 +55,19 @@
       </header>
   
       <div class="container mt-4">
-        <div class="row">
-          <main role="main" class="col-sm-8 col-md-9 col-lg-9 col-xl-9">
+        <div class="row  flex-xl-nowrap">
+          <nav class="d-none d-md-block col-md-3 col-lg-2 bd-toc">
+            <ul id="sidebarNavList" class="nav nav-pills flex-column">
+            </ul>
+          </nav>
+          <main role="main" class="col-12 col-md-9 col-lg-10 py-md-3 pl-md-5 bd-content">
             {{ content }}
 
             <footer class="site-footer">
                 <span class="site-footer-credits">© 2017-2018 Software development craftsmanship by <a href="{{ site.github.owner_url }}">Aleksei Semidotskii</a>.</span>
             </footer>
           </main>
-          <nav class="col-sm-3 col-md-3 col-lg-3 col-xl-1 offset-sm-6 offset-md-7 offset-lg-8 offset-xl-6 d-none d-sm-block sidebar bd-sidebar">
-            <ul id="sidebarNavList" class="nav nav-pills flex-column">
-            </ul>
-          </nav>
+
       </div>
     </div>
 
