@@ -621,6 +621,26 @@ function findArrayMin(arr) {
 }
 ```
 
+# Operators
+
+Here is not full list of operators, only interesting.
+
+For examples consider that:
+* **x = 5**.
+* **y = 3**
+
+Operator | Description | Example | Result |
+---------| ----------- |-------- | ------ |
+==       | equal to    | x == 8  | true   |
+===      | equal value and equal type | x === 5; x === "5" | true; false |
+!=       | not equal   | x != 8  | true   |
+!==      | not equal value or not equal type | x !== 5; x !== "5" | false; true |
+&&       | AND    | (x < 10 && y > 1)    | true   |
+\|\|     | OR     | (x == 6 \|\| y == 5) | false   |
+!        | NOT    | !(x == y) | true     |
+cond ? v1 : v2 | Ternary operator    | var v = (age < 18) ? "Young":"Old"; |  |
+
+
 # Functions
 
 # Objects
