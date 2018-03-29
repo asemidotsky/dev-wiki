@@ -9,6 +9,9 @@
     <meta name="theme-color" content="#2288bb">
     <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/brands.css" integrity="sha384-ATC/oZittI09GYIoscTZKDdBr/kI3lCwzw3oBMnOYCPVNJ4i7elNlCxSgLfdfFbl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css" integrity="sha384-Lyz+8VfV0lv38W729WFAmn77iH5OSroyONnUva4+gYaQTic3iI2fnUKtDSpbVf0J" crossorigin="anonymous">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
@@ -42,13 +45,31 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/pages/languages/js/index">JavaScript</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/badges/badges-wall">About Me</a>
+                </li>
               </ul>
             </div>
 
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
               <li class="nav-item">
-                <a class="nav-link" href="/pages/badges/badges-wall">About Me</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/aleksei-semidotskii" title="LinkedIn" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/asemidotsky" title="Github" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://stackoverflow.com/users/2180096/aleksei-semidotskii?tab=profile" title="Stackoverflow" target="_blank">
+                  <i class="fab fa-stack-overflow"></i>
+                </a>
+              </li>
+              <form class="form-inline ml-md-3">
+                <input class="form-control" type="text" placeholder="Search soon..." aria-label="Search">
+              </form>
             </ul>
           </div>
         </nav>
