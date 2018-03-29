@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css" integrity="sha384-Lyz+8VfV0lv38W729WFAmn77iH5OSroyONnUva4+gYaQTic3iI2fnUKtDSpbVf0J" crossorigin="anonymous">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
@@ -69,7 +70,7 @@
               </li>
             </ul>
             <form class="form-inline d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3">
-                <input class="form-control" type="text" placeholder="Search soon..." aria-label="Search">
+                <input id="searchBox" class="form-control" type="text" placeholder="Search..." aria-label="Search">
             </form>     
           </div>
         </nav>
@@ -107,5 +108,13 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+      apiKey: '5587ee2f7f25b2fb721dd3152fb1dea0',
+      indexName: 'semidotsky',
+      inputSelector: '#searchBox',
+      debug: false
+    });
+    </script> 
   </body>
 </html>
