@@ -18,7 +18,7 @@ h1 {
 }
 
 /*
- * Sidebar
+ * Sidebar for version 1
  */
 
 .sidebar {
@@ -32,7 +32,7 @@ h1 {
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   /*border-left: 1px solid #eee;*/
 }
-
+/*
 .sidebar .nav {
   margin-bottom: 20px;
 }
@@ -43,19 +43,43 @@ h1 {
 
 .sidebar .nav-item + .nav-item {
   margin-left: 0;
+}*/
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #2288bb;
 }
 
-.sidebar .nav-link {
+/**** layout ver 2 *****/
+
+/* main content */
+.bd-content {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+/* right table of content */
+.bd-toc {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: .875rem;
+}
+
+.bd-toc .nav-link {
   border-radius: 1;
   /*color: #007bff;*/
   color: #2288bb;
 }
 
-.sidebar .tag-h2 a {
+.bd-toc .tag-h2 a {
   margin-left: 15px;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  color: #fff;
-  background-color: #2288bb;
 }

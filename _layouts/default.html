@@ -9,7 +9,11 @@
     <meta name="theme-color" content="#2288bb">
     <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/brands.css" integrity="sha384-ATC/oZittI09GYIoscTZKDdBr/kI3lCwzw3oBMnOYCPVNJ4i7elNlCxSgLfdfFbl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css" integrity="sha384-Lyz+8VfV0lv38W729WFAmn77iH5OSroyONnUva4+gYaQTic3iI2fnUKtDSpbVf0J" crossorigin="anonymous">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
@@ -27,7 +31,7 @@
     
             <div class="collapse navbar-collapse" id="navbarsDefault">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -42,31 +46,50 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/pages/languages/js/index">JavaScript</a>
                 </li>
+                <li class="nav-item text-nowrap">
+                  <a class="nav-link" href="/pages/badges/badges-wall">About Me</a>
+                </li>
               </ul>
             </div>
 
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
               <li class="nav-item">
-                <a class="nav-link" href="/pages/badges/badges-wall">About Me</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/aleksei-semidotskii" title="LinkedIn" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/asemidotsky" title="Github" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://stackoverflow.com/users/2180096/aleksei-semidotskii?tab=profile" title="Stackoverflow" target="_blank">
+                  <i class="fab fa-stack-overflow"></i>
+                </a>
               </li>
             </ul>
+            <form class="form-inline d-none d-lg-inline-block col-md-3 col-lg-2 mb-3 mb-md-0 ml-md-3">
+                <input id="searchBox" class="form-control" type="text" placeholder="Search..." aria-label="Search">
+            </form>     
           </div>
         </nav>
       </header>
   
       <div class="container mt-4">
-        <div class="row">
-          <main role="main" class="col-sm-8 col-md-9 col-lg-9 col-xl-9">
+        <div class="row  flex-xl-nowrap">
+          <nav class="d-none d-md-block col-md-3 col-lg-2 bd-toc">
+            <ul id="sidebarNavList" class="nav nav-pills flex-column">
+            </ul>
+          </nav>
+          <main role="main" class="col-12 col-md-9 col-lg-10 py-md-3 pl-md-5 bd-content">
             {{ content }}
 
             <footer class="site-footer">
                 <span class="site-footer-credits">© 2017-2018 Software development craftsmanship by <a href="{{ site.github.owner_url }}">Aleksei Semidotskii</a>.</span>
             </footer>
           </main>
-          <nav class="col-sm-3 col-md-3 col-lg-3 col-xl-1 offset-sm-6 offset-md-7 offset-lg-8 offset-xl-6 d-none d-sm-block sidebar bd-sidebar">
-            <ul id="sidebarNavList" class="nav nav-pills flex-column">
-            </ul>
-          </nav>
+
       </div>
     </div>
 
@@ -85,5 +108,13 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+      apiKey: '5587ee2f7f25b2fb721dd3152fb1dea0',
+      indexName: 'semidotsky',
+      inputSelector: '#searchBox',
+      debug: false
+    });
+    </script> 
   </body>
 </html>
