@@ -89,11 +89,34 @@ Selector actually works like a CSS selector.
 
 # Templates and Styles
 
-TODO:
+**Template expressions guidelines:**
+* No visible side effects
+* Quick execution
+* Simplicity
+* Idempotence
 
 # Databinding
 
-Databinding = Communication between TypeScript code (Business Logic) and Template (HTML).
+## New mental model
+
+**HTML attribute vs. DOM property**
+
+> The distinction between an HTML attribute and a DOM property is crucial to understanding how Angular binding works.
+
+The HTML attribute and the DOM property are not the same thing, even when they have the same name.
+
+**Attributes are defined by HTML. Properties are defined by the DOM (Document Object Model).**
+
+* A few HTML attributes have 1:1 mapping to properties. *id* is one example.
+* Some HTML attributes don't have corresponding properties. *colspan* is one example.
+* Some DOM properties don't have corresponding attributes. *textContent* is one example.
+* Many HTML attributes appear to map to properties ... but not in the way you might think!
+
+That last category is confusing until you grasp **this general rule**:
+
+> Attributes initialize DOM properties and then they are done. Property values can change; attribute values can't.
+
+**Databinding = Communication between TypeScript code (Business Logic) and Template (HTML)**.
 
 **Code -> Template (Output Data)**:
 * String interpolation: `{{ data }}`
@@ -128,6 +151,16 @@ Databinding = Communication between TypeScript code (Business Logic) and Templat
 export class UsersComponent {
   allowAddUser = false;
 }
+```
+
+Some people prefer the `bind-` prefix alternative, known as the *canonical form*:
+```html
+<img bind-src="carImageUrl">
+```
+
+Element properties may be the more common targets, but Angular looks first to see if the name is a property of a known directive:
+```html
+<div [ngClass]="classes">[ngClass] binding to the classes property</div>
 ```
 
 ## Event Binding
