@@ -1,4 +1,6 @@
-# Data Types
+# JavaScript
+
+## Data Types
 
 ```js
 typeof "John"  // Returns "string"
@@ -7,7 +9,7 @@ typeof (3)     // Returns "number"
 typeof (3 + 4) // Returns "number"
 ```
 
-# Primitive Data
+### Primitive Data
 
 The typeof operator can return one of these primitive types:
 
@@ -25,17 +27,20 @@ The typeof operator returns object for both objects, arrays, and null.
 
 The typeof operator does not return object for functions.
 
-# Undefined 
+### Undefined
+
 Variable without a value, has the value undefined. The typeof is also undefined
 
-# Null
+### Null
+
 In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
 
 Unfortunately, in JavaScript, the data type of null is an object.
 
-**Difference Between Undefined and Null**
+#### Difference Between Undefined and Null
 
 Undefined and null are equal in value but different in type:
+
 ```js
 typeof undefined   // undefined
 typeof null        // object
@@ -44,16 +49,16 @@ null === undefined // false
 null == undefined  // true
 ```
 
-# String
+### String
 
-### Properties
+#### Properties
 
 **length** - `var txt="abc"; var len = txt.length;`
 
-### Methods
+#### Methods
 
 > All string methods return a new string. They don't modify the original string.
-
+>
 > Formally said: Strings are immutable: Strings cannot be changed, only replaced
 
 **indexOf(str, fromPos)** - returns the index of (the position of) the first occurrence of a specified text in a string
@@ -100,6 +105,7 @@ res = str.substring(7, 13); // Banana
 
 res = str.substr(7, 6);     // Banana
 ```
+
 #### Replacing String Content
 
 **replace()** - replaces a specified value with another value in a string
@@ -113,10 +119,12 @@ var n = str.replace("Apple", "Google"); // n = "Please visit Google!"
 * By default, the replace() function replaces only the first match
 * By default, the replace() function is case sensitive
 * To replace case insensitive, use a **regular expression** with an **/i** flag (insensitive)
+
 ```js
 str = "Please visit Microsoft!";
 var n = str.replace(/MICROSOFT/i, "Apple");
 ```
+
 * To replace all matches, use a **regular expression** with a **/g** flag (global match)
 
 #### Converting to Upper and Lower Case
@@ -127,6 +135,7 @@ var n = str.replace(/MICROSOFT/i, "Apple");
 #### Concat
 
 **concat()** joins two or more strings
+
 ```js
 var text1 = "Hello";
 var text2 = "World";
@@ -135,7 +144,9 @@ var text3 = text1.concat(" ", text2);
 // same with plus operator
 text3 = text1 + " " + text2;
 ```
+
 #### Extracting String Characters
+
 * **charAt(position)** - returns the character at a specified index (position) in a string
 * **charCodeAt(position)** - returns the unicode of the character at a specified index in a string
 
@@ -174,11 +185,11 @@ txt.split(",");          // Split on commas
 txt.split(" ");          // Split on spaces
 txt.split("|");          // Split on pipe
 
-var txt2 = "Hello";       
+var txt2 = "Hello";
 txt2.split("");          // Split in characters
 ```
 
-# Numbers
+### Numbers
 
 ```js
 var x = 3.14;    // A number with decimals
@@ -195,6 +206,7 @@ var x = 0xFF;    // x will be 255
 * **NaN** is a JavaScript reserved word indicating that a number is not a legal number
 
 You can use the global JavaScript function **isNaN()** to find out if a value is a number
+
 ```js
 var x = 100 / "Apple";
 isNaN(x);              // returns true because x is Not a Number
@@ -230,7 +242,7 @@ myNumber.toString(8);   // returns 200
 myNumber.toString(2);   // returns 10000000
 ```
 
-### Methods
+#### Number methods
 
 * **toExponential()** returns a string, with a number rounded and written using exponential notation
 * **toFixed()** returns a string, with the number written with a specified number of decimals
@@ -258,6 +270,7 @@ x.toPrecision(6);    // returns 9.65600
 ```
 
 #### Converting Variables to Numbers
+
 There are 3 JavaScript methods that can be used to convert variables to numbers:
 
 * The Number() method
@@ -273,7 +286,7 @@ Number(false);         // returns 0
 Number("10");          // returns 10
 Number("  10");        // returns 10
 Number("10  ");        // returns 10
-Number("10 20");       // returns NaN 
+Number("10 20");       // returns NaN
 Number("John");        // returns NaN
 
 // parseInt()
@@ -281,7 +294,7 @@ parseInt("10");         // returns 10
 parseInt("10.33");      // returns 10
 parseInt("10 20 30");   // returns 10
 parseInt("10 years");   // returns 10
-parseInt("years 10");   // returns NaN 
+parseInt("years 10");   // returns NaN
 
 // parseFloat()
 parseFloat("10");        // returns 10
@@ -311,7 +324,7 @@ Number properties belongs to the JavaScript's number object wrapper called **Num
 
 These properties can only be accessed as Number.MAX_VALUE
 
-# Random
+### Random
 
 **Math.random()** returns a random number between 0 (inclusive),  and 1 (exclusive)
 
@@ -326,9 +339,10 @@ function getRndInteger(min, max) {
 }
 ```
 
-# Boolean
+### Boolean
 
 Everything With a "Value" is True:
+
 ```js
 100
 3.14
@@ -350,7 +364,7 @@ Boolean(null);
 Boolean(NaN);
 ```
 
-# Dates
+### Dates
 
 * Dates written as numbers, specifiy the number of milliseconds since January 1, 1970, 00:00:00
 * JavaScript counts months from 0 to 11. January is 0. December is 11
@@ -366,6 +380,7 @@ new Date(year, month, day, hours, minutes, seconds, milliseconds)
 ### Date Formats
 
 There are generally 4 types of JavaScript date input formats:
+
 * ISO Date - "2015-03-25" (The International Standard)
 * Short Date - "03/25/2015"
 * Long Date - "Mar 25 2015" or "25 Mar 2015"
@@ -400,7 +415,7 @@ var d = new Date("Jan 25 2015");
 var d = new Date("JANUARY, 25, 2015");
 ```
 
-### Date Methods
+#### Date Methods
 
 * getDate() - Get the day as a number (1-31)
 * getDay() - returns the weekday as a number (0-6)
@@ -420,10 +435,10 @@ Date object has equivalent *Set Methods* in format setDate(), setTime(), ...
 var d = new Date();
 d.setFullYear(2020, 0, 14);
 
-/* 
+/*
 The setDate() method can be used to add days to a date:
 If adding days, shifts the month or year, the changes are handled automatically by the Date object.
-*/ 
+*/
 d.setDate(d.getDate() + 50);
 ```
 
@@ -453,13 +468,13 @@ if (someday > today) {
 }
 ```
 
-# Arrays
+## Arrays
 
 ```js
 var cars = ["Saab", "Volvo", "BMW"];
 // You can do
 var cars = new Array("Saab", "Volvo", "BMW"); // bad
-/* 
+/*
 The two examples above do exactly the same. There is no need to use new Array().
 For simplicity, readability and execution speed, use the first one (the array literal method).
 */
@@ -474,7 +489,7 @@ cars[cars.length] = "Ford"; // Appends "Ford" to cars
 * Array indexes start with 0
 * The **typeof** operator in JavaScript returns "object" for arrays
 
-#### How to Recognize an Array
+### How to Recognize an Array
 
 The problem is that the JavaScript operator typeof returns "object".
 
@@ -496,7 +511,7 @@ function isArray(x) {
 fruits instanceof Array     // returns true
 ```
 
-### Methods
+#### Array methods
 
 * **join()** - joins all array elements into a string
 * **push()** - adds a new element to an array (at the end)
@@ -504,7 +519,7 @@ fruits instanceof Array     // returns true
 * **shift()** - removes the first array element and "shifts" all other elements to a lower index
 * **unshift()** - adds a new element to an array (at the beginning), and "unshifts" older elements
 * **splice()** - can be used to add new items to an array
-*  **concat()** - creates a new array by merging (concatenating) existing arrays
+* **concat()** - creates a new array by merging (concatenating) existing arrays
 * **slice()** - slices out a piece of an array into a new array
 * **sort()** - sorts an array alphabetically
 * **reverse()** - reverses the elements in an array.
@@ -621,11 +636,12 @@ function findArrayMin(arr) {
 }
 ```
 
-# Operators
+## Operators
 
 Here is not full list of operators, only interesting.
 
 For examples consider that:
+
 * **x = 5**.
 * **y = 3**
 
@@ -640,12 +656,11 @@ Operator | Description | Example | Result |
 !        | NOT    | !(x == y) | true     |
 cond ? v1 : v2 | Ternary operator    | var v = (age < 18) ? "Young":"Old"; |  |
 
+## Functions
 
-# Functions
+## Objects
 
-# Objects
-
-# Scopes
+## Scopes
 
 * Local scope
 * Global scope
@@ -656,7 +671,7 @@ JavaScript has function scope: Each function creates a new scope - LOCAL scope.
 
 In HTML, the global scope is the *window* object. *All global variables belong to the window object*
 
-**The Lifetime of JavaScript Variables**
+### Variables lifetime
 
 The lifetime of a JavaScript variable starts when it is declared.
 
@@ -664,8 +679,8 @@ Local variables are deleted when the function is completed.
 
 In a web browser, global variables are deleted when you close the browser window (or tab), but remain available to new pages loaded into the same window.
 
-# HTML DOM
+## HTML DOM
 
-## Events
+### Events
 
 `<button onclick="displayDate()">The time is?</button>`

@@ -1,16 +1,14 @@
-# [Installation](https://jekyllrb.com/docs/installation/)
+# Jekyll
 
-* **Ruby** version 2.1 or above:
-`$ sudo apt-get install ruby-full`
-* **RubyGems** (upgrade to the latest RubyGems):
-`gem update --system`
+## [Installation](https://jekyllrb.com/docs/installation/)
+
+* **Ruby** version 2.1 or above: `$ sudo apt-get install ruby-full`
+* **RubyGems** (upgrade to the latest RubyGems): `gem update --system`
 * **GCC** and **Make** (check is installed *gcc -v* and *make -v*)
-* Install with RubyGems:
-`gem install jekyll`
-* That's all.Check version:
-`jekyll -v`
+* Install with RubyGems: `gem install jekyll`
+* That's all.Check version: `jekyll -v`
 
-# Let's get started!
+## Let's get started
 
 ```bash
 jekyll new my_blog

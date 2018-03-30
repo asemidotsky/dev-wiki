@@ -1,12 +1,13 @@
+# Angular Index
+
 * [Core blocks](angular-dev)
 
-
-# Manage environments
+## Manage environments
 
 [Angular 2 and environment variables](https://medium.com/beautiful-angular/angular-2-and-environment-variables-59c57ba643be)
 [Environment Variables in Angular](https://alligator.io/angular/environment-variables/)
 
-# Testing
+## Testing
 
 * [Testing - Official docs](https://angular.io/guide/testing)
 * [Angular Testing In Depth: Services](https://auth0.com/blog/angular-2-testing-in-depth-services/)

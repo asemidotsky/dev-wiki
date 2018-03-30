@@ -1,6 +1,8 @@
-# Ubuntu setup
+# Node.js Setup
 
-## Install Using a PPA
+## Ubuntu setup
+
+### Install Using a PPA
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
@@ -16,7 +18,7 @@ sudo apt-get install nodejs
 sudo apt-get install build-essential
 ```
 
-## Install using NVM
+### Install using NVM
 
 ```bash
 # install prerequisites
@@ -38,7 +40,7 @@ nvm alias default 8
 
 [more](https://ru.godaddy.com/help/install-nodejs-ubuntu-17395)
 
-# Production install
+## Production install
 
 1. Install nvm (see above)
 1. Install NodeJS using nvm

@@ -1,11 +1,13 @@
+# Technology radar
+
 * [Stack Overflow Insights](https://insights.stackoverflow.com/)
-* [Stack Overflow Trends](https://insights.stackoverflow.com/trends?tags=jquery%2Cangularjs%2Cangular%2Creactjs) 
+* [Stack Overflow Trends](https://insights.stackoverflow.com/trends?tags=jquery%2Cangularjs%2Cangular%2Creactjs)
 * [Most Popular Technologies 2016](https://insights.stackoverflow.com/survey/2016#technology-most-popular-technologies)
 * [Discover languages in Github](http://githut.info/)
 
 On this page you can see the cutting edge and popular technologies.
 
-# Web
+## Web
 
 * Large: Angular, React
 * Small: Vue, Meteor, Knockout, Ember, Redux
@@ -13,7 +15,7 @@ On this page you can see the cutting edge and popular technologies.
 * TypeScript, Babel
 * Testing: Jest, Mocha, Chai, Jasmine, Protractor
 
-# Languages
+## Languages
 
 * JavaScript (ES6/ES7)
 * TypeScript
@@ -22,33 +24,33 @@ On this page you can see the cutting edge and popular technologies.
 * Python
 * Rust
 
-# Databases
+## Databases
 
 * PostgreSQL
 * MongoDB
 * ElasticSearch
 
-# Messaging
+## Messaging
 
 * RabbitMQ
 * .NET Service bus: NServiceBus, MassTransit, EasyNetQ
 
-# Cloud
+## Cloud
 
 * AWS
 * Azure
 
-# Mobile
+## Mobile
 
 * With Angular: NativeScript, Ionic, Ionic2
 * With React: React Native
 * Xamarin
 
-# Cross platform
+## Cross platform
 
 * Cross Platform UI: [Avalonia](https://github.com/avaloniaui/avalonia)
 
-# Infrastructure
+## Infrastructure
 
 CI/CD: TeamCity, Bamboo;
 Monitoring: Grafana, Kibana;
@@ -63,17 +65,17 @@ Logs: Seq, ElasticSearch, Splunk;
 * Capistrano
 * Octopus
 
-# Tools
+## Tools
 
 IDE: VS Code, WebStorm
 
-# Patterns & Practices
+## Patterns & Practices
 
 * Saga
 
-# Middleware
+## Middleware
 
-# Business Intelligence - BI
+## Business Intelligence - BI
 
 * Datazen
 * Power BI

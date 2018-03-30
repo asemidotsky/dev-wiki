@@ -1,4 +1,6 @@
-# Febrary 2018
+# My personal history
+
+## Febrary 2018
 
 Work
 
@@ -8,7 +10,7 @@ Books
 
 Personal
 
-# January 2018
+## January 2018
 
 Work
 
@@ -25,7 +27,7 @@ Personal
 * Migration AngularJS apps to Angular2
 * Working on layout of the dev.semidotsky.com
 
-# December 2017
+## December 2017
 
 Work
 

@@ -1,27 +1,13 @@
-# Node.js
+# Node.js Fundamentals
 
-- [General concepts](#general-concepts)
-- [Event emitters](#event-emitters)
-- [Modules](#modules)
-- [File System](#file-system) 
-  - [fs module](#fs-module)
-    - [Reading a file](#reading-a-file)
-    - [Writing a file](#writing-a-file)
-    - [Watching files](#watching-files)
-  - [path module](#path-module)
-- [Streams](#streams)
-  - [Readable streams](#readable-streams)
-  - [Writable streams](#writable-streams)
-- [HTTP](#http)
-
-# General concepts
+## General concepts
 
 * Event driven
 * Single thread
 * Non-blocking I/O
 * The event loop
 
-# Event emitters
+## Event emitters
 
 EventEmitter is synchronous, and that means the callback is called on every cycle of the for loop
 
@@ -36,7 +22,7 @@ for (let i = 0; i < 10; i++) {
 
 Asynchronous version is `emitter.on('numberAdded', n => setImmediate(() => console.log(n * 2)))`
 
-# Modules
+## Modules
 
 ```js
 // file: person.js
@@ -52,11 +38,12 @@ console.log(user.name); // alexey
 console.log(user.getFullName()); //alexey semidotsky
 ```
 
-# File System 
+## File System
 
-## fs module
+### fs module
 
-### Reading a file
+#### Reading a file
+
 ```js
 const fs = require('fs' )
 fs.readFile('/path/to/file', (err, data) => {
@@ -71,17 +58,18 @@ const fs = require('fs' )
 const data = fs.readFileSync('/path/to/file')
 ```
 
-### Writing a file
+#### Writing a file
 
 ```js
 const fs = require('fs' )
 fs.writeFile('/path/to/file', data, (err) => {
   // check error
 })
-```    
+```
+
 // `writeFileSync` - sync version
 
-### Watching files
+#### Watching files
 
 ```js
 const fs = require('fs')
@@ -107,9 +95,9 @@ const parts = path.parse('/path/to/a/file.txt')
 console.log(parts)
 ```
 
-# Streams
+## Streams
 
-## Readable streams
+### Readable streams
 
 ```js
 const fs = require('fs');
@@ -122,7 +110,7 @@ const server = http.createServer((request, response) => {
 server.listen(8000);
 ```
 
-## Writable streams
+### Writable streams
 
 ```js
 const fs = require('fs');
@@ -132,5 +120,3 @@ var destinationFile = fs.createWriteStream('path/to/dest.txt');
   destinationFile.write(chunk);
 });
 ```
-
-# HTTP

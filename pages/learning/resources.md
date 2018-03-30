@@ -1,5 +1,5 @@
-# Resources
+# Learning Resources
 
-# Blogs
+## Blogs
 
-* http://blog.stevensanderson.com
+* <http://blog.stevensanderson.com>

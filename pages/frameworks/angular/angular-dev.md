@@ -1,5 +1,8 @@
+# Angular Fundamentals
+
 {% raw %}
-# CLI
+
+## CLI
 
 In order to update the angular-cli package installed globally in your system, you need to run:
 
@@ -17,16 +20,18 @@ npm install --save-dev @angular/cli@latest
 npm install
 ```
 
-# Components
+## Components
 
 **Purpose:** The main building block for application. The user interface (application) is built by combining components.
 
 Component consists of three main parts:
+
 1. ViewModel class on TypeScript (user-info.component.ts) - defines model for view with properties and some logic
 1. View template (user-info.component.html)
 1. Styles (user-info.component.css)
 
-**user-info.component.ts**
+user-info.component.ts:
+
 ```ts
 import { Component } from '@angular/core';
 
@@ -56,7 +61,7 @@ export class UserInfoComponent {
 
 In examples below I will refer to this `user-component`.
 
-## Selectors
+### Selectors
 
 Selector actually works like a CSS selector.
 
@@ -74,7 +79,7 @@ Selector actually works like a CSS selector.
 -->
 ```
 
-# Decorators
+## Decorators
 
 **Purpose:** Allows to attach some additional information to a class. `@Component(..)` - it is a decorator.
 
@@ -87,19 +92,20 @@ Selector actually works like a CSS selector.
 })
 ```
 
-# Templates and Styles
+## Templates and Styles
 
-**Template expressions guidelines:**
+### Template expressions guidelines
+
 * No visible side effects
 * Quick execution
 * Simplicity
 * Idempotence
 
-# Databinding
+## Databinding
 
-## New mental model
+### New mental model
 
-**HTML attribute vs. DOM property**
+HTML attribute vs. DOM property
 
 > The distinction between an HTML attribute and a DOM property is crucial to understanding how Angular binding works.
 
@@ -118,21 +124,24 @@ That last category is confusing until you grasp **this general rule**:
 
 **Databinding = Communication between TypeScript code (Business Logic) and Template (HTML)**.
 
-**Code -> Template (Output Data)**:
+#### Code -> Template (Output Data)
+
 * String interpolation: `{{ data }}`
 * Property Binding: `[property]="data"`
 
-**Template -> Code (React to (User) Events)**:
+#### Template -> Code (React to (User) Events)
+
 * Event Binding: `(event)="expression"`
 
-**Combination of Both: Two-Way-Binding**
+#### Combination of Both: Two-Way-Binding
+
 * `[(ngModel)]="data"`
 
-## String interpolation
+### String interpolation
 
 **Purpose:** Display model's data in view
 
-**user-info.component.html**
+user-info.component.html:
 
 ```html
 <div>
@@ -142,11 +151,12 @@ That last category is confusing until you grasp **this general rule**:
 </div>
 ```
 
-## Property Binding
+### Property Binding
 
 ```html
 <button [disabled]="!allowAddUser">Add user</button>
 ```
+
 ```ts
 export class UsersComponent {
   allowAddUser = false;
@@ -154,16 +164,18 @@ export class UsersComponent {
 ```
 
 Some people prefer the `bind-` prefix alternative, known as the *canonical form*:
+
 ```html
 <img bind-src="carImageUrl">
 ```
 
 Element properties may be the more common targets, but Angular looks first to see if the name is a property of a known directive:
+
 ```html
 <div [ngClass]="classes">[ngClass] binding to the classes property</div>
 ```
 
-## Event Binding
+### Event Binding
 
 ```ts
 export class UsersComponent {
@@ -179,23 +191,25 @@ export class UsersComponent {
   }
 }
 ```
+
 ```html
 <input type="text" (input)="onUpdateUserName($event)">
 <button (click)="onCreateUser()">Add user</button>
 ```
 
-## Two-Way-Binding
+### Two-Way-Binding
 
 ```ts
 export class UsersComponent {
   userName = 'User name';
 }
 ```
+
 ```html
 <input type="text" [(ngModel)]="userName">
 ```
 
-# Directives
+## Directives
 
 Directives are Instructions in the DOM!
 
@@ -209,18 +223,21 @@ export class TurnGreenDirective {
 ```
 
 Directive types:
+
 * **Structural directives** - change the DOM, add or remove elements
 * **Attribute directives** - only change the element they were placed on
 
-## ngIf
+### ngIf
 
 It is structural directive.
+
 ```html
 <p *ngIf="expression to evaluate">Some text</p>
 ```
+
 The p element added or removed from the DOM (not hided) based on provided expression.
 
-**ngIf with an Else Condition**
+#### ngIf with an Else Condition
 
 ```html
 <p *ngIf="serverCreated; else noServer">Server {{ serverName }} was created</p>
@@ -229,31 +246,35 @@ The p element added or removed from the DOM (not hided) based on provided expres
 </ng-template>
 ```
 
-## ngFor
+### ngFor
 
 It is structural directive.
+
 ```html
 <app-server *ngFor="let server of servers"></app-server>
 ```
+
 servers - array property in TypeScript class.
 
-**Getting the Index when using ngFor**
+#### Getting the Index when using ngFor
 
 ```html
 <div *ngFor="let log of logs; let i = index">
  Log number {{ i }}
 </div>
 ```
+
 *index* - like a reserved expresssion
 
-## ngStyle
+### ngStyle
 
 It is attribute directive.
+
 ```html
 <p [ngStyle]="{backgroundColor: getColor()}">Server {{ serverId }} is {{ getServerStatus() }}</p>
 ```
 
-## ngClass
+### ngClass
 
 It only adds a CSS class if a certain condition is true. It is attribute directive.
 

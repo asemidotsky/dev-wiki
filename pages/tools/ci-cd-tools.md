@@ -1,3 +1,5 @@
+# CI and CD tools
+
 * Jenkins - open source
 * Travis
 * Codeship 
@@ -6,6 +8,6 @@
 
 Strider for closed-source projects, and Travis for open-source projects.
 
- * Ansible
- * Chef
- * Puppet
+* Ansible
+* Chef
+* Puppet

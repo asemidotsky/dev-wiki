@@ -1,10 +1,12 @@
+# Node.js Index
+
 * [Setup](nodejs-setup)
-* [Core](nodejs-core)
+* [Fundamentals](nodejs-core)
 * [Developing guide](nodejs-dev)
 * [Testing](nodejs-testing)
 * [Great packages](nodejs-packages)
 
-# Links
+## Links
 
 * [Learn Node.js: A Beginner's Guide](http://stackabuse.com/learn-node-js-a-beginners-guide/)
 * [Node Hero tutorial](https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/)

@@ -1,5 +1,6 @@
+# Node.js Development
 
-# Stack
+## Stack
 
 * TypeScript
 * Express - web api
@@ -10,15 +11,15 @@ Language features:
 * ES6
 * Promises
 
-# Project structure
+## Project structure
 
-## TypeScript based project
+### TypeScript based project
 
 ```bash
 .
 |-- src
 |   |-- config
-|   |-- public 
+|   |-- public
 |       |-- feature-1
 |       |-- feature-2
 |       |-- feature-3
@@ -29,7 +30,7 @@ Language features:
 
 [example](https://github.com/Microsoft/TypeScript-Node-Starter)
 
-## Pure js based project
+### Pure js based project
 
 ```bash
 .
@@ -37,7 +38,7 @@ Language features:
 |   |-- components
 |   |   |-- common.js
 |   |   |-- logger.js
-|   |   |-- rabbitmq.js 
+|   |   |-- rabbitmq.js
 |   |   |-- server.js
 |   |-- index.js
 |   |-- social-preprocessor-worker.js
@@ -81,13 +82,13 @@ Language features:
 `-- package.json
 ```
 
-# Client & Server are both in TypeScript, one repository
+## Client & Server are both in TypeScript, one repository
 
 [Creating a MEAN Stack with Angular 2 and TypeScript](https://medium.com/@tsmith18256/creating-a-mean-stack-with-angular-2-and-typescript-3dd23b3e717f)
 
-# Web api
+## Web api
 
-# Tests
+## Tests
 
 * Jest (.test.ts) - integration, api testing
 * Jasmine (.spec.ts)
@@ -102,6 +103,7 @@ Language features:
 * [Debugging Mocha Tests Written in TypeScript with Visual Studio Code](https://saravanaj.github.io/2017/02/05/debugging-mocha-tests-written-in-typescript-with-visual-studio-code/)
 
 Integration testing (end-to-end) for API:
+
 * [SuperTest](https://github.com/visionmedia/supertest)
 * [hippie](https://github.com/vesln/hippie)
 
@@ -111,8 +113,7 @@ Frontend applications:
 
  [Protractor](https://github.com/angular/protractor) for AngularJS applications or [Nightwatch](http://nightwatchjs.org/). To make sure it works in every browser you support, run your end-to-end tests on a Selenium cluster. Or you can use services like [Sauce Labs](https://saucelabs.com/) or [Browserstack](https://www.browserstack.com/).
 
-# Linting
-
+## Linting
 
 [TypeScript Linting with TSLint – Setup, Configuration, & Rules](https://spin.atomicobject.com/2017/06/05/tslint-linting-setup/)
 
@@ -124,11 +125,11 @@ npm install tslint typescript -g
 
 Rules extention with [TSLint-ESLint](https://github.com/buzinas/tslint-eslint-rules)
 
-```
+```bash
 npm install --save-dev tslint-eslint-rules
 ```
 
-# Build
+## Build
 
 The following steps can occur:
 
@@ -138,23 +139,23 @@ The following steps can occur:
 * run integration/end-to-end tests
 * creating artifacts (bundle the node_modules directory to it as well, so during deployment, you won't depend on NPM)
 
-# Deploy
+## Deploy
 
 * [Setup for production](https://ru.godaddy.com/help/set-up-nodejs-application-for-production-ubuntu-17352)
 * [Automating Node.js Deployments with Docker and Bamboo](https://hnryjms.io/2016/11/automated-deploy/)
 * [Continuous Deployment of Node.js Applications](https://blog.risingstack.com/continuous-deployment-of-node-js-applications/)
 * [Package Your Node.js Application for Deployment in an Offline Environment](https://dzone.com/articles/how-to-package-your-nodejs-application-for-deploym)
 
-# API Documentation
+## API Documentation
 
 * [Documenting your Node.js API with apiDoc](https://jonathas.com/documenting-your-nodejs-api-with-apidoc/)
 
-# Run
+## Run
 
-When port is accessed in the code as `process.env.PORT` you can run app with selected port using 
+When port is accessed in the code as `process.env.PORT` you can run app with selected port using
 
 ```PORT=7878 node app.js```
 
-# Operating in Production
+## Operating in Production
 
 * [Operating Node.js in Production](https://blog.risingstack.com/operating-node-in-production/)

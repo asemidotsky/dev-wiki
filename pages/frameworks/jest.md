@@ -1,6 +1,9 @@
-# Global setup/teardown
+# Jest
+
+## Global setup/teardown
 
 In package.config
+
 ```js
 "jest": {
     "globalSetup": "./jest-setup.js",
@@ -13,7 +16,7 @@ module.exports = async function() {
 }
 ```
 
-# jest.config.js
+## jest.config.js
 
 ```js
 module.exports =
@@ -28,6 +31,6 @@ module.exports =
 }
 ```
 
-# Links
+## Links
 
 * [How to debug Jest tests with VSCode](https://medium.com/@mattmazzola/how-to-debug-jest-tests-with-vscode-48f003c7cb41)

@@ -1,6 +1,8 @@
+# Linux basics
+
 [Tools](linux-tools)
 
-# Connect
+## Connect
 
 ```bash
 ssh remote_username@remote_host
@@ -9,29 +11,29 @@ ssh remote_username@remote_host
 exit
 ```
 
-# Generate SSH Keys
+## Generate SSH Keys
 
 SSH keys should be generated on the computer you wish to log in from. This is usually your local computer.
 
 ```bash
-$ ssh-keygen -t rsa
+ssh-keygen -t rsa
 ```
 
 Press enter to accept the defaults. Your keys will be created at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa.
 
-Change into the .ssh directory by typing: 
+Change into the .ssh directory by typing:
 
-```
+```bash
 cd ~/.ssh
 ```
 
 You can copy the public key to the remote server by issuing this command:
 
-```
+```bash
 ssh-copy-id remote_username@remote_host
 ```
 
-## Adding SSH key to the ssh-agent
+### Adding SSH key to the ssh-agent
 
 Start the ssh-agent in the background.
 
@@ -45,7 +47,7 @@ Add your SSH private key to the ssh-agent. If you created your key with a differ
 ssh-add ~/.ssh/id_rsa
 ```
 
-# SSH
+## SSH
 
 ```bash
 # if you changed the port number in your sshd configuration
@@ -55,9 +57,10 @@ $ ssh -p port_number remote_host
 $ ssh remote_host command_to_run
 ```
 
-# Users
+## Users
 
-# Groups
+## Groups
+
 ```bash
 # create user group
 sudo groupadd sales
@@ -75,17 +78,14 @@ members sales
 chgrp sales sales.report
 ```
 
-
-# Permissions
-
+## Permissions
 
 ```bash
 # see folder items permissions
 ls -la
 ```
 
-
-# Kill process
+## Kill process
 
 ```bash
 # to find out all running processes in the system
@@ -99,16 +99,17 @@ $ kill -s 15 2358
 $ kill -9 PID-HERE
 $ kill -9 3553
 ```
+
 [more](https://www.cyberciti.biz/faq/stop-process-ubuntu-linux-command/)
 
-# Run script as another user
+## Run script as another user
 
 ```bash
 su - anotherusername -c "<command>"
 
 ```
 
-# Mount windows network share folder
+## Mount windows network share folder
 
 ```bash
 # 1. mount
@@ -125,31 +126,33 @@ umount /mnt/ubuntu-dir-name
 mount -v | grep 'type cifs'
 
 ```
+
 [more](https://wiki.ubuntu.com/MountWindowsSharesPermanently)
 
-# Extract zip
+## Extract zip
 
 ```bash
 tar -xvzf robomongo-0.9.0-linux-x86_64-0786489.tar.gz
 ```
 
-# Transfer files to server
+## Transfer files to server
 
 [Using SFPT](https://www.computerhope.com/unix/sftp.htm)
 
 Copy file.txt from current directory to home dir for *semidotsky* user
+
 ```bash
 sftp semidotsky@192.168.1.1
 put file.txt
 ```
 
-# Get listing on a specific TCP port
+## Get listing on a specific TCP port
 
-Type the following command to see IPv4 port(s), enter: 
+Type the following command to see IPv4 port(s), enter:
 
 `lsof -Pnl +M -i4`
 
-Type the following command to see IPv6 listing port(s), enter: 
+Type the following command to see IPv6 listing port(s), enter:
 
 `lsof -Pnl +M -i6`
 
@@ -160,22 +163,21 @@ netstat -npl
 
 [more](https://www.cyberciti.biz/faq/find-out-which-service-listening-specific-port/)
 
-# Work with programms, packages
-
+## Work with programms, packages
 
 ```bash
 dpkg-query -L nodejs
 ```
+
 will list the full path to every file belonging to the nodejs package
 
-## Move programs to background
+### Move programs to background
 
 * CTRL+Z puts a job to the background and you get a bash prompt back
 * type `jobs` to seeall jobs
 * `bg #` - run job # in background
 * `fg #` - bring job with # number to foreground
 
-
-# Links
+## Links
 
 * [SSH/TransferFiles](https://help.ubuntu.com/community/SSH/TransferFiles)

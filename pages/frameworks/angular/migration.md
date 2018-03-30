@@ -1,4 +1,6 @@
-# Preparation
+# Migration to Angular
+
+## Preparation
 
 For successfull migration you should prepare you AngularJS application.
 
@@ -8,7 +10,7 @@ For successfull migration you should prepare you AngularJS application.
 1. Use a Module Loader such as SystemJS, Webpack, or Browserify
 1. Migrating to TypeScript
 
-# Links
+## Links
 
 * [Preparing for Migration from AngularJS (1.x) to Angular (2+)](https://www.pluralsight.com/courses/migrating-applications-angular-2)
 * [Migrating Applications from AngularJS to Angular](https://www.pluralsight.com/courses/migrating-applications-angularjs-angular)

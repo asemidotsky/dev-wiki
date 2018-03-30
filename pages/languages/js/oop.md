@@ -1,4 +1,6 @@
-# Inheritance In ES5
+# OOP in JavaScript
+
+## Inheritance In ES5
 
 ```js
 console.log('PERSON');
@@ -52,9 +54,9 @@ console.log(
 );
 ```
 
-# In ES6
+## In ES6
 
-## Inheritance
+### Inheritance
 
 We must remember that is just syntactic sugar.
 
@@ -98,7 +100,7 @@ console.log(
 );
 ```
 
-## Static methods
+### Static methods
 
 ```js
 class Person {
@@ -111,13 +113,13 @@ class Person {
 console.log( Person.say('Hello') );
 ```
 
-## Private Methods
+### Private Methods
 
 There is no *private keyword* in JavaScript like in C# and Java. By convention when we want to define *‘private’* values, we use a underscore before the word:
 
 ```js
 class Person {
- constructor (name, phone) { 
+ constructor (name, phone) {
    this.name = name;
    this._phone = phone;
  }
@@ -143,7 +145,7 @@ const p = new Person('Alex', 792012121);
 console.log(p._phone); // Print's undefined
 ```
 
-## Getters and Setters
+### Getters and Setters
 
 ```js
 const secret = new WeakMap();
@@ -160,14 +162,14 @@ class Person {
   }
 }
 const p = new Person('Alex', 792012121);
-// Now we can access to the phone by using the getter: 
+// Now we can access to the phone by using the getter:
 console.log(p.phoneNumber); // Print's the number
 // Set a new number
 p.phoneNumber = 432232323;
 console.log(p.phoneNumber); // We get the new number
 ```
 
-## Polymorphism
+### Polymorphism
 
 Is the ability for an object during execution, to reference either an occurrence of his class or an occurrence of any of his descendants classes. Descendants classes may redefine a method.
 
@@ -190,14 +192,14 @@ class Employee extends Person {
   }
   me() {
     return `My name is ${this.name} and my salary is ${this.salary}`;
-  } 
+  }
 }
 
 const ivan = new Employee('Ivan', 1500);
 console.log(ivan.me()); // ->  'My name is Ivan and my salary is 1500'
 ```
 
-# Concepts
+## Concepts
 
 * **class**: Define of a new class/model, abstraction
 * **method**: Function inside a class.

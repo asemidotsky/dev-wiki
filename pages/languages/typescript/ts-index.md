@@ -1,4 +1,5 @@
+# TypeScript Index
 
-# Links
+## Links
 
-* [Basarat GitBook](* https://basarat.gitbooks.io/typescript/content/docs/getting-started.html)
+* [Basarat GitBook](https://basarat.gitbooks.io/typescript/content/docs/getting-started.html)

@@ -1,6 +1,8 @@
-# Viewing the Commit History
+# Git
 
-```
+## Viewing the Commit History
+
+```bash
 git log -p -2
 
 git log --pretty=format:"%h - %an, %ar : %s"

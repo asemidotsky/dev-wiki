@@ -1,4 +1,6 @@
-# Elasticsearch
+# ELK Stack
+
+## Elasticsearch
 
 [Install](http://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html)
 
@@ -11,7 +13,7 @@ sudo systemctl stop elasticsearch.service
 
 logs: `/var/log/elasticsearch/`
 
-# Kibana
+## Kibana
 
 [Install](http://www.elastic.co/guide/en/kibana/current/deb.html)
 
@@ -24,7 +26,7 @@ sudo systemctl stop kibana.service
 
 Log files can be found in `/var/log/kibana/`
 
-# Logstash
+## Logstash
 
 [Install](https://www.elastic.co/guide/en/logstash/current/installing-logstash.html)
 

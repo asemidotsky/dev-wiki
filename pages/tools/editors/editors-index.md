@@ -1,1 +1,3 @@
+# Editors index
+
 * [Nano](nano)
