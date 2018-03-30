@@ -1,4 +1,6 @@
-# Acrhitecture
+# Table of contents
+
+## Acrhitecture
 
 * [Great application design concepts](pages/architecture/great-design)
 * Microservices
@@ -11,16 +13,16 @@
   * AWS
   * Google Cloud
 
-# Languages
+## Languages
 
 * [C#](pages/languages/csharp/csharp-index)
 * [JavaScript](pages/languages/js/index)
   * [ES6](pages/languages/js/es6)
   * [OOP](pages/languages/js/oop)
 * [TypeScript](pages/languages/typescript/ts-index)
-* Go
+* [Go](pages/languages/go/index)
 
-# Frameworks
+## Frameworks
 
 * .NET Core
   * [ASP.NET Core](/pages/frameworks/aspnet/core/index)
@@ -38,23 +40,23 @@
   * [Jest](pages/frameworks/jest)
 * WPF
 
-# Databases
+## Databases
 
 * [MS SQL Server](pages/databases/mssql/mssql-index)
 * [MongoDB](pages/databases/mongodb/mongo-index)
 
-# Data structures
+## Data structures
 
 * General data structures
 * Trees
 
-# Alghoritms
+## Alghoritms
 
-# Practices
+## Practices
 
 * [Testing](pages/practices/testing/testing-index)
 
-# Tools
+## Tools
 
 * [IDE](pages/tools/ide/ide-index)
 * [Editors](pages/tools/editors/editors-index)
@@ -62,26 +64,22 @@
 * [Blogging](pages/tools/blogging-index)
 * [ELK Stack](pages/tools/elk.md)
 
-# Style guides
+## Style guides
 
 * C#
 * SQL
 * Angular
 * AngularJS
 
-# Operating systems
+## Operating systems
 
 * [Linux](pages/os/linux/linux-basics)
   * [Ubuntu](pages/os/ubuntu/ubuntu-index)
 * Windows server
 * Windows
 
-# Learning
+## Learning
 
 * [Technology radar](pages/learning/technology-radar)
 * [Books](pages/learning/books)
 * [Resources](pages/learning/resources)
-
-# Personal
-
-* [Badges wall](pages/badges/badges-wall)

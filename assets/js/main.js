@@ -2,7 +2,7 @@ $(document).ready(function(){
     document.vm = { selectedNavItemId: null };
 
     /* build nav menu from page headers */
-    $("main h1, main h2").each(function(){
+    $("main h2, main h3").each(function(){
       $("#sidebarNavList").append("<li class='nav-item tag-" + this.nodeName.toLowerCase() + "'><a class='nav-link' href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
       var itemId = $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'');
       $(this).attr("id", itemId);    

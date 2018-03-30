@@ -45,7 +45,7 @@ h1 {
   color: #2288bb;
 }
 
-.bd-toc .tag-h2 a {
+.bd-toc .tag-h3 a {
   margin-left: 15px;
 }
 
@@ -55,7 +55,7 @@ h1 {
 }
 
 main h2, main h3, main h4 {
-  padding-bottom: 15px;
+  margin: 15px 0px;
 }
 
 blockquote {
@@ -63,6 +63,14 @@ blockquote {
   border-left: 0.5em solid #2288bb;
   background-color: #f8f8f8;
   padding: 12px 12px 2px 12px;
+}
+
+/*
+  Search
+ */
+
+#searchBox {
+  width:160px;
 }
 
 /*

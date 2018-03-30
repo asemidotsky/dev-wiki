@@ -45,10 +45,6 @@ h1 {
   margin-left: 0;
 }*/
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  color: #fff;
-  background-color: #2288bb;
-}
 
 /**** layout ver 2 *****/
 
@@ -80,6 +76,19 @@ h1 {
   color: #2288bb;
 }
 
-.bd-toc .tag-h2 a {
+.bd-toc .tag-h3 a {
   margin-left: 15px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #2288bb;
+}
+
+main h2, main h3, main h4 {
+  margin: 15px 0px;
+}
+
+#searchBox {
+  width:160px;
 }
