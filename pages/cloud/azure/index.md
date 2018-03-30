@@ -1,48 +1,53 @@
+# Azure cloud
+
 * Azure - Public Cloud
 * Azure Stack - Private Cloud
 
 Azure versions (co-existence):
+
 * Azure v1 - Azure Service Management (ASM), Classic portal
 * Azure v2 - Azure Resource Management (ARM), New portal/API's/Tooling
 
-# Azure 2
+## Azure 2
 
 * Building Blocks
 * Individual Resources
-   * Belongs only to one Resource Group
+  * Belongs only to one Resource Group
 * Resource *Groups*
-   * Contains many resources
+  * Contains many resources
 * ARM Templates (JSON)
-   * Defines resources, dependencies, all configuration
+  * Defines resources, dependencies, all configuration
 * Tags
-   * Group resources by one or more tags
+  * Group resources by one or more tags
 * RBAC (Role based access control)
 
-# Account & Subscriptions
+## Account & Subscriptions
 
 Account:
+
 * has a single user by default - account administrator.
 * has no billing info attached to it.
 * has no resources.
 
 Subscription:
+
 * has a billing info
 * has a payment method
 * belongs to single directory
 
 ![Azure account and subscription](azure-account-and-subscription.png)
 
-# Global Infrastructure
+## Global Infrastructure
 
 * Geos
-    * 1+ Region
-    * 1+ Region Pair
+  * 1+ Region
+  * 1+ Region Pair
 * Regions
-    * 1+ DC's
+  * 1+ DC's
 * Region Pairs
-    * 2 Regions 
+  * 2 Regions
 
-# Role Based Access Control (RBAC)
+## Role Based Access Control (RBAC)
 
 * Roles
 * Scopes
@@ -57,33 +62,32 @@ A list of **actions**.
 
 ![Assignment role to scope](role-scope-assignment.png)
 
-# Azure Compute
+## Azure Compute
 
 * Virtual Machines
-    * Type
-    * Size
+  * Type
+  * Size
 * App Service
-    * Runtime environments
+  * Runtime environments
 * Cloud Services
-    * Web Roles
-    * Worker Roles
-    * Have much more flexibility in configuration of underlying infrastructure
+  * Web Roles
+  * Worker Roles
+  * Have much more flexibility in configuration of underlying infrastructure
 * Container Service
-    * Docker
-    * Kubernetes
+  * Docker
+  * Kubernetes
 * Azure Functions
 * Service Fabric
 * Batch
 
-# Azure Storage
+## Azure Storage
 
 * Blob Storage
-    * For unstructured data
-    * Massive data: media files, images, etc.
-    * Stores objects. Object is like a file. Object has: key (name), data, metadata
-    * **Block blobs** are used to store files that can be accessed sequentially and are not subject to frequent updates. Some common examples of where Block blobs are leveraged include video files and images.
-    * **Page blobs** are used to store files that need random access or are updated 
-frequently.
+  * For unstructured data
+  * Massive data: media files, images, etc.
+  * Stores objects. Object is like a file. Object has: key (name), data, metadata
+  * **Block blobs** are used to store files that can be accessed sequentially and are not subject to frequent updates. Some common examples of where Block blobs are leveraged include video files and images.
+  * **Page blobs** are used to store files that need random access or are updated frequently.
 * Queue Storage
 * File Storage
 * Disk Storage
@@ -91,13 +95,14 @@ frequently.
 Charges by two factors: amount of storage or amount of accessing the data
 
 Storage extras:
+
 * StorSimple
 * Archive Storage
 * Data Lake Store - large scale objects for big data analysis
 
 [Azure Storage Explorer](https://azure.microsoft.com/en-au/features/storage-explorer/)
 
-# Azure Networking
+## Azure Networking
 
 * Virtual Networks (vNet)
 * VPN Gateway
@@ -105,82 +110,90 @@ Storage extras:
 * Content Delivery Network
 
 Products:
+
 * Load Balancer
 * Application Gateway
 * Traffic Manager
 * Azure DNS
 
-# Databases
+## Databases
 
 Relational:
+
 * SQL Database
 * Azure Database MySql
 * Azure Database PostgreSQL
 * SQL Data warehouse
 
 NoSQL:
+
 * Table Storage
 * Azure Cosmos DB
 * Stretch Database
 * Redis Cache
 * Data factory
 
-# Web & Mobile
+## Web & Mobile
 
 Azure App Service:
+
 * Web apps
 * Mobile Apps
 * Logic Apps
 * API Apps
 
 Other:
+
 * Media Services
 * Azure Search
 * API Management
 * Notification Hubs
 * Service Bus
 
-# AI & Cognitive Services
+## AI & Cognitive Services
 
 * Machine Learning
 * Azure Bot Service
 * Cognitive Services
-    * Vision
-    * Knowledge
-    * Language
-    * Speech
-    * Search
+  * Vision
+  * Knowledge
+  * Language
+  * Speech
+  * Search
 
-# Big Data & Analytics
+## Big Data & Analytics
 
 * HDInsight
-    * Hadoop and it's ecosystem
+  * Hadoop and it's ecosystem
 * Data Lake Analytics
 * Azure Analysis Service
-* PowerBI 
+* PowerBI
 
-# Internet of Things
+## Internet of Things
 
 * IOT Hub
-    * Bidirectional communication with device
+  * Bidirectional communication with device
 * IOT Edge
 * Stream Analytics
 * Event Grid
 * Event Hubs
-    * Incoming only
+  * Incoming only
 
-# Management & Monitoring
+## Management & Monitoring
 
 Monitoring:
+
 * Azure Monitor
 * Log Analytics
 * Application Insights
+
 Management:
+
 * Backup
 * Site Recovery
 * Scheduler
 
-# Security & Identity
+## Security & Identity
 
 * Security Centre
 * Role-Based Access Control
@@ -190,9 +203,9 @@ Management:
 * Azure Active Directory Domain Services
 * Multi-Factor Authentication
 
-# Resources
+## Resources
 
-## Virtual Networks
+### Virtual Networks
 
 * *Isolated* Network
 * Has an *address space* for the network
@@ -200,6 +213,6 @@ Management:
 * Each of those can have an *IP range*
 * Can be *connected* together
 
-# Links
+## Links
 
 * [Azure Roadmap](https://azure.microsoft.com/en-us/roadmap/)

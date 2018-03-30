@@ -1,4 +1,6 @@
-# I work with
+# About Me
+
+## I work with
 
 <div class="container-fluid badges-table">
     <div class="row">
@@ -115,5 +117,5 @@
     </div>
 </div>
 
-# I worked with
+## I worked with
 

@@ -1,4 +1,6 @@
-# Characteristics 
+# Cloud
+
+## Characteristics
 
 The NIST Definition of Cloud Computing (publication 800-145) is defined what is Cloud.
 
@@ -16,21 +18,21 @@ The NIST Definition of Cloud Computing (publication 800-145) is defined what is 
 1. Measured service
    * "Resource usage can be **monitored, controled, and reported** providing transparency for both the provider and consumer of the utilized service."
 
-# Deployment Models
+## Deployment Models
 
-   * Public
-       * Azure, AWS, Google Cloud
-       * Is easy
-   * Private
-       * Be *very* skeptical
-   * Hybryd
-       * Public + Public
-       * Public + Private
-       * Be skeptical
-   * Community
-       * It exists
+* Public
+  * Azure, AWS, Google Cloud
+  * Is easy
+* Private
+  * Be *very* skeptical
+* Hybryd
+  * Public + Public
+  * Public + Private
+  * Be skeptical
+* Community
+  * It exists
 
-# Service Models
+## Service Models
 
 Service model defines what end-users gets, manages, sees.
 
@@ -38,29 +40,31 @@ Service model defines what end-users gets, manages, sees.
 Billing (cost) for service is based on UoC.
 
 Three service models:
+
 * **IaaS** - Infrastructure as a Service
-    * UoC: VM or OS
-    * Billing: Per second/minute/hour when VM is active
+  * UoC: VM or OS
+  * Billing: Per second/minute/hour when VM is active
 * **PaaS** - Platform as a Service
-    * UoC: Runtime Environment (Node.js, PHP, etc.)
+  * UoC: Runtime Environment (Node.js, PHP, etc.)
 * **SaaS** - Software as a Service
 
 ![Cloud service models](cloud-service-models.png)
 
 IaaS -> PaaS -> SaaS:
+
 * You loose flexibility
 * You gain in terms of easy of management: less costs, less risks
 
 AWS and Azure service models priorities and path.
+
 * Azure more SaaS and PaaS
 * AWS more IaaS and PaaS
 
 ![Cloud service models](aws-azure-service-models-path.png)
 
 Additional notable service models:
+
 * **FaaS** - Function as a Service - when you upload a single function (**serverless architecture**). Examples: Azure Functions, AWS Lambda
 * **DBaaS** - Database as a Service. Examples: Azure Cosmos DB, AWS DynamoDB, Google Spanner. They have fairly deep into performance tuning and configuration.
 
 ![Cloud service models range](cloud-service-models-range.png)
-
-

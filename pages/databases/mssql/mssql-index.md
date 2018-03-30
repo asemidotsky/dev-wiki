@@ -1,6 +1,8 @@
-# Tools
+# MS SQL Server
 
-## [Microsoft SQL Operations Studio](https://docs.microsoft.com/en-us/sql/sql-operations-studio/download)
+## Tools
+
+### [Microsoft SQL Operations Studio](https://docs.microsoft.com/en-us/sql/sql-operations-studio/download)
 
 ``` bash
 cd ~

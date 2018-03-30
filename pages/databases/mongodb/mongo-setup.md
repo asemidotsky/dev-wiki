@@ -1,12 +1,14 @@
-# Ubuntu setup 
+# MongoDB Setup
+
+## Ubuntu setup
 
 [Install MongoDB Community Edition on Ubuntu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
-# Configure Auth
+## Configure Auth
 
 [MongoDB manual - Enable Auth](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
 
-## Create users
+### Create users
 
 ```js
 // create super admin user with name 'admin'
@@ -21,9 +23,9 @@ db.createUser({
 
 // create user 'alex' as owner of database 'Staging-Payments'
 db.createUser({
-	user: "alex",
-	pwd: "030201",
-	roles: [ { role: "dbOwner", db: "Staging-Payments" } ]
+  user: "alex",
+  pwd: "030201",
+  roles: [ { role: "dbOwner", db: "Staging-Payments" } ]
 }
 )
 
@@ -39,19 +41,19 @@ db.createUser(
 
 // grant roles for existing user
 db.grantRolesToUser(
-	"admin",
-	[ { role: "dbOwner", db: "Dev-Test" }, 
+  "admin",
+  [ { role: "dbOwner", db: "Dev-Test" },
           { role: "dbOwner", db: "Staging-Test" } ]
 )
 ```
 
-## Connect and authenticate
+### Connect and authenticate
 
-### To authenticate during connection
+#### To authenticate during connection
 
 `mongo --port 27017 -u "myUserAdmin" -p "abc123" --authenticationDatabase "admin"`
 
-### To authenticate after connecting
+#### To authenticate after connecting
 
 ```js
 use admin
