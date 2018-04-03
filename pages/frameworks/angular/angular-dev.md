@@ -76,12 +76,43 @@ Selector actually works like a CSS selector.
 
 ## Templates and Styles
 
-### Template expressions guidelines
+Template expressions guidelines:
 
 * No visible side effects
 * Quick execution
 * Simplicity
 * Idempotence
+
+### View encapsulation
+
+View encapsulation defines how styles will be applied to the component: component styles only applied to component template or spread out to other parts.
+
+```ts
+@Component({
+  selector: 'app-user',
+  encapsulation: ViewEncapsulation.Emulated
+})
+```
+
+ViewEncapsulation:
+
+* Emulated - default, Angular approach (when you see some strange attributes on html elements, like `_ngcontent-c2`)
+* Native - uses Shadow DOM technology
+* None - no view encapsulation
+
+### Local references
+
+```html
+<input
+  type="text"
+  class="form-control"
+  #serverNameInput>
+
+<button
+  (click)="onAddServer(serverNameInput.value)">Add Server</button>
+```
+
+`#serverNameInput` - is a *Local Reference*
 
 ## Databinding
 
