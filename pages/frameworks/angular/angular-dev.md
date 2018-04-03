@@ -157,6 +157,23 @@ Element properties may be the more common targets, but Angular looks first to se
 <div [ngClass]="classes">[ngClass] binding to the classes property</div>
 ```
 
+#### Custom property binding
+
+```ts
+// app-server-element
+export class ServerElementComponent implements OnInit {
+  @Input('srvElement') element: { type: string, name: string };
+}
+```
+
+and then in parent component template:
+
+```html
+<app-server-element [srvElement]="serverElement"></app-server-element>
+```
+
+`srvElement` is an alias - a property name outside of the component.
+
 ### Event Binding
 
 ```ts
@@ -177,6 +194,63 @@ export class UsersComponent {
 ```html
 <input type="text" (input)="onUpdateUserName($event)">
 <button (click)="onCreateUser()">Add user</button>
+```
+
+#### Custom event binding
+
+Child component:
+
+```ts
+export class CockpitComponent implements OnInit {
+  @Output('srvCreated') serverCreated = new EventEmitter<{ serverName: string, serverContent: string }>();
+
+  newServerName = '';
+  newServerContent = '';
+
+  onAddServer() {
+    this.serverCreated.emit({
+      serverName: this.newServerName,
+      serverContent: this.newServerContent
+    });
+  }
+}
+```
+
+`srvCreated` is an alias - a event name outside of the component.
+
+```html
+
+<label>Server Name</label>
+<input type="text" [(ngModel)]="newServerName">
+
+<label>Server Content</label>
+<input type="text" [(ngModel)]="newServerContent">
+
+<button (click)="onAddServer()">Add Server</button>
+```
+
+Parent component:
+
+```ts
+export class AppComponent {
+  serverElements = [];
+
+  onServerAdded(serverData: { name: string, content: string }) {
+    this.serverElements.push({
+      name: serverData.name,
+      content: serverData.content
+    });
+  }
+}
+```
+
+```html
+<div>
+  <app-cockpit
+    (srvCreated)="onServerAdded($event)">
+  </app-cockpit>
+  ...
+<div>
 ```
 
 ### Two-Way-Binding
