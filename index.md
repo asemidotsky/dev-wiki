@@ -21,6 +21,7 @@
   * [OOP](pages/languages/js/oop)
 * [TypeScript](pages/languages/typescript/ts-index)
 * [Go](pages/languages/go/index)
+* [HTML](pages/languages/html/html-index), [CSS](pages/languages/css/css-index)
 
 ## Frameworks
 
