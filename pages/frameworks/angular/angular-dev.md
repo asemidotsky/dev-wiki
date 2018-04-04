@@ -61,6 +61,17 @@ Selector actually works like a CSS selector.
 -->
 ```
 
+### Lifecycle
+
+* **ngOnChanges** - Called after a bound input property changes
+* **ngInit** - Called once the component is initialized
+* **ngDoCheck** - Called during every change detection run
+* **ngAfterContentInit** - Called after (ng-content) has been projected into view
+* **ngAfterContentChecked** - Called every time the project content has been checked
+* **ngAfterViewInit** - Called after the component's view (and child views) has been initialized
+* **ngAfterViewChecked** - Called every time the view (and child views) has been checked
+* **ngDestroy** - Called once the component is about to be destroyed
+
 ## Decorators
 
 **Purpose:** Allows to attach some additional information to a class. `@Component(..)` - it is a decorator.
