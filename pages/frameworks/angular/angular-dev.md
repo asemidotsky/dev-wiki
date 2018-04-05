@@ -344,6 +344,17 @@ The p element added or removed from the DOM (not hided) based on provided expres
 </ng-template>
 ```
 
+### ngSwitch
+
+```html
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">Value is 5</p>
+  <p *ngSwitchCase="10">Value is 10</p>
+  <p *ngSwitchCase="15">Value is 15</p>
+  <p>Value is Default</p>
+</div>
+```
+
 ### ngFor
 
 It is structural directive.
