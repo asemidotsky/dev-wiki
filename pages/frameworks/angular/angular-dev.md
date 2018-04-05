@@ -425,11 +425,79 @@ export class BetterHighlightDirective implements OnInit {
   }
 
   ngOnInit() {
-    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue', false, false);
   }
 }
 ```
 
 [More on Renderer2](https://angular.io/api/core/Renderer2)
+
+### HostListener
+
+To make directive reactive.
+
+```ts
+import { Directive, ElementRef, RendererV2, HostListener } from '@angular/core';
+
+@Directive({
+  selector: '[appBetterHighlight]'
+})
+export class BetterHighlightDirective {
+  constructor(private elementRef: ElementRef,
+              private renderer: RendererV2) {
+  }
+
+  @HostListener('mouseenter') mouseover(eventData: Event) {
+    this.renderer.setStyle(this.elementRef.nativeElement,
+     'background-color', 'blue', false, false);
+  }
+
+  @HostListener('mouseleave') mouseleave(eventData: Event {
+    this.renderer.setStyle(this.elementRef.nativeElement,
+     'background-color', 'transparent', false, false);
+  }
+}
+```
+
+### HostBinding
+
+**HostBinding** is more simple way than using Renderer in some cases.
+
+In this example binding to directive properties is also demonstraited.
+
+```ts
+import { Directive, OnInit, HostListener, HostBinding } from '@angular/core';
+
+@Directive({
+  selector: '[appBetterHighlight]'
+})
+export class BetterHighlightDirective implements OnInit {
+  @Input defaultColor: string = 'transparent';
+  @Input highlightColor: string = 'blue';
+
+  @HostBinding('style.backgroundColor') backgroundColor: string;
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.backgroundColor = this.defaultColor;
+  }
+
+  @HostListener('mouseenter') mouseover(eventData: Event) {
+    this.backgroundColor = this.highlightColor;
+  }
+
+  @HostListener('mouseleave') mouseleave(eventData: Event {
+    this.backgroundColor = this.defaultColor;
+  }
+}
+```
+
+```html
+<p appBasicHighlight 
+  [defaultColor]="'yellow'"
+  [highlightColor]="'red'">Custom directive here!</p>
+```
 
 {% endraw %}
