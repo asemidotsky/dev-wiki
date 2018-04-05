@@ -322,7 +322,7 @@ export class TurnGreenDirective {
 
 Directive types:
 
-* **Structural directives** - change the DOM, add or remove elements
+* **Structural directives** - change the DOM, add or remove elements. *Only one structural directive is allowed per element*.
 * **Attribute directives** - only change the element they were placed on
 
 ### ngIf
@@ -374,12 +374,62 @@ It is attribute directive.
 
 ### ngClass
 
-It only adds a CSS class if a certain condition is true. It is attribute directive.
+It is attribute directive.
+
+It only adds a CSS class if a certain condition is true.
 
 ```html
 <p [ngClass]="{online: serverStatus === 'online'}">Server {{ serverId }} is {{ getServerStatus() }}</p>
 ```
 
 *online* is a CSS class name.
+
+### Custom attribute directive
+
+> Using direct reference to the element (`ElemenntRef`) isn't the best approach. Use *Renderer* instead.
+
+```ts
+import { Directive, OnInit, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[appBasicHighlight]'
+})
+export class BasicHighlightDirective implements OnInit {
+  constructor(private elementRef: ElementRef) {
+  }
+
+  ngOnInit() {
+    this.elementRef.nativeElement.style.backgroundColor = 'green';
+  }
+}
+```
+
+Register directive in `declarations` array of you module and then use it:
+
+```html
+<p appBasicHighlight>Style me with a basic directive!</p>
+```
+
+The better approach using Renderer.
+This approach is better because Angular isn't limited to run in the browser, for example it can be run in service workers and etc.
+
+```ts
+import { Directive, OnInit, ElementRef, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[appBetterHighlight]'
+})
+export class BetterHighlightDirective implements OnInit {
+  constructor(private elementRef: ElementRef,
+              private renderer: Renderer2) {
+  }
+
+  ngOnInit() {
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
+  }
+}
+```
+
+[More on Renderer2](https://angular.io/api/core/Renderer2)
 
 {% endraw %}
