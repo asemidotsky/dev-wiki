@@ -472,8 +472,8 @@ import { Directive, OnInit, HostListener, HostBinding } from '@angular/core';
   selector: '[appBetterHighlight]'
 })
 export class BetterHighlightDirective implements OnInit {
-  @Input defaultColor: string = 'transparent';
-  @Input highlightColor: string = 'blue';
+  @Input() defaultColor: string = 'transparent';
+  @Input() highlightColor: string = 'blue';
 
   @HostBinding('style.backgroundColor') backgroundColor: string;
 
@@ -495,9 +495,39 @@ export class BetterHighlightDirective implements OnInit {
 ```
 
 ```html
-<p appBasicHighlight 
+<p appBetterHighlight
   [defaultColor]="'yellow'"
   [highlightColor]="'red'">Custom directive here!</p>
+```
+
+### Custom structural directive
+
+UnlessDirective is a opposite directive to `ngIf`.
+
+```ts
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+
+@Directive({
+  selector: '[appUnless]'
+})
+export class UnlessDirective {
+  @Input() set appUnless(condition: boolean) {
+    if(!condition) {
+      this.vcRef.createEmbeddedView(this.templateRef);
+    } else {
+      this.vcRef.clear();
+    }
+  }
+
+  constructor(private templateRef: TemplateRef<any>,
+              private vcRef: ViewContainerRef) {
+  }
+
+}
+```
+
+```html
+<div *appUnless="condition"></div>
 ```
 
 {% endraw %}
