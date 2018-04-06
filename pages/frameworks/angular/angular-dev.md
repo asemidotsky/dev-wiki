@@ -43,6 +43,11 @@ export class UserInfoComponent {
 
 In examples below I will refer to this `user-component`.
 
+`@Component({...})` is **decorator**.
+
+Decorators allow to attach some additional information to a class. 
+*[Decorator is a TypeScript feature](https://www.typescriptlang.org/docs/handbook/decorators.html).*
+
 ### Selectors
 
 Selector actually works like a CSS selector.
@@ -72,20 +77,7 @@ Selector actually works like a CSS selector.
 * **ngAfterViewChecked** - Called every time the view (and child views) has been checked
 * **ngDestroy** - Called once the component is about to be destroyed
 
-## Decorators
-
-**Purpose:** Allows to attach some additional information to a class. `@Component(..)` - it is a decorator.
-
-*[Decorator is a TypeScript feature](https://www.typescriptlang.org/docs/handbook/decorators.html).*
-
-```ts
-@Component({
-  selector: 'app-user-info',
-  ...
-})
-```
-
-## Templates and Styles
+## Templates
 
 Template expressions guidelines:
 
