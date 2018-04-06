@@ -45,7 +45,7 @@ In examples below I will refer to this `user-component`.
 
 `@Component({...})` is **decorator**.
 
-Decorators allow to attach some additional information to a class. 
+Decorators allow to attach some additional information to a class.
 *[Decorator is a TypeScript feature](https://www.typescriptlang.org/docs/handbook/decorators.html).*
 
 ### Selectors
@@ -532,5 +532,60 @@ export class UnlessDirective {
 ```html
 <div *appUnless="condition"></div>
 ```
+
+## Services
+
+Create service:
+
+```ts
+export class LoggingService {
+  log (message: string) {
+    console.log(message);
+  }
+}
+
+// if service depends on other service
+// you should mark it as Injectable
+@Injectable()
+export class AccountingService {
+  constructor(private logService: LoggingService) {}
+}
+```
+
+Register/Provide service in module or component:
+
+```ts
+@NgModule({
+  ...
+  providers: [LoggingService]
+  ...
+})
+
+//or
+
+@Component({
+  ...
+  providers: [LoggingService]
+  ...
+})
+```
+
+Use service in components and other services:
+
+```ts
+export class SomeComponent {
+  constructor(private logService: LoggingService) {}
+}
+```
+
+Angular use **Hierarchical Injector**.
+
+1. **AppModule level** - same Instance of Service is available **Application-wide**
+1. **AppComponent** - same Instance of Service is available for **all Components** (but **not for other Services**)
+1. **Any other Component** - same Instance of Service is available for **the Component and all its child components**
+
+Service registration on lower level is override service registration on higher level.
+
+> You can use EventEmiters in services to provide some publish-subscriber behaviour.
 
 {% endraw %}
