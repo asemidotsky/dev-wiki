@@ -651,7 +651,7 @@ var res = str.replace(/school/i, "Google");
 #### RegExp Object
 
 ```js
-/* 
+/*
 test() method - it searches a string for a pattern,
 and returns true or false, depending on the result
 */
@@ -686,6 +686,25 @@ Operator | Description | Example | Result |
 !        | NOT    | !(x == y) | true     |
 cond ? v1 : v2 | Ternary operator    | var v = (age < 18) ? "Young":"Old"; |  |
 
+## Errors
+
+```js
+try {
+    // Block of code to try
+
+    // you can throw a custom exception
+    if(isNaN(x)) throw "not a number";
+}
+catch(err) {
+    // Block of code to handle errors
+    // err - Error object with two properties: name and message
+}
+finally {
+    // Block of code to be executed regardless
+    // of the try / catch result
+}
+```
+
 ## Functions
 
 ## Objects
@@ -697,17 +716,66 @@ cond ? v1 : v2 | Ternary operator    | var v = (age < 18) ? "Young":"Old"; |  |
 
 JavaScript has function scope: Each function creates a new scope - LOCAL scope.
 
-**Strict mode** - Global variables are not created automatically in "Strict Mode".
-
 In HTML, the global scope is the *window* object. *All global variables belong to the window object*
 
-Variables lifetime
+**Variables lifetime**:
 
 The lifetime of a JavaScript variable starts when it is declared.
 
 Local variables are deleted when the function is completed.
 
 In a web browser, global variables are deleted when you close the browser window (or tab), but remain available to new pages loaded into the same window.
+
+**Strict mode**:
+
+Strict mode is declared by adding `"use strict";` to the beginning (ONLY) of a script or a function.
+
+*Not Allowed in Strict Mode*:
+
+* Using a variable/object, without declaring it (global variables are not created automatically)
+* Deleting a variable (or object)
+* Deleting a function
+* Duplicating a parameter name in function args
+* Octal numeric literals - `var x = 010;`
+* Octal escape characters - `var x = "\010";`
+* Writing to a read-only property
+* Writing to a get-only property
+* Deleting an undeletable property - `delete Object.prototype;`
+* The string "eval" cannot be used as a variable - `var eval = 3.14;`
+* The string "arguments" cannot be used as a variable
+* The `with` statement
+
+## Hoisting
+
+**Hoisting** is JS's default behavior of moving declarations to the top of the current scope.
+
+In JS a variable can be used before it has been declared.
+
+```js
+var y;
+x = 5; // Assign 5 to x
+y = x;
+var x; // Declare x
+```
+
+> JavaScript only hoists declarations, not initializations
+
+```js
+var x = 5; // Initialize x
+var res;
+
+res = y; // y - undefined
+
+var y = 7; // Initialize y
+```
+
+## Best Practices
+
+1. Always declare all variables at the beginning of every scope
+
+**Style guides**:
+
+* [W3Schools - JavaScript Style Guide and Coding Conventions](https://www.w3schools.com/js/js_conventions.asp)
 
 ## HTML DOM
 
