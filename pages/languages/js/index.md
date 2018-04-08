@@ -9,8 +9,6 @@ typeof (3)     // Returns "number"
 typeof (3 + 4) // Returns "number"
 ```
 
-### Primitive Data
-
 The typeof operator can return one of these primitive types:
 
 * string
@@ -377,7 +375,7 @@ new Date(dateString)
 new Date(year, month, day, hours, minutes, seconds, milliseconds)
 ```
 
-### Date Formats
+#### Date Formats
 
 There are generally 4 types of JavaScript date input formats:
 
@@ -468,7 +466,7 @@ if (someday > today) {
 }
 ```
 
-## Arrays
+### Arrays
 
 ```js
 var cars = ["Saab", "Volvo", "BMW"];
@@ -489,7 +487,7 @@ cars[cars.length] = "Ford"; // Appends "Ford" to cars
 * Array indexes start with 0
 * The **typeof** operator in JavaScript returns "object" for arrays
 
-### How to Recognize an Array
+#### How to Recognize an Array
 
 The problem is that the JavaScript operator typeof returns "object".
 
@@ -636,6 +634,38 @@ function findArrayMin(arr) {
 }
 ```
 
+### RegExp
+
+Regexp syntax: `/pattern/modifiers;`
+
+Regexp are often used with the two **string methods: search()** and **replace()**:
+
+```js
+var str = "Visit School";
+var n = str.search(/school/i); // n = 6
+
+var res = str.replace(/school/i, "Google");
+// res = 'Visit Google'
+```
+
+#### RegExp Object
+
+```js
+/* 
+test() method - it searches a string for a pattern,
+and returns true or false, depending on the result
+*/
+var patt = /e/;
+var isMatch = patt.test("Hello!"); // = true
+
+/*
+exec() method - it searches a string for a specified pattern, and returns the found text.
+If no match is found, it returns null.
+*/
+```
+
+[JavaScript RegExp Reference - W3Schools](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
+
 ## Operators
 
 Here is not full list of operators, only interesting.
@@ -671,7 +701,7 @@ JavaScript has function scope: Each function creates a new scope - LOCAL scope.
 
 In HTML, the global scope is the *window* object. *All global variables belong to the window object*
 
-### Variables lifetime
+Variables lifetime
 
 The lifetime of a JavaScript variable starts when it is declared.
 
