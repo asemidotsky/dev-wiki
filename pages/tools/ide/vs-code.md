@@ -8,3 +8,4 @@
 * vscode-icons
 * C# for Visual Studio Code (powered by OmniSharp)
 * markdownlint
+* Go

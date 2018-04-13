@@ -645,6 +645,38 @@ function findArrayMin(arr) {
 }
 ```
 
+### RegExp
+
+Regexp syntax: `/pattern/modifiers;`
+
+Regexp are often used with the two **string methods: search()** and **replace()**:
+
+```js
+var str = "Visit School";
+var n = str.search(/school/i); // n = 6
+
+var res = str.replace(/school/i, "Google");
+// res = 'Visit Google'
+```
+
+#### RegExp Object
+
+```js
+/*
+test() method - it searches a string for a pattern,
+and returns true or false, depending on the result
+*/
+var patt = /e/;
+var isMatch = patt.test("Hello!"); // = true
+
+/*
+exec() method - it searches a string for a specified pattern, and returns the found text.
+If no match is found, it returns null.
+*/
+```
+
+[JavaScript RegExp Reference - W3Schools](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
+
 ## Operators
 
 Here is not full list of operators, only interesting.
@@ -750,6 +782,25 @@ while (i < 10);
 >
 > The **continue** statement "jumps over" one iteration in the loop.
 
+## Errors
+
+```js
+try {
+    // Block of code to try
+
+    // you can throw a custom exception
+    if(isNaN(x)) throw "not a number";
+}
+catch(err) {
+    // Block of code to handle errors
+    // err - Error object with two properties: name and message
+}
+finally {
+    // Block of code to be executed regardless
+    // of the try / catch result
+}
+```
+
 ## Functions
 
 ## Objects
@@ -761,17 +812,66 @@ while (i < 10);
 
 JavaScript has function scope: Each function creates a new scope - LOCAL scope.
 
-**Strict mode** - Global variables are not created automatically in "Strict Mode".
-
 In HTML, the global scope is the *window* object. *All global variables belong to the window object*
 
-*Variables lifetime*.
+**Variables lifetime**:
 
 The lifetime of a JavaScript variable starts when it is declared.
 
 Local variables are deleted when the function is completed.
 
 In a web browser, global variables are deleted when you close the browser window (or tab), but remain available to new pages loaded into the same window.
+
+**Strict mode**:
+
+Strict mode is declared by adding `"use strict";` to the beginning (ONLY) of a script or a function.
+
+*Not Allowed in Strict Mode*:
+
+* Using a variable/object, without declaring it (global variables are not created automatically)
+* Deleting a variable (or object)
+* Deleting a function
+* Duplicating a parameter name in function args
+* Octal numeric literals - `var x = 010;`
+* Octal escape characters - `var x = "\010";`
+* Writing to a read-only property
+* Writing to a get-only property
+* Deleting an undeletable property - `delete Object.prototype;`
+* The string "eval" cannot be used as a variable - `var eval = 3.14;`
+* The string "arguments" cannot be used as a variable
+* The `with` statement
+
+## Hoisting
+
+**Hoisting** is JS's default behavior of moving declarations to the top of the current scope.
+
+In JS a variable can be used before it has been declared.
+
+```js
+var y;
+x = 5; // Assign 5 to x
+y = x;
+var x; // Declare x
+```
+
+> JavaScript only hoists declarations, not initializations
+
+```js
+var x = 5; // Initialize x
+var res;
+
+res = y; // y - undefined
+
+var y = 7; // Initialize y
+```
+
+## Best Practices
+
+1. Always declare all variables at the beginning of every scope
+
+**Style guides**:
+
+* [W3Schools - JavaScript Style Guide and Coding Conventions](https://www.w3schools.com/js/js_conventions.asp)
 
 ## HTML DOM
 

@@ -2,24 +2,6 @@
 
 {% raw %}
 
-## CLI
-
-In order to update the angular-cli package installed globally in your system, you need to run:
-
-```bash
-npm uninstall -g angular-cli
-npm cache clean
-npm install -g @angular/cli@latest
-```
-
-Most likely you also want to update your local project version, because inside your project directory it will be selected with higher priority than the global one:
-
-```bash
-npm uninstall --save-dev angular-cli
-npm install --save-dev @angular/cli@latest
-npm install
-```
-
 ## Components
 
 **Purpose:** The main building block for application. The user interface (application) is built by combining components.
@@ -61,6 +43,11 @@ export class UserInfoComponent {
 
 In examples below I will refer to this `user-component`.
 
+`@Component({...})` is **decorator**.
+
+Decorators allow to attach some additional information to a class.
+*[Decorator is a TypeScript feature](https://www.typescriptlang.org/docs/handbook/decorators.html).*
+
 ### Selectors
 
 Selector actually works like a CSS selector.
@@ -79,27 +66,56 @@ Selector actually works like a CSS selector.
 -->
 ```
 
-## Decorators
+### Lifecycle
 
-**Purpose:** Allows to attach some additional information to a class. `@Component(..)` - it is a decorator.
+* **ngOnChanges** - Called after a bound input property changes
+* **ngInit** - Called once the component is initialized
+* **ngDoCheck** - Called during every change detection run
+* **ngAfterContentInit** - Called after (ng-content) has been projected into view
+* **ngAfterContentChecked** - Called every time the project content has been checked
+* **ngAfterViewInit** - Called after the component's view (and child views) has been initialized
+* **ngAfterViewChecked** - Called every time the view (and child views) has been checked
+* **ngDestroy** - Called once the component is about to be destroyed
 
-*[Decorator is a TypeScript feature](https://www.typescriptlang.org/docs/handbook/decorators.html).*
+## Templates
 
-```ts
-@Component({
-  selector: 'app-user-info',
-  ...
-})
-```
-
-## Templates and Styles
-
-### Template expressions guidelines
+Template expressions guidelines:
 
 * No visible side effects
 * Quick execution
 * Simplicity
 * Idempotence
+
+### View encapsulation
+
+View encapsulation defines how styles will be applied to the component: component styles only applied to component template or spread out to other parts.
+
+```ts
+@Component({
+  selector: 'app-user',
+  encapsulation: ViewEncapsulation.Emulated
+})
+```
+
+ViewEncapsulation:
+
+* Emulated - default, Angular approach (when you see some strange attributes on html elements, like `_ngcontent-c2`)
+* Native - uses Shadow DOM technology
+* None - no view encapsulation
+
+### Local references
+
+```html
+<input
+  type="text"
+  class="form-control"
+  #serverNameInput>
+
+<button
+  (click)="onAddServer(serverNameInput.value)">Add Server</button>
+```
+
+`#serverNameInput` - is a *Local Reference*
 
 ## Databinding
 
@@ -175,6 +191,23 @@ Element properties may be the more common targets, but Angular looks first to se
 <div [ngClass]="classes">[ngClass] binding to the classes property</div>
 ```
 
+#### Custom property binding
+
+```ts
+// app-server-element
+export class ServerElementComponent implements OnInit {
+  @Input('srvElement') element: { type: string, name: string };
+}
+```
+
+and then in parent component template:
+
+```html
+<app-server-element [srvElement]="serverElement"></app-server-element>
+```
+
+`srvElement` is an alias - a property name outside of the component.
+
 ### Event Binding
 
 ```ts
@@ -195,6 +228,63 @@ export class UsersComponent {
 ```html
 <input type="text" (input)="onUpdateUserName($event)">
 <button (click)="onCreateUser()">Add user</button>
+```
+
+#### Custom event binding
+
+Child component:
+
+```ts
+export class CockpitComponent implements OnInit {
+  @Output('srvCreated') serverCreated = new EventEmitter<{ serverName: string, serverContent: string }>();
+
+  newServerName = '';
+  newServerContent = '';
+
+  onAddServer() {
+    this.serverCreated.emit({
+      serverName: this.newServerName,
+      serverContent: this.newServerContent
+    });
+  }
+}
+```
+
+`srvCreated` is an alias - a event name outside of the component.
+
+```html
+
+<label>Server Name</label>
+<input type="text" [(ngModel)]="newServerName">
+
+<label>Server Content</label>
+<input type="text" [(ngModel)]="newServerContent">
+
+<button (click)="onAddServer()">Add Server</button>
+```
+
+Parent component:
+
+```ts
+export class AppComponent {
+  serverElements = [];
+
+  onServerAdded(serverData: { name: string, content: string }) {
+    this.serverElements.push({
+      name: serverData.name,
+      content: serverData.content
+    });
+  }
+}
+```
+
+```html
+<div>
+  <app-cockpit
+    (srvCreated)="onServerAdded($event)">
+  </app-cockpit>
+  ...
+<div>
 ```
 
 ### Two-Way-Binding
@@ -224,7 +314,7 @@ export class TurnGreenDirective {
 
 Directive types:
 
-* **Structural directives** - change the DOM, add or remove elements
+* **Structural directives** - change the DOM, add or remove elements. *Only one structural directive is allowed per element*.
 * **Attribute directives** - only change the element they were placed on
 
 ### ngIf
@@ -244,6 +334,17 @@ The p element added or removed from the DOM (not hided) based on provided expres
 <ng-template #noServer>
   <p>No server was created</p>
 </ng-template>
+```
+
+### ngSwitch
+
+```html
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">Value is 5</p>
+  <p *ngSwitchCase="10">Value is 10</p>
+  <p *ngSwitchCase="15">Value is 15</p>
+  <p>Value is Default</p>
+</div>
 ```
 
 ### ngFor
@@ -276,12 +377,215 @@ It is attribute directive.
 
 ### ngClass
 
-It only adds a CSS class if a certain condition is true. It is attribute directive.
+It is attribute directive.
+
+It only adds a CSS class if a certain condition is true.
 
 ```html
 <p [ngClass]="{online: serverStatus === 'online'}">Server {{ serverId }} is {{ getServerStatus() }}</p>
 ```
 
 *online* is a CSS class name.
+
+### Custom attribute directive
+
+> Using direct reference to the element (`ElemenntRef`) isn't the best approach. Use *Renderer* instead.
+
+```ts
+import { Directive, OnInit, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[appBasicHighlight]'
+})
+export class BasicHighlightDirective implements OnInit {
+  constructor(private elementRef: ElementRef) {
+  }
+
+  ngOnInit() {
+    this.elementRef.nativeElement.style.backgroundColor = 'green';
+  }
+}
+```
+
+Register directive in `declarations` array of you module and then use it:
+
+```html
+<p appBasicHighlight>Style me with a basic directive!</p>
+```
+
+The better approach using Renderer.
+This approach is better because Angular isn't limited to run in the browser, for example it can be run in service workers and etc.
+
+```ts
+import { Directive, OnInit, ElementRef, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[appBetterHighlight]'
+})
+export class BetterHighlightDirective implements OnInit {
+  constructor(private elementRef: ElementRef,
+              private renderer: Renderer2) {
+  }
+
+  ngOnInit() {
+    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue', false, false);
+  }
+}
+```
+
+[More on Renderer2](https://angular.io/api/core/Renderer2)
+
+### HostListener
+
+To make directive reactive.
+
+```ts
+import { Directive, ElementRef, RendererV2, HostListener } from '@angular/core';
+
+@Directive({
+  selector: '[appBetterHighlight]'
+})
+export class BetterHighlightDirective {
+  constructor(private elementRef: ElementRef,
+              private renderer: RendererV2) {
+  }
+
+  @HostListener('mouseenter') mouseover(eventData: Event) {
+    this.renderer.setStyle(this.elementRef.nativeElement,
+     'background-color', 'blue', false, false);
+  }
+
+  @HostListener('mouseleave') mouseleave(eventData: Event {
+    this.renderer.setStyle(this.elementRef.nativeElement,
+     'background-color', 'transparent', false, false);
+  }
+}
+```
+
+### HostBinding
+
+**HostBinding** is more simple way than using Renderer in some cases.
+
+In this example binding to directive properties is also demonstraited.
+
+```ts
+import { Directive, OnInit, HostListener, HostBinding } from '@angular/core';
+
+@Directive({
+  selector: '[appBetterHighlight]'
+})
+export class BetterHighlightDirective implements OnInit {
+  @Input() defaultColor: string = 'transparent';
+  @Input() highlightColor: string = 'blue';
+
+  @HostBinding('style.backgroundColor') backgroundColor: string;
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.backgroundColor = this.defaultColor;
+  }
+
+  @HostListener('mouseenter') mouseover(eventData: Event) {
+    this.backgroundColor = this.highlightColor;
+  }
+
+  @HostListener('mouseleave') mouseleave(eventData: Event {
+    this.backgroundColor = this.defaultColor;
+  }
+}
+```
+
+```html
+<p appBetterHighlight
+  [defaultColor]="'yellow'"
+  [highlightColor]="'red'">Custom directive here!</p>
+```
+
+### Custom structural directive
+
+UnlessDirective is a opposite directive to `ngIf`.
+
+```ts
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+
+@Directive({
+  selector: '[appUnless]'
+})
+export class UnlessDirective {
+  @Input() set appUnless(condition: boolean) {
+    if(!condition) {
+      this.vcRef.createEmbeddedView(this.templateRef);
+    } else {
+      this.vcRef.clear();
+    }
+  }
+
+  constructor(private templateRef: TemplateRef<any>,
+              private vcRef: ViewContainerRef) {
+  }
+
+}
+```
+
+```html
+<div *appUnless="condition"></div>
+```
+
+## Services
+
+Create service:
+
+```ts
+export class LoggingService {
+  log (message: string) {
+    console.log(message);
+  }
+}
+
+// if service depends on other service
+// you should mark it as Injectable
+@Injectable()
+export class AccountingService {
+  constructor(private logService: LoggingService) {}
+}
+```
+
+Register/Provide service in module or component:
+
+```ts
+@NgModule({
+  ...
+  providers: [LoggingService]
+  ...
+})
+
+//or
+
+@Component({
+  ...
+  providers: [LoggingService]
+  ...
+})
+```
+
+Use service in components and other services:
+
+```ts
+export class SomeComponent {
+  constructor(private logService: LoggingService) {}
+}
+```
+
+Angular use **Hierarchical Injector**.
+
+1. **AppModule level** - same Instance of Service is available **Application-wide**
+1. **AppComponent** - same Instance of Service is available for **all Components** (but **not for other Services**)
+1. **Any other Component** - same Instance of Service is available for **the Component and all its child components**
+
+Service registration on lower level is override service registration on higher level.
+
+> You can use EventEmiters in services to provide some publish-subscriber behaviour.
 
 {% endraw %}
