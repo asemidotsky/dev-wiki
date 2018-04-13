@@ -2,6 +2,20 @@
 
 ## Data Types
 
+* Primitive Data
+  * string
+  * number
+  * boolean
+* Objects
+  * Object
+  * Array
+  * Date
+  * Function
+  * RegExp
+* Other
+  * null
+  * undefined
+
 ```js
 typeof "John"  // Returns "string"
 typeof 3.14    // Returns "number"
@@ -9,23 +23,18 @@ typeof (3)     // Returns "number"
 typeof (3 + 4) // Returns "number"
 ```
 
-### Primitive Data
-
-The typeof operator can return one of these primitive types:
-
-* string
-* number
-* boolean
-* undefined
-
-The typeof operator can return one of two complex types:
-
-* function
-* object
-
-The typeof operator returns object for both objects, arrays, and null.
-
-The typeof operator does not return object for functions.
+| typeof()  |   return    |
+|-----------|-------------|
+| string    | "string"    |
+| number    | "number"    |
+| NaN       | "number"    |
+| boolean   | "boolean"   |
+| object    | "object"    |
+| date      | "object"    |
+| array     | "object"    |
+| null      | "object"    |
+| function  | "function"  |
+| undefined | "undefined" |
 
 ### Undefined
 
@@ -377,7 +386,7 @@ new Date(dateString)
 new Date(year, month, day, hours, minutes, seconds, milliseconds)
 ```
 
-### Date Formats
+#### Date Formats
 
 There are generally 4 types of JavaScript date input formats:
 
@@ -468,7 +477,7 @@ if (someday > today) {
 }
 ```
 
-## Arrays
+### Arrays
 
 ```js
 var cars = ["Saab", "Volvo", "BMW"];
@@ -489,7 +498,7 @@ cars[cars.length] = "Ford"; // Appends "Ford" to cars
 * Array indexes start with 0
 * The **typeof** operator in JavaScript returns "object" for arrays
 
-### How to Recognize an Array
+#### How to Recognize an Array
 
 The problem is that the JavaScript operator typeof returns "object".
 
@@ -656,6 +665,91 @@ Operator | Description | Example | Result |
 !        | NOT    | !(x == y) | true     |
 cond ? v1 : v2 | Ternary operator    | var v = (age < 18) ? "Young":"Old"; |  |
 
+## Control flow
+
+```js
+// If-Else
+
+if (time < 10) {
+    greeting = "Good morning";
+} else if (time < 20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+// Switch
+
+switch (new Date().getDay()) {
+    case 4:
+    case 5:
+        text = "Soon it is Weekend";
+        break;
+    case 6:
+        text = "Saturday";
+        break;
+    case 0:
+        text = "Sunday";
+        break;
+    // ! does not have to be the last case in a switch block
+    default:
+        text = "Waiting for the Weekend";
+}
+```
+
+JavaScript supports different kinds of loops:
+
+* **for** - loops through a block of code a number of times
+* **for/in** - loops through the properties of an object
+* **while** - loops through a block of code while a specified condition is true
+* **do/while** - also loops through a block of code while a specified condition is true
+
+```js
+// For Loop
+
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+    text += cars[i] + "<br>";
+}
+
+// all FOR parts are optional
+var i = 0;
+var len = cars.length;
+for (;;) {
+    text += cars[i] + "<br>";
+    if(++i >= len) {
+        break;
+    }
+}
+
+// For/In Loop
+
+var person = {name:"Alex", lastname:"Wu", age:32};
+
+var text = "";
+for (var x in person) {
+    text += person[x];
+}
+
+// While
+
+while (i < 10) {
+    text += "The number is " + i;
+    i++;
+}
+
+// Do/While
+
+do {
+    text += "The number is " + i;
+    i++;
+}
+while (i < 10);
+```
+
+> The **break** statement "jumps out" of a loop.
+>
+> The **continue** statement "jumps over" one iteration in the loop.
+
 ## Functions
 
 ## Objects
@@ -671,7 +765,7 @@ JavaScript has function scope: Each function creates a new scope - LOCAL scope.
 
 In HTML, the global scope is the *window* object. *All global variables belong to the window object*
 
-### Variables lifetime
+*Variables lifetime*.
 
 The lifetime of a JavaScript variable starts when it is declared.
 
