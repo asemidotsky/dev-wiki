@@ -1,6 +1,6 @@
 # IDE
 
-* [Visual Studio](pages/tools/ide/visual-studio)
+* [Visual Studio](visual-studio)
 
 ## Online IDE and code editors
 

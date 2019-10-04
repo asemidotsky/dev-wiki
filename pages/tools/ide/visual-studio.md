@@ -2,7 +2,8 @@
 
 ## Keyboard
 
-[How to use the keyboard exclusively](https://docs.microsoft.com/en-us/visualstudio/ide/reference/how-to-use-the-keyboard-exclusively?view=vs-2019)
+* [How to use the keyboard exclusively](https://docs.microsoft.com/en-us/visualstudio/ide/reference/how-to-use-the-keyboard-exclusively?view=vs-2019)
+* [Default keyboard shortcuts in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019#bkmk_edit)
 
 ## Shortcuts
 
@@ -20,3 +21,10 @@
 | Ctrl + Alt + L | Format Document | |
 | Ctrl + K,/ | Toggle single line comment/uncomment | |
 | Ctrl + Shift + K | Toggle block comment/uncomment | |
+| Ctrl + R, T | Run current test | |
+| Ctrl + R, Ctrl + T | Debug current test | |
+
+## Other features
+
+* Locate File in Solution Explorer - Tools > Options > Projects and Solutions > Track Active Item in Solution Explorer
+* Add usings for types in reference assemblies and NuGet packages - Tools > Options > Text Editor > C# > Advanced > Suggest usings for types in reference assemblies and Suggest usings for types in NuGet packages
