@@ -26,9 +26,11 @@ On this page you can see the cutting edge and popular technologies.
 
 ## Databases
 
+* SQL Server
 * PostgreSQL
 * MongoDB
 * ElasticSearch
+* Redis
 
 ## Messaging
 
@@ -80,3 +82,25 @@ IDE: VS Code, WebStorm
 * Datazen
 * Power BI
 * SQL Reporting Services 2016
+
+----
+## Most in-demand languages in U.S.
+
+[May 2017](https://www.techrepublic.com/article/here-are-the-3-most-in-demand-coding-languages-and-where-you-can-find-a-developer-job/)
+
+| State/Language | Java   | C#   | JavaScript | MEAN Stack | Python |
+|----------------|--------|------|------------|------------|--------|
+| New York       |   2    |  4   |    1       |   1        |   3    |
+| Los Angeles    |   2    |  4   |    3       |   3        |   1    |
+| Dallas         |   2    |  4   |    3       |   3        |   1    |
+| Houston        |   2    |  4   |    1       |   1        |   3    |
+| San Jose       |   2    |  -   |    3       |   3        |   1    |
+| Washington D.C.|   2    |  4   |    3       |   3        |   1    |
+| Boston         |   2    |  4   |    3       |   3        |   1    |
+| Atlanta        |   2    |  5   |    3       |   3        |   1    |
+| Seattle        |   2    |  5   |    3       |   3        |   1    |
+
+
+
+
+
