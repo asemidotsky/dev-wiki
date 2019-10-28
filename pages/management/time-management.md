@@ -99,3 +99,23 @@ Set the expectations.
 * Messengers
 * Social networks
 * Coffe talks
+
+## Inbox zen
+
+1. Reduce inbox trash flow
+    1. Configure spam filters (notifications, old subscriptions, etc.).
+    1. Only strategic and important daily interests
+1. Training the team
+    1. Explain that you can only be added to recipients of messages that are directly related to you
+    1. For urgent cases there is a phone
+    1. Explain this principle to customers, friends, family
+1. Inbox automatization
+    1. Set up the filters so that with a quick glance at the Inbox you understand what needs your immediate attention, what you can see at the end of the day, and what - during the week.
+1. Use deferred reading services
+    1. Pocket
+    1. Instapaper
+1. Create to-do list using special services
+1. Use "Two minutes" rule
+    1. Immediately respond only to emails that take less than two minutes of your time
+    1. Send the rest to the to-do list or to the Read Later folder.
+
