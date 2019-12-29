@@ -1,0 +1,1 @@
+* [microsoft/api-guidelines](https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md)
