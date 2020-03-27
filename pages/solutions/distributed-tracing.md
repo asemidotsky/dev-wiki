@@ -13,6 +13,8 @@ Azure
 * [Telemetry context: Application Insights data model](https://docs.microsoft.com/en-us/azure/azure-monitor/app/data-model-context)
 * [Track custom operations with Application Insights .NET SDK](https://docs.microsoft.com/en-us/azure/azure-monitor/app/custom-operations-tracking)
 * [Correlation with Activity with Application Insights (1) Overview](https://medium.com/@tsuyoshiushio/correlation-with-activity-with-application-insights-1-overview-753a48a645fb)
+* [Correlation with Activity with Application Insights (2) Activity deep dive](https://medium.com/@tsuyoshiushio/correlation-with-activity-with-application-insights-2-activity-deep-dive-2a4147919659)
+* [Correlation with Activity with Application Insights (3) W3C TraceContext](https://medium.com/@tsuyoshiushio/correlation-with-activity-with-application-insights-3-w3c-tracecontext-d9fb143c0ce2)
 * [Activity User Guide](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md)
 
 ### Get telemetry OperationId
