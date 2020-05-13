@@ -2,7 +2,7 @@
 
 * [Stack Overflow Insights](https://insights.stackoverflow.com/)
 * [Stack Overflow Trends](https://insights.stackoverflow.com/trends?tags=jquery%2Cangularjs%2Cangular%2Creactjs)
-* [Most Popular Technologies 2016](https://insights.stackoverflow.com/survey/2016#technology-most-popular-technologies)
+* [Most Popular Technologies 2019](https://insights.stackoverflow.com/survey/2019#most-popular-technologies)
 * [Discover languages in Github](http://githut.info/)
 
 On this page you can see the cutting edge and popular technologies.
@@ -17,11 +17,11 @@ On this page you can see the cutting edge and popular technologies.
 
 ## Languages
 
-* JavaScript (ES6/ES7)
+* **Python** - must have
+* [JavaScript](https://hackr.io/tutorials/learn-javascript?ref=blog)
 * TypeScript
 * C#
 * Go
-* Python
 * Rust
 
 ## Databases
@@ -31,10 +31,12 @@ On this page you can see the cutting edge and popular technologies.
 * MongoDB
 * ElasticSearch
 * Redis
+* Memcached
 
 ## Messaging
 
 * RabbitMQ
+* Kafka
 * .NET Service bus: NServiceBus, MassTransit, EasyNetQ
 
 ## Cloud
@@ -99,6 +101,33 @@ IDE: VS Code, WebStorm
 | Boston         |   2    |  4   |    3       |   3        |   1    |
 | Atlanta        |   2    |  5   |    3       |   3        |   1    |
 | Seattle        |   2    |  5   |    3       |   3        |   1    |
+
+Details
+
+### San Francisco
+
+* JavaScript, Go, Python, Ruby, Java
+* React,
+* Node, GraphQL
+* Docker, Kubernetes
+* PostgreSQL
+* Kafka
+* AWS, GCP
+
+Articles:
+* [Most In-Demand Skills in San Francisco](https://sanfranciscobootcamps.com/most-in-demand-skills-in-san-francisco/)
+
+### San Diego
+
+* C#, JS (ES6), TS, Python, Java, Ruby, Go
+* .NET, Node, GraphQL
+* React, Angular
+* Mongo, Redis, Sql Server, Elastic Search
+* Docker, Kubernetes
+* AWS, Azure
+* Alghoritms, Data-Structures
+* Linux
+
 
 
 
