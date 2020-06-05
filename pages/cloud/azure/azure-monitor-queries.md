@@ -6,3 +6,6 @@ StormEvents
 | where State == "FLORIDA"
 | count
 ```
+
+[Find and diagnose performance issues with Azure Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-performance)
+[Application Insights API for custom events and metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics#trackmetric)

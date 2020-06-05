@@ -16,6 +16,7 @@
 ## Languages
 
 * [C#](pages/languages/csharp/csharp-index)
+* [Python](pages/languages/python/python)
 * [JavaScript](pages/languages/js/index)
   * [ES6](pages/languages/js/es6)
   * [OOP](pages/languages/js/oop)

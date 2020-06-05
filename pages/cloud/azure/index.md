@@ -1,12 +1,11 @@
+* [Azure Cloud Concepts](/azure-cloud-concepts)
+* [Azure Architecture](/azure-architecture)
+* [Cloud Shell](/cloud-shell)
+
 # Azure cloud
 
 * Azure - Public Cloud
 * Azure Stack - Private Cloud
-
-Azure versions (co-existence):
-
-* Azure v1 - Azure Service Management (ASM), Classic portal
-* Azure v2 - Azure Resource Management (ARM), New portal/API's/Tooling
 
 ## Azure 2
 
