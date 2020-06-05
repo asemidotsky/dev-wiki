@@ -1,0 +1,1 @@
+* [Convention over configuration](https://en.wikipedia.org/wiki/Convention_over_configuration)

@@ -13,7 +13,16 @@ On this page you can see the cutting edge and popular technologies.
 * Small: Vue, Meteor, Knockout, Ember, Redux
 * Build: Gulp, Webpack
 * TypeScript, Babel
-* Testing: Jest, Mocha, Chai, Jasmine, Protractor
+* Testing: Jest, Mocha, Chai, Jasmine, Karma, Protractor
+
+Web Frameworks:
+
+* ASP.NET Core
+* [Ruby on Rails](https://rubyonrails.org/)
+* [Spring](https://spring.io/)
+* Express
+* Django
+* Flask
 
 ## Languages
 
