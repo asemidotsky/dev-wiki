@@ -1,5 +1,6 @@
 * [Azure Cloud Concepts](azure-cloud-concepts)
 * [Azure Architecture](azure-architecture)
+* [Azure IoT](iot/azure-iot)
 * [Cloud Shell](cloud-shell)
 
 # Azure cloud
