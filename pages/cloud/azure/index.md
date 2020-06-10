@@ -1,13 +1,13 @@
-* [Azure Cloud Concepts](/azure-cloud-concepts)
-* [Azure Architecture](/azure-architecture)
-* [Cloud Shell](/cloud-shell)
+* [Azure Cloud Concepts](azure-cloud-concepts)
+* [Azure Architecture](azure-architecture)
+* [Cloud Shell](cloud-shell)
 
 # Azure cloud
 
 * Azure - Public Cloud
 * Azure Stack - Private Cloud
 
-## Azure 2
+## Azure
 
 * Building Blocks
 * Individual Resources
