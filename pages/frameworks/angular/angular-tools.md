@@ -20,6 +20,15 @@ npm install --save-dev @angular/cli@latest
 npm install
 ```
 
+### Common CLI commands
+
+```
+// creating component
+
+ng g c dir/folder
+```
+
+
 Commands:
 
 * `ng g c dir/componentName --spec false` - create component `componentName` in directory `dir` and prevent creation of the test file.

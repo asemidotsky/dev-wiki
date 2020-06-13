@@ -4,12 +4,16 @@
 
 ## Components
 
+```
+
+```
+
 **Purpose:** The main building block for application. The user interface (application) is built by combining components.
 
 Component consists of three main parts:
 
 1. ViewModel class on TypeScript (user-info.component.ts) - defines model for view with properties and some logic
-1. View template (user-info.component.html)
+1. View template (user-info.component.html), Must have it: external or inline template.
 1. Styles (user-info.component.css)
 
 user-info.component.ts:
@@ -48,6 +52,18 @@ In examples below I will refer to this `user-component`.
 Decorators allow to attach some additional information to a class.
 *[Decorator is a TypeScript feature](https://www.typescriptlang.org/docs/handbook/decorators.html).*
 
+Components should be registered in **Modules**, usually in AppModule:
+
+```ts
+import { UserInfoComponent } from './users/user-info.component';
+
+@NgModule({
+  declarations: [
+    UserInfoComponent
+  ]
+})
+```
+
 ### Selectors
 
 Selector actually works like a CSS selector.
@@ -55,10 +71,13 @@ Selector actually works like a CSS selector.
 ```html
 <!-- Element selector - selector: 'app-user-info' -->
 <app-user-info></app-user-info>
+selector: 'app-user-info'
 <!-- Attribute selector - selector: '[app-user-info]' -->
 <div app-user-info></div>
+selector: '[app-user-info]'
 <!-- Class selector - selector: '.app-user-info' -->
 <div class="app-user-info"></div>
+selector: '.app-user-info'
 
 <!-- Not work in Angular 
  - id selector
