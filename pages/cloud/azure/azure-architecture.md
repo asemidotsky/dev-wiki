@@ -71,3 +71,7 @@ Resiliency
 * If your application SLA defines four 9's (99.99%) performance targets, recovering from failures by manual intervention may not be enough to fulfill your SLA. Your Azure solution must be self-diagnosing and self-healing instead.
 * It is difficult to respond to failures quickly enough to meet SLA performance targets above four 9's.
 * Carefully consider the time window against which your application SLA performance targets are measured. The smaller the time window, the tighter the tolerances. If you define your application SLA as hourly or daily uptime, you need to understand these tighter tolerances might not allow for achievable performance targets.
+
+## Resource groups
+
+An Azure resource group is a logical container into which Azure resources are deployed and managed.
