@@ -4,6 +4,8 @@
 
 ## Glossary
 
+The Internet of Things (IoT) is a network of Internet connected devices that communicate sensor data to the cloud for centralized processing. These sensors are typically embedded in monitoring devices. These devices, known as _IoT devices_, have some processing power to control communications. The stream of data they generate is known as _telemetry_.
+
 **Telemetry**: Telemetry is the process of recording and transmitting values received by an IoT device. Telemetry is an essential function of an IoT solution.
 
 **Provisioning**: The act of provisioning a device to the cloud uniquely identifies the device to the cloud. Provisioning also establishes the security protocols for the device and its access rights and privileges.
@@ -55,3 +57,34 @@ IoT Hub is a managed service, hosted in the cloud, that acts as a central messag
 **Provisioning devices with Azure IoT Hub Device Provisioning Service**: The IoT Hub Device Provisioning Service is a helper service for IoT Hub. The device provisioning service enables zero-touch, just-in-time provisioning to the right IoT Hub without requiring human intervention, allowing the customers to provision millions of devices in a secure and scalable manner.
 
 ![When to use IoT](when-to-use-iot.png)
+
+## IoT strategy and solutions
+
+IoT can be envisioned as a set of technologies connected across three main areas:
+
+* Things: Physical "things," with embedded sensors, that are connected to the Internet. These things send telemetry data.
+* Insights: The results from processing and analyzing the data. IoT real-time analysis, machine learning, and other backend processes, produce these insights.
+* Actions: The automated, or manual, response to the insights. Actions include the automated changing of device settings, a manual intervention to repair a piece of equipment, or an update to a computer system that is not working optimally.
+
+![IoT Solution Architecture](iot-solution-arch.png)
+
+## IoT services
+
+* IoT Hub
+* IoT Central
+* IoT Security
+    * Azure Sphere
+    * Azure Device Provisioning Service (DPS)
+    * Azure Security Center for IoT
+* Azure IoT Edge devices
+* Azure IoT data analysis
+    * Azure Time Series Insights - ability to view anomalies in data, which can be hard to detect visually.
+    * Azure Maps
+    * Azure Digital Twins
+* Azure IoT Hub SDKs
+    * Azure IoT Device SDKs
+    * Azure IoT Service SDKs
+    * Provisioning Device SDKs
+    * Provisioning Service SDKs
+
+> IoT Hub was developed to address the unique requirements of connecting IoT devices to the Azure cloud, while Event Hubs was designed for big data streaming. Microsoft recommends using Azure IoT Hub to connect IoT devices to Azure.
