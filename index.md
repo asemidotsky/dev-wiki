@@ -12,6 +12,7 @@
   * [Azure](pages/cloud/azure/index)
   * AWS
   * Google Cloud
+* [Authentication](pages/architecture/authentication)
 
 ## Languages
 
