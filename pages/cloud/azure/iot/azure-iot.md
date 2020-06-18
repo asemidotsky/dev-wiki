@@ -88,3 +88,66 @@ IoT can be envisioned as a set of technologies connected across three main areas
     * Provisioning Service SDKs
 
 > IoT Hub was developed to address the unique requirements of connecting IoT devices to the Azure cloud, while Event Hubs was designed for big data streaming. Microsoft recommends using Azure IoT Hub to connect IoT devices to Azure.
+
+## IoT Edge
+
+Azure IoT Edge is a combination of a cloud service running in the cloud and a runtime that runs on the device. The runtime starts and manages workflows on the device. The workflow comprises a set of containers that you link together in a specific order to create an end-to-end scenario. IoT Edge is managed by the IoT Hub. The Azure IoT Edge enables you to run workloads on the edge device, which are developed using cloud services. The workload is a module deployed using docker compatible containers. The modules could be artificial intelligence applications, Azure and third-party services, or your business logic.
+
+IoT Edge enables you to:
+* React in near real time to local changes
+* Manage edge devices
+* Deploy using Containers
+* Deploy using secure and certified hardware
+* Distribute AI and analytics workloads to the edge
+* Use existing developer skillsets and code
+* Manage data to reduce costs
+* Reliably operate in offline or intermittent mode
+* Provide security for edge deployments
+* Ensure privacy for IoT deployments
+* Act as a gateway
+* Availability of third-party modules
+
+Azure IoT Edge comprises three components:
+* IoT Edge modules
+* IoT Edge runtime
+* IoT Edge cloud interface
+
+## IoT Storages
+
+It's common to use the familiar terms hot, warm, cool, and cold in data analysis. Hot clearly means a real-time approach is needed. Warm can have the same meaning, though perhaps the data is "near" real time, or at least, recent. Cool means the flow of data is slow. Cold means that the data is stored and not "flowing". The cooler the path, the more the data can be batched.
+
+The _Lambda architecture_ of Azure IoT enables multiple paths.
+
+**The hot path**
+
+The IoT remote device pumps out specific telemetry. This telemetry is sent in its own message, routed by the IoT Hub for instant analysis and visualization. The analysis could be done by a human operator, say, using Azure Time Series Insights. This approach is described in this module.
+
+Alternatively, the analysis could be handled by Azure Stream Analytics, which supports simple SQL language queries, and is extensible via C# or JavaScript UDFs (User-defined functions).
+
+The hot path requires storage optimized for data availability. Data services that provide this speed of access are the more expensive services.
+
+**The cold path**
+
+The IoT remote device also sends out all telemetry, and logging, data. The IoT Hub directs these messages down a route to an Azure storage account. The key point about cold path storage is that it's optimized for size (that is, it's compressed), long-term storage, and low cost. _The cold path is not optimized for availability_.
+
+Having an understanding of your own data is important. If it consists of files, images, recordings, and similar disparate items, then it's considered **unstructured** storage. If your data neatly divides into similar database-like objects, then it's considered **structured**.
+
+**Storages**
+
+Blob storage is your _go to_ solution for cloud IoT storage.
+
+**Blob storage** - unstructured data
+
+* Block blob - When you have a large volume of data, it can be more efficient to access that data if it's divided into blocks. Each block has a unique ID. You have access to this ID, and can use it to read from, and write to, a specific block. Block blobs can be written to in parallel, and can be uploaded in any order. Basically, block blobs are for handling large amounts of data over a network. There isn't really an equivalent type of storage on your personal PC.
+* Page blob - are there for data that needs frequent read/write access
+* Append blob - can only be appended to, and is ideal for log files.
+
+**Azure Data Lake**
+
+The time to consider upgrading from Azure Blob to Azure Data Lake storage comes when you have an enormous amount of data, big data in cloud terminology. Blob storage is easily accessible, secure, and low-cost. However, with big data, data organization becomes an issue. A Data Lake provides additional features to help organize, and secure, vast amounts of data.
+
+To help organize data, a concept called _hierarchical namespaces_ is available in a Data Lake. A hierarchical namespace can be used to encapsulate a collection, large or small, of data objects and files. It basically adds another level of reference, that is used to make access to the data more efficient.
+
+Security in Azure Data Lake is on the file, or folder, level, or greater granularity if needed. All the security, and API access, features of Blob storage apply to Data Lake storage.
+
+Finally, Data Lake analytics, available through REST APIs, are optimized for big data. Your queries should still run in a decent amount of time, even if they're trawling through a sea of data.
