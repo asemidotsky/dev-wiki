@@ -14,6 +14,7 @@ On this page you can see the cutting edge and popular technologies.
 * Build: Gulp, Webpack
 * TypeScript, Babel
 * Testing: Jest, Mocha, Chai, Jasmine, Karma, Protractor
+* Performance: Pagespeed
 
 Web Frameworks:
 
@@ -69,13 +70,13 @@ CI/CD: TeamCity, Bamboo;
 Monitoring: Grafana, Kibana;
 Logs: Seq, ElasticSearch, Splunk;
 
-* Docker
+* Docker, K8S
+* Ansible
+* Capistrano
 * Bcfg2
 * CFEngine
 * Chef
 * Puppet
-* Ansible
-* Capistrano
 * Octopus
 
 ## Tools
@@ -117,7 +118,7 @@ Details
 
 * JavaScript, Go, Python, Ruby, Java
 * React,
-* Node, GraphQL
+* Node, GraphQL, Node
 * Docker, Kubernetes
 * PostgreSQL
 * Kafka
