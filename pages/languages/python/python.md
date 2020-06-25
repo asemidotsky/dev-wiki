@@ -82,6 +82,8 @@ Here is the last line """
 
 ## Functions
 
+[Built-in functions](https://docs.python.org/3/library/functions.html#func-list)
+
 ```python
 # function defenition
 def say_hello(firstName, lastName):
@@ -163,6 +165,74 @@ for number in range(2, 4):
 
 # range with the step equals 2
 for number in range(0, 10, 2):
+```
+
+## Dictionaries
+
+```python
+contacts = {
+    'David': '555-0123',
+    'Tom': '555-5678'
+}
+contacts['David'] = '555-0000'
+davids_phone = contacts['David']
+
+# remove item
+del contacts['David']
+
+# check key existence in the dictionary
+if 'David' in contacts.keys():
+
+# find value in the dictionary
+'555-5678' in contacts.values()
+
+# loop through
+for contact in contacts
+for key_variable, value_variable in dictionary_name.items():
+
+# nesting dictionaries
+contacts = {
+ 'David': {
+   'phone': '555-0123',
+   'email': 'david@gmail.com'
+ },
+ 'Tom': {
+   'phone': '555-5678',
+   'email': 'tom@gmail.com'
+ }
+}
+```
+
+## Tuples
+
+A tuple is an immutable list, which means that once it has been defined the values in the tuple cannot
+be changed.
+
+```python
+tuple_name = (item_1, item_2, item_N)
+tuple_name = (item_1,)
+
+# creating tuple from list
+tuple_name = tuple([1, 2, 3])
+
+# creating list from tuple
+list = list((1, 2, 3))
+
+# loop through
+for month in months_of_the_year:
+
+# tuple assigment
+(jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec) = months_of_the_year
+
+def high_and_low(numbers):
+  ....
+  return (highest, lowest)
+
+(highest, lowest) = high_and_low(lucky_numbers)
+
+contacts = [('David', '555-0123'), ('Tom', '555-5678')]
+for (name, phone) in contacts:
+  print("{}'s phone number is {}.".format(name, phone))
 ```
 
 ## Exceptions
