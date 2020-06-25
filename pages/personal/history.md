@@ -1,5 +1,14 @@
 # My personal history
 
+## 2020
+
+* Python
+* SaltStack, YAML
+
+Tools
+* VirtualBox
+* Vagrant
+
 ## Febrary 2018
 
 Work

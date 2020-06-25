@@ -2,6 +2,15 @@
 
 [Tools](linux-tools)
 
+```bash
+# check Ubuntu version
+lsb_release -a
+cat /etc/os-release
+
+# create file
+touch data/file.txt
+```
+
 ## Connect
 
 ```bash
