@@ -66,10 +66,11 @@ Web Frameworks:
 
 ## Infrastructure
 
-CI/CD: TeamCity, Bamboo;
+CI/CD: TeamCity, Bamboo, Azure DevOps;
 Monitoring: Grafana, Kibana;
 Logs: Seq, ElasticSearch, Splunk;
 
+* Salt
 * Docker, K8S
 * Ansible
 * Capistrano

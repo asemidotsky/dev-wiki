@@ -41,12 +41,15 @@
 * Testing
   * [Mocha](pages/frameworks/mocha)
   * [Jest](pages/frameworks/jest)
-* WPF
 
 ## Databases
 
 * [MS SQL Server](pages/databases/mssql/mssql-index)
 * [MongoDB](pages/databases/mongodb/mongo-index)
+
+## Infrastructure
+
+* [SaltStack](pages/infrastructure/saltstack)
 
 ## Data structures
 
