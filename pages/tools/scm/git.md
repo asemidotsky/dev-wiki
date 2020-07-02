@@ -2,6 +2,34 @@
 
 [Learn Git](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
 
+## Configuration
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@blah.com"
+
+# Tell git to not try to mess with line endings by default (this can be changed for specific repos as desired)
+git config --global core.autocrlf false
+# Tell git to automatically track remote branches
+git config --global branch.autosetupmerge true
+# Tell "git push" to just push the current branch to its remote origin
+git config --global push.default upstream
+# Tell git to use rebase instead of merge when performing a "git pull" from a remote branch
+git config --global branch.autosetuprebase always
+# Make git show colorized output by default
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.interactive auto
+git config --global color.status auto
+
+# See just the global settings
+git config --global --list
+# See just the settings of the git Repo you are inside
+git config --local --list
+# See the union of the 2 (the local settings take precedence over the global settings)
+git config --list
+```
+
 ## Main commands
 
 * git status
