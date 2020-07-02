@@ -1,12 +1,38 @@
 ## Books & Resources
 
-* Python Succinctly book
+Docs
+* [Type hints cheat sheet (Python 3)](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
 * [Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
+* [The Python Standard Library](https://docs.python.org/3/library/)
+* [Idioms and Anti-Idioms in Python](https://docs.python.org/3.1/howto/doanddont.html)
 
-## Frameworks and libraries
+Books
+* Python Succinctly book
+
+Surveys
+* [Python Developers Survey 2018](https://www.jetbrains.com/research/python-developers-survey-2018/#development-tools)
+
+## Frameworks, libs
 
 * [Django](https://www.djangoproject.com/)
 * [FastAPI](https://fastapi.tiangolo.com/)
+
+## Environment
+
+PYTHONPATH env var
+
+Add Pyhton path and python\Scripts to the Path variable.
+
+pip install:
+```
+python -m pip install -U pip
+```
+
+## Code Editor
+
+VSCode:
+* Install Python extension
+* Formatting: "autopep8"
 
 ## Variables & Types
 
@@ -26,6 +52,7 @@ first_char = vegetable[0]
 * print('-' * 12) - repeating string
 * str()
 * slice, a part of the string `'whale'[1:3]`
+* rstrip() - remove any trailing white space
 
 Formatting
 
@@ -237,8 +264,8 @@ for (name, phone) in contacts:
 
 ## Exceptions
 
-* https://wiki.python.org/moin/HandlingExceptions
-* https://docs.python.org/3/library/exceptions.html
+* [HandlingExceptions](https://wiki.python.org/moin/HandlingExceptions)
+* [Exceptions](https://docs.python.org/3/library/exceptions.html)
 
 ```python
 animals = ['toad', 'lion', 'seal']
@@ -264,9 +291,9 @@ else:
 
 ### For, While
 
-* https://wiki.python.org/moin/ForLoop
-* https://wiki.python.org/moin/WhileLoop
-* https://docs.python.org/3/library/functions.html#sorted
+* [ForLoop](https://wiki.python.org/moin/ForLoop)
+* [WhileLoop](https://wiki.python.org/moin/WhileLoop)
+* [Sorted](https://docs.python.org/3/library/functions.html#sorted)
 
 ```python
 animals = ['toad', 'lion', 'seal']
@@ -282,4 +309,92 @@ while index < len(animals):
     index += 1
 
 # Python does not have a “++” increment operator.
+```
+
+## File I/O
+
+[Core tools for working with streams](https://docs.python.org/3/library/io.html)
+
+`open(path_to_file, mode)`
+
+File open modes:
+| Mode | DEscription |
+|------|-------------|
+| r    | Open for reading (default) |
+| w    | Open for writing, truncating the file first |
+| x    | Create a new file and open it for writing |
+| A    | Open for writing, appending to the end of the file if it exists |
+| b    | Binary mode |
+| t    | Text mode (default) |
+| +    | Open a disk file for updating (reading and writing) |
+
+```python
+hosts = open('/etc/hosts')
+hosts_file_contents = hosts.read()
+
+# current position in the file
+hosts.tell()
+
+# move position
+hosts.seek(0)
+
+# close file
+hosts.close()
+
+# closed attribute of the file object
+if not hosts.closed:
+    hosts.close()
+
+# automatically closing file
+with open('/etc/hosts') as hosts:
+    print('File closed? {}'.format(hosts.closed))
+    print(hosts.read())
+
+# reading one line at a time
+with open('file.txt') as the_file:
+    for line in the_file:
+        print(line)
+
+# check open mode
+the_file.mode
+
+# writing to file
+with open('file2.txt', 'w') as the_file:
+    the_file.write('This text will be written to the file.')
+```
+
+## Modules
+
+```python
+import time
+print(time.asctime())
+
+# import specific method
+from time import asctime
+print(asctime())
+
+from time import asctime, sleep
+
+# Peeking Inside a Module
+import time
+dir(time)
+
+# The Module Search Path
+import sys
+for path in sys.path:
+    print(path)
+
+# add new path
+sys.path.append('/Users/david/python')
+
+# Using main
+def say_hello():
+    print('Hello!')
+
+def main():
+    print('Hello from say_hello3.py!')
+    say_hello()
+
+if __name__ == '__main__':
+    main()
 ```
