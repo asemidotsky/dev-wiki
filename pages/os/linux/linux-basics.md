@@ -1,5 +1,7 @@
 # Linux basics
 
+* [Linux for Beginners Book](http://www.linuxtrainingacademy.com/linux)
+
 [Tools](linux-tools)
 
 ```bash
