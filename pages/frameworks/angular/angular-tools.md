@@ -38,3 +38,4 @@ Commands:
 1. Chrome dev tools
 1. Source maps
 1. [Augury](https://augury.angular.io/)
+1. [Debugging in Visual Studio Code](https://www.digitalocean.com/community/tutorials/how-to-debug-angular-cli-applications-in-visual-studio-code)

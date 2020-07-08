@@ -79,7 +79,7 @@ selector: '[app-user-info]'
 <div class="app-user-info"></div>
 selector: '.app-user-info'
 
-<!-- Not work in Angular 
+<!-- Not work in Angular
  - id selector
  - pseudo
 -->
@@ -171,6 +171,8 @@ That last category is confusing until you grasp **this general rule**:
 #### Combination of Both: Two-Way-Binding
 
 * `[(ngModel)]="data"`
+
+![Databinding Types](databinding-types.png)
 
 ### String interpolation
 
