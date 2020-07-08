@@ -26,3 +26,4 @@ Labs CSRC) the Unix philosophy is the following:
 ## Links
 
 * [12factor](https://12factor.net/)
+* [Architecture decision record (ADR)](https://github.com/joelparkerhenderson/architecture_decision_record)
