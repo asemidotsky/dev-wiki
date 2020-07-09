@@ -3,6 +3,11 @@
 * https://github.com/microsoft/terminal
 * https://fossbytes.com/tmux-on-bash-ubuntu-windows-10-install/
 
+### Remote Desktop Managers
+
+* MobaXterm
+* [mRemoteNG](https://mremoteng.org/)
+
 ### Console2
 
 [Download](https://sourceforge.net/projects/console/files/)
