@@ -66,7 +66,7 @@
 
 * [IDE](pages/tools/ide/ide-index)
 * [Editors](pages/tools/editors/editors-index)
-* Source control
+* [Git](pages/tools/scm/git)
 * [Blogging](pages/tools/blogging-index)
 * [ELK Stack](pages/tools/elk.md)
 
