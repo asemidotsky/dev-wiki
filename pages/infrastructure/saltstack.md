@@ -1,5 +1,34 @@
 https://www.saltstack.com/
 
+## Popular commands
+
+```bash
+# execute module function
+salt \*minon_name_pattern <module>.<func_name> -l debug
+
+# execute remote command
+salt \*minion cmd.run 'docker ps'
+
+# apply state
+salt \*minion state.apply utils.sync_all
+
+# show all minions
+ls -1 /var/cache/salt/master/minions
+
+# or
+salt-run manage.up
+salt-run manage.status
+salt-run manage.down
+
+# will list all minions that whose public keys you've accepted on your master.
+salt-key -L
+
+# minion versions
+salt-run manage.versions
+```
+
+## What is Salt ?
+
 Salt is for:
 * System Management (install packages)
 * Configuration Management

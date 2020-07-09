@@ -34,6 +34,15 @@ VSCode:
 * Install Python extension
 * Formatting: "autopep8"
 
+## Pip package manager
+
+```bash
+# show packages
+pip list -v
+# show package info
+pip show <package_name>
+```
+
 ## Variables & Types
 
 ```python
