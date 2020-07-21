@@ -40,6 +40,18 @@ git config --list
 * git fetch --dry-run  = Show what would be done, without making any changes
 * git status -uno = to check if your local branch is up-to-date with the origin one
 
+## Undo commit
+
+```bash
+# In case you just want to undo the commit and change nothing more, you can use
+git reset --soft HEAD~
+
+# undo the last commit and unstage all the files you can use the following
+git reset HEAD~
+# or
+git reset --mixed HEAD~
+```
+
 ## Viewing the Commit History
 
 ```bash
