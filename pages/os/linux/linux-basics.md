@@ -68,6 +68,15 @@ $ ssh -p port_number remote_host
 $ ssh remote_host command_to_run
 ```
 
+## File operations
+
+* [mv](https://man7.org/linux/man-pages/man1/mv.1.html)
+* `sudo apt-get install rename` for renaming
+
+```bash
+mv oldfile.txt newfile.txt
+```
+
 ## Users
 
 ## Groups
@@ -91,10 +100,36 @@ chgrp sales sales.report
 
 ## Permissions
 
+* chmod – change permissions
+* chown – change ownership
+
 ```bash
 # see folder items permissions
 ls -la
 ```
+
+If Bethany and Jacob are the only users on the system (and you know your network is safe – very important), you can change the permissions of the folder to give them access. One way to do this would be to issue the command:
+```bash
+sudo chmod -R ugo+rw /DATA/SHARE
+```
+
+The `-R` swith (recursive) - the same permissions are applied all the way to the deepest folder, contained within the parent.
+
+The breakdown of permissions looks like this:
+* u – user
+* g – group
+* o – other
+
+The ‘other’ entry is the dangerous one, as it effectively gives everyone permission for the folder/file. The permissions you can give to a file or folder are:
+* r – read
+* w – write
+* x – execute
+
+**Change ownership**
+```
+sudo chown -R bethany /DATA/SHARE
+```
+bethany- is a user name
 
 ## Kill process
 

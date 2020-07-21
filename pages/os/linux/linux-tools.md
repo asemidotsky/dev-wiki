@@ -3,6 +3,10 @@
 * ssh-keygen - ssh keys generator
 * xclip - command line copy & paste tool
 
+## Linux - Windows
+
+* [WinSCP](https://winscp.net/eng/index.php)
+
 ## Terminal managers
 
 ### Tmux
