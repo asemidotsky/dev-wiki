@@ -1,4 +1,7 @@
-https://www.saltstack.com/
+## Resources
+
+* https://www.saltstack.com/
+* [SALT IN 10 MINUTES](https://docs.saltstack.com/en/master/topics/tutorials/walkthrough.html)
 
 ## Popular commands
 
@@ -25,6 +28,74 @@ salt-key -L
 
 # minion versions
 salt-run manage.versions
+
+# -----------------
+
+salt '*' cmd.run 'ls -l /etc'
+salt '*' pkg.install vim
+
+salt '*' network.interfaces
+```
+
+**Changing command output format**
+
+The default output format used for most Salt commands is called the _nested outputter_, but there are several other outputters that can be used to change the way the output is displayed. For instance, the _pprint outputter_ can be used to display the return data using Python's pprint module:
+`salt myminion grains.item pythonpath --out=pprint`
+
+### Salt-call
+
+The examples so far have described running commands from the Master using the **salt** command, but when troubleshooting it can be more beneficial to login to the minion directly and use **salt-call**.
+
+Doing so allows you to see the minion log messages specific to the command you are running (which are not part of the return data you see when running the command from the Master using salt), making it unnecessary to tail the minion log.
+
+### Salt master
+
+Used ports 4505 and 4506.
+
+```bash
+# start salt master process
+systemctl start salt-master
+# or
+service salt-master start
+
+# To list the keys that are on the master
+salt-key -L
+
+# show minion key
+salt-key -f <minion_id>
+
+# approve minion key
+salt-key -a <minion_id>
+```
+
+### Minion
+
+```bash
+# show minion's public key fingerprint
+salt-call key.finger --local
+```
+
+### Debug state
+
+```bash
+# inside sls file
+{%- do salt.log.error('testing jinja logging') -%}
+
+# debug state
+salt \*minion --output=yaml state.show_sls test.nop
+
+#or
+salt-call -l debug state.apply yourslsfile test=True
+salt-call --output=yaml state.show_sls yourslsfile
+```
+
+debug.sls
+```yaml
+test:
+  test.nop:
+  - user: {{ grains.username }}
+  - nested:
+      foo: bar
 ```
 
 ## What is Salt ?
@@ -70,3 +141,14 @@ Thus far, we have discussed Salt only as a single master with a number of connec
 You may even decide that you only want to use Salt’s execution modules and states without any master at all. It is a masterless minion setup.
 
 Lastly, you may want to allow some users to harness the power Salt provides without giving them access directly to the main master. The _peer publisher_ system allows you to give special access to some minions. This could allow you to let developers run deployment commands without giving them access to the entire set of tools that Salt provides.
+
+## Grains
+
+Salt uses a system called [Grains](https://docs.saltstack.com/en/master/topics/targeting/grains.html#targeting-grains) to build up static data about minions. This data includes information about the operating system that is running, CPU architecture and much more. The grains system is used throughout Salt to deliver platform data to many components and to users.
+
+Grains can also be statically set, this makes it easy to assign values to minions for grouping and managing.
+
+A common practice is to assign grains to minions to specify what the role or roles a minion might be. These static grains can be set in the minion configuration file or via the grains.setval function.
+
+## States
+
