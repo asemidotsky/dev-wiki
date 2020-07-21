@@ -25,13 +25,13 @@ npm install
 ```
 // creating component
 
-ng g c dir/folder
+ng g c dir/folder --skipTests true
 ```
 
 
 Commands:
 
-* `ng g c dir/componentName --spec false` - create component `componentName` in directory `dir` and prevent creation of the test file.
+* `ng g c dir/componentName --skipTests true` - create component `componentName` in directory `dir` and prevent creation of the test file.
 
 ## Debugging
 

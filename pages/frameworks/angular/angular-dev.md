@@ -88,13 +88,13 @@ selector: '.app-user-info'
 ### Lifecycle
 
 * **ngOnChanges** - Called after a bound input property changes
-* **ngInit** - Called once the component is initialized
+* **ngOnInit** - Called once the component is initialized. Runs after constructor.
 * **ngDoCheck** - Called during every change detection run
 * **ngAfterContentInit** - Called after (ng-content) has been projected into view
 * **ngAfterContentChecked** - Called every time the project content has been checked
 * **ngAfterViewInit** - Called after the component's view (and child views) has been initialized
 * **ngAfterViewChecked** - Called every time the view (and child views) has been checked
-* **ngDestroy** - Called once the component is about to be destroyed
+* **ngOnDestroy** - Called once the component is about to be destroyed
 
 ## Templates
 
@@ -118,7 +118,7 @@ View encapsulation defines how styles will be applied to the component: componen
 
 ViewEncapsulation:
 
-* Emulated - default, Angular approach (when you see some strange attributes on html elements, like `_ngcontent-c2`)
+* Emulated - default, Angular approach (when you see some strange attributes on html elements, like `_ngcontent-c2`). Angular applies such attributes to all elements in the component and thereby implementing view encapsulation.
 * Native - uses Shadow DOM technology
 * None - no view encapsulation
 
@@ -134,7 +134,38 @@ ViewEncapsulation:
   (click)="onAddServer(serverNameInput.value)">Add Server</button>
 ```
 
-`#serverNameInput` - is a *Local Reference*
+`#serverNameInput` - is a *Local Reference* and it can be used in any place in the template.
+
+### @ViewChild()
+
+Used in TypeScript to get reference to the HTML element.
+```ts
+@ViewChild('serverNameInput', {static: true}) serverContentInput: ElementRef;
+```
+
+serverNameInput - is a local reference and the first parameter of @ViewChild is a Selector.
+
+### ng-content
+
+```html
+<app-component>
+  <p>
+    Some content inside component
+  </p>
+</app-component>
+```
+
+and in component definition:
+
+```html
+<div>
+  <div class="row">
+    <ng-content></ng-content>
+  </div>
+</div>
+```
+
+@ContentChild - is used if component has content (ng-content)
 
 ## Databinding
 
@@ -229,7 +260,7 @@ and then in parent component template:
 
 `srvElement` is an alias - a property name outside of the component.
 
-### Event Binding
+### Custom Event Binding
 
 ```ts
 export class UsersComponent {
