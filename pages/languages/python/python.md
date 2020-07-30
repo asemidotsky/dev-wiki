@@ -205,6 +205,8 @@ for number in range(0, 10, 2):
 
 ## Dictionaries
 
+[more](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+
 ```python
 contacts = {
     'David': '555-0123',
@@ -237,12 +239,15 @@ contacts = {
    'email': 'tom@gmail.com'
  }
 }
+
+# looping 1
+for k, v in contacts.items():
+    print(k, v)
 ```
 
 ## Tuples
 
-A tuple is an immutable list, which means that once it has been defined the values in the tuple cannot
-be changed.
+A tuple is an immutable list, which means that once it has been defined the values in the tuple cannot be changed.
 
 ```python
 tuple_name = (item_1, item_2, item_N)
@@ -269,6 +274,35 @@ def high_and_low(numbers):
 contacts = [('David', '555-0123'), ('Tom', '555-5678')]
 for (name, phone) in contacts:
   print("{}'s phone number is {}.".format(name, phone))
+```
+
+## Sets
+
+A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
+
+```python
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+>>> 'orange' in basket # fast membership testing
+
+>>> # Demonstrate set operations on unique letters from two words
+...
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                  # unique letters in a
+{'a', 'r', 'b', 'c', 'd'}
+>>> a - b                              # letters in a but not in b
+{'r', 'd', 'b'}
+>>> a | b                              # letters in a or b or both
+{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+>>> a & b                              # letters in both a and b
+{'a', 'c'}
+>>> a ^ b                              # letters in a or b but not both
+{'r', 'd', 'b', 'm', 'z', 'l'}
+
+# list comprehensions
+>>> a = {x for x in 'abracadabra' if x not in 'abc'}
+>>> a
+{'r', 'd'}
 ```
 
 ## Exceptions
