@@ -227,3 +227,26 @@ will list the full path to every file belonging to the nodejs package
 ## Links
 
 * [SSH/TransferFiles](https://help.ubuntu.com/community/SSH/TransferFiles)
+
+## Device mounting
+
+* **df** command – Shoe file system disk space usage.
+* **mount** command – Show all mounted file systems.
+* **/proc/mounts or /proc/self/mounts** file – Show all mounted file systems.
+
+```bash
+cat /proc/mounts
+cat /proc/self/mounts
+
+mount
+mount -l
+
+df -aTh
+
+# device - mount folder mapping
+lsblk
+
+# device name - UUID mapping
+blkid
+lsblk -f
+```
