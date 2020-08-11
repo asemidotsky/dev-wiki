@@ -4,6 +4,11 @@
 
 [Tools](linux-tools)
 
+## Get test environment
+
+* https://webminal.org/ - it has CentOS distribution
+* Use VirtualBox
+
 ```bash
 # check Ubuntu version
 lsb_release -a
@@ -81,21 +86,45 @@ mv oldfile.txt newfile.txt
 
 ## Groups
 
+Linux groups are organization units that are used to organize and administer user accounts in Linux. The primary purpose of groups is to define a set of privileges such as reading, writing, or executing permission for a given resource that can be shared among the users within the group.
+
+There are two types of groups in Linux operating systems:
+
+* **Primary group** – When a user creates a file, the file’s group is set to the user’s primary group. Usually, the name of the group is the same as the name of the user. The information about the user’s primary group is stored in the _/etc/passwd_ file.
+* **Secondary or supplementary group** - Useful when you want to grant certain file permissions to a set of users who are members of the group. For example, if you add a specific user to the docker group, the user will inherit the access rights from the group, and be able to run docker commands.
+
+Each user can belong to exactly one primary group and zero or more secondary groups.
+
+Only root or users with sudo access can add a user to a group.
+
 ```bash
 # create user group
-sudo groupadd sales
+sudo groupadd <group_name>
+# delete user group
+sudo groupdel groupname
 
 # add user to group
-sudo usermod -a -G sales alex
+sudo usermod -a -G <group_name> <user_name>
+# to multiple groups
+sudo usermod -a -G group1,group2 username
+
+# remove user from the group
+sudo gpasswd -d username groupname
+
+# change user primary group
+sudo usermod -g groupname username
+
+# show user groups
+id username
 
 # see who is in group
-grep sales /etc/group
+grep <group_name> /etc/group
 # or
 sudo apt-get install members
-members sales
+members <group_name>
 
 # change group for directory
-chgrp sales sales.report
+chgrp <group_name> sales.report
 ```
 
 ## Permissions

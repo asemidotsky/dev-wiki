@@ -2,6 +2,7 @@
 
 * ssh-keygen - ssh keys generator
 * xclip - command line copy & paste tool
+* [sftp](https://linuxconfig.org/how-to-setup-sftp-server-on-ubuntu-20-04-focal-fossa-linux) - file transfer
 
 ## Linux - Windows
 
@@ -63,3 +64,16 @@ Create config file [.screenrc](configs/.screenrc) in user's home directory.
 * Ctrl + a :remove - remove region
 
 Connect to previous closed session: `screen -r`
+
+## Tar
+
+```bash
+# archive folder package-dir to file package.tar.gz
+tar -czvf "package.tar.gz" package-dir
+
+# archive folder without folder name in archive, -C option + *
+tar -czvf "package.tar.gz" -C package-dir *
+
+# extract to C:/
+tar -C C:/ -xvf package.tar.gz
+```

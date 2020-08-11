@@ -4,6 +4,10 @@
 
 * gnome-system-monitor - system monitor like task manager in Windows
 
+## UI Tools
+
+* Nautilus file manager
+
 ## Proxy configuration
 
 Install `dconf-editor` and open `dconf-editor -> system -> proxy`, than add your hosts to `ignore-hosts` on this window and that's all.
@@ -20,6 +24,14 @@ gconftool -g  /system/http_proxy/ignore_hosts
 gconftool  --type list --list-type string  -s /system/http_proxy/ignore_hosts '[localhost,127.0.0.0/8,myhost]'
 ```
 
+## Powershell
+
+Install via snap
+```bash
+# Install PowerShell
+sudo snap install powershell --classic
+```
+
 ## Applications
 
 ### RDP to Windows
@@ -28,6 +40,17 @@ gconftool  --type list --list-type string  -s /system/http_proxy/ignore_hosts '[
 sudo apt install snapd
 sudo snap install remmina
 ```
+
+### RDP from Windows
+
+```bash
+sudo apt install xrdp
+sudo systemctl enable --now xrdp
+# firewall
+sudo ufw allow from any to any port 3389 proto tcp
+```
+
+[guide](https://linuxconfig.org/ubuntu-20-04-remote-desktop-access-from-windows-10)
 
 ### Skype
 
