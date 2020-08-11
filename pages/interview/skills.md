@@ -34,3 +34,19 @@ Front-end
 * algorithm design
 * problem solving
 * complexity analysis
+
+## Amazon
+
+• Experience building large scale, high-performance systems in a complex, multi-tiered, distributed environment
+• Strong coding skill in at least one modern programming language such as or
+• Computer Science fundamentals in object-oriented design, algorithm design, problem solving, and complexity analysis
+
+Preferred qualifications
+
+• Experience to lead teams and guide engineers inside and outside the team for design
+• Understanding of Amazon technologies like DynamoDB, AWS, S3
+• Understanding of integration technologies like web services, messaging queues
+• Understanding of No-Sql and RDBMS database technologies
+• Experience with an AB testing framework
+• Experience with MapReduce concepts and Hadoop
+

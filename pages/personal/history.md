@@ -2,8 +2,11 @@
 
 ## 2020
 
-* Python
+* Python: FastAPI
 * SaltStack, YAML
+* Docker, Docker-Compose
+* Ubuntu, Linux
+* bash, PowerShell
 
 Tools
 * VirtualBox
