@@ -32,6 +32,8 @@ Install via snap
 sudo snap install powershell --classic
 ```
 
+[Install on Ubuntu 16.04](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-1604)
+
 ## Applications
 
 ### RDP to Windows

@@ -3,6 +3,12 @@
 * https://www.saltstack.com/
 * [SALT IN 10 MINUTES](https://docs.saltstack.com/en/master/topics/tutorials/walkthrough.html)
 
+## Salt files
+
+master config is located in `/etc/salt/`
+
+{% raw %}
+
 ## Popular commands
 
 ```bash
@@ -151,4 +157,6 @@ Grains can also be statically set, this makes it easy to assign values to minion
 A common practice is to assign grains to minions to specify what the role or roles a minion might be. These static grains can be set in the minion configuration file or via the grains.setval function.
 
 ## States
+
+{% endraw %}
 
