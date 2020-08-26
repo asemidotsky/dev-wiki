@@ -39,6 +39,7 @@ git config --list
 * git commit -m "Commit message is here"
 * git fetch --dry-run  = Show what would be done, without making any changes
 * git status -uno = to check if your local branch is up-to-date with the origin one
+* git update-index --chmod=+x foo.sh - add executable permission on Linux
 
 ## Undo commit
 

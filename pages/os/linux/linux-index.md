@@ -1,8 +1,9 @@
 # Linux basics
 
 * [Linux for Beginners Book](http://www.linuxtrainingacademy.com/linux)
-
-[Tools](linux-tools)
+* [Learning the Shell](http://linuxcommand.org/lc3_learning_the_shell.php)
+* [Tools](linux-tools)
+* [Ubuntu desktop](ubuntu-desktop)
 
 ## Get test environment
 
@@ -278,4 +279,17 @@ lsblk
 # device name - UUID mapping
 blkid
 lsblk -f
+```
+
+## Services
+
+```bash
+sudo service --status-all
+sudo service docker start
+
+# to start service
+sudo service ssh start
+
+# On Ubuntu 16.04 you can use systemctl, the systemd command for managing services:
+sudo systemctl start ssh
 ```

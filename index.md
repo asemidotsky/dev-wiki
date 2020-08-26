@@ -79,8 +79,7 @@
 
 ## Operating systems
 
-* [Linux](pages/os/linux/linux-basics)
-  * [Ubuntu](pages/os/ubuntu/ubuntu-index)
+* [Linux](pages/os/linux/linux-index)
 * Windows server
 * Windows
 

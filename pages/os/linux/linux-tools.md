@@ -8,6 +8,26 @@
 
 * [WinSCP](https://winscp.net/eng/index.php)
 
+## Powershell
+
+Install via snap
+```bash
+# Install PowerShell
+sudo snap install powershell --classic
+```
+
+[Install on Ubuntu 16.04](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-1604)
+
+## Docker
+
+[Install on Ubuntu 18.04](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
+Docker Compose install:
+```bash
+sudo curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
 ## Terminal managers
 
 ### Tmux

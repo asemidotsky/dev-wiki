@@ -24,16 +24,6 @@ gconftool -g  /system/http_proxy/ignore_hosts
 gconftool  --type list --list-type string  -s /system/http_proxy/ignore_hosts '[localhost,127.0.0.0/8,myhost]'
 ```
 
-## Powershell
-
-Install via snap
-```bash
-# Install PowerShell
-sudo snap install powershell --classic
-```
-
-[Install on Ubuntu 16.04](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-1604)
-
 ## Applications
 
 ### RDP to Windows

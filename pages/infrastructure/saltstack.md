@@ -72,6 +72,9 @@ salt-key -f <minion_id>
 
 # approve minion key
 salt-key -a <minion_id>
+
+# delete minion keys
+salt-key -d <minion_id>
 ```
 
 ### Minion
