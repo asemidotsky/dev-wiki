@@ -130,14 +130,31 @@ Articles:
 
 ### San Diego
 
-* C#, JS (ES6), TS, Python, Java, Ruby, Go
-* .NET, Node, GraphQL
-* React, Angular
-* Mongo, Redis, Sql Server, Elastic Search
-* Docker, Kubernetes
-* AWS, Azure
-* Alghoritms, Data-Structures
-* Linux
+| Tech      | Rating    |
+|-----------|-----------|
+| C#, .NET  |           |
+| ASP.NET MVC |    2    |
+| JS (ES6)  |      2    |
+| TS        |           |
+| Python    |     1     |
+| Java      |           |
+| Ruby      |           |
+| Go        |           |
+| Node      |           |
+| GraphQL   |           |
+| React     |     2     |
+| Angular   |           |
+| Mongo     |           |
+| Sql Server |    2     |
+| Elastic Search | 1    |
+| Redis     |     1     |
+| RabbitMQ  |     1     |
+| Docker    |           |
+| Kubernetes|           |
+| AWS       |           |
+| Azure     |           |
+| Alghoritms, Data-Structures | |
+| Linux     |           |
 
 
 
