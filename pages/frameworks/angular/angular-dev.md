@@ -369,6 +369,8 @@ Directive types:
 * **Structural directives** - change the DOM, add or remove elements. *Only one structural directive is allowed per element*.
 * **Attribute directives** - only change the element they were placed on
 
+![Directive types](directive-types.png)
+
 ### ngIf
 
 It is structural directive.
