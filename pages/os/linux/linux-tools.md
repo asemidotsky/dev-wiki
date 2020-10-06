@@ -8,6 +8,18 @@
 
 * [WinSCP](https://winscp.net/eng/index.php)
 
+## Snap
+
+```bash
+sudo apt update
+sudo apt install snapd
+# to check
+$ sudo snap install hello-world
+hello-world 6.4 from Canonical✓ installed
+$ hello-world
+Hello World!
+```
+
 ## Powershell
 
 Install via snap
@@ -97,3 +109,18 @@ tar -czvf "package.tar.gz" -C package-dir *
 # extract to C:/
 tar -C C:/ -xvf package.tar.gz
 ```
+
+## Less
+
+**less** is a program that lets us view text files.
+
+| Command |	Action |
+|---------|--------|
+| Page Up or b | Scroll back one page |
+| Page Down or space | Scroll forward one page |
+| G	| Go to the end of the text file |
+| 1G	| Go to the beginning of the text file |
+| /characters | Search forward in the text file for an occurrence of the specified characters |
+| n	| Repeat the previous search |
+| h	| Display a complete list less commands and options |
+| q	| Quit |

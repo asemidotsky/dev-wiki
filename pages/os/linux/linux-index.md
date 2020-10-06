@@ -2,6 +2,7 @@
 
 * [Linux for Beginners Book](http://www.linuxtrainingacademy.com/linux)
 * [Learning the Shell](http://linuxcommand.org/lc3_learning_the_shell.php)
+    * [File system structure](http://linuxcommand.org/lc3_lts0040.php)
 * [Tools](linux-tools)
 * [Ubuntu desktop](ubuntu-desktop)
 
@@ -74,7 +75,7 @@ $ ssh -p port_number remote_host
 $ ssh remote_host command_to_run
 ```
 
-## File operations
+## Manipulating Files
 
 * [mv](https://man7.org/linux/man-pages/man1/mv.1.html)
 * `sudo apt-get install rename` for renaming
@@ -130,6 +131,12 @@ chgrp <group_name> sales.report
 
 ## Permissions
 
+`-rw-rw-r--`
+
+A representation of the file's access permissions. The first character is the type of file. A "-" indicates a regular (ordinary) file. A "d" indicates a directory. The second set of three characters represent the read, write, and execution rights of the file's owner. The next three represent the rights of the file's group, and the final three represent the rights granted to everybody else.
+
+Commands:
+
 * chmod – change permissions
 * chown – change ownership
 
@@ -174,6 +181,12 @@ $ kill -s 15 2358
 #OR send signal 9 (SIGKILL) which is used for forced termination to PID 3553:
 $ kill -9 PID-HERE
 $ kill -9 3553
+```
+
+## Get process exit code
+
+```
+command && echo $?
 ```
 
 [more](https://www.cyberciti.biz/faq/stop-process-ubuntu-linux-command/)

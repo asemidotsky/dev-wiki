@@ -1,5 +1,10 @@
 # Node.js Testing
 
+* **Mocha** is a feature-rich JavaScript test framework running on Node. js and in the browser, making asynchronous testing simple and fun
+* **Chai** is a BDD / TDD assertion library for NodeJS and the browser that can be delightfully paired with any javascript testing framework.
+* **Jest** is an open JavaScript testing library from Facebook. Its slogan is "Delightful JavaScript Testing"
+* **SuperTest** is an HTTP assertions library that allows you to test your Node. js HTTP servers. It is built on top of SuperAgent library, wich is an HTTP client for Node.js. _SuperTest is for end-to-end tests._
+
 ## Unit tests
 
 ### Mocha and Chai

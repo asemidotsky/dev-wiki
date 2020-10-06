@@ -10,4 +10,13 @@ gsv *slb*
 ```bash
 # adding path to PATH
 PATH=$PATH:~/opt/bin
+
+# check traffic
+sudo iftop
+
+# check folder size
+watch -d du -m <folder_path>
+
+#check files size
+ls -lh <folder_path>
 ```

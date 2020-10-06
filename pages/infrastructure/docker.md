@@ -37,3 +37,10 @@ docker exec -t --user www-data container bash -c "ls -la"
 ## Links
 
 [Securely using .npmrc files in Docker images](https://www.alexandraulsh.com/2018/06/25/docker-npmrc-security/)
+
+## Install app in container
+
+```bash
+apt-get update
+apt-get -y install curl
+```
