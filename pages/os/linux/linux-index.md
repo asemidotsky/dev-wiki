@@ -84,6 +84,22 @@ $ ssh remote_host command_to_run
 mv oldfile.txt newfile.txt
 ```
 
+## Get Directory size
+
+```
+$ du -sh
+$ sudo du -h --max-depth=1 /var
+
+# 5 largest directories in the /var
+$ sudo du -h /var/ | sort -rh | head -5
+```
+
+* s - Display only the total size of the specified directory, do not display file size totals for subdirectories.
+* h - Print sizes in a human-readable format (h).
+* c - to print a grand total of all sizes
+* --max-depth - to get a report about the disk usage of the first-level subdirectories
+* --apparent-size - the “apparent size” of a file is how much data is actually in the file
+
 ## Users
 
 ## Groups
