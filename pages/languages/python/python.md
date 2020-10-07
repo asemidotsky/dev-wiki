@@ -49,7 +49,9 @@ Mocks
 * [Mocking functions Part I: Better Unit Testing in Python with pytest-mock](https://medium.com/analytics-vidhya/mocking-in-python-with-pytest-mock-part-i-6203c8ad3606)
 * [Mocking Functions Part II: Writing Better Tests in Python with pytest-mock](https://medium.com/@durgaswaroop/writing-better-tests-in-python-with-pytest-mock-part-2-92b828e1453c)
 * [pytest: How to mock in Python](https://changhsinlee.com/pytest-mock/)
+* [Python – Getting Started with Python Mock](https://myadventuresincoding.wordpress.com/2011/02/26/python-python-mock-cheat-sheet/)
 * [An Introduction to Mocking in Python](https://www.toptal.com/python/an-introduction-to-mocking-in-python)
+* [unittest.mock — mock object library](https://docs.python.org/3/library/unittest.mock.html)
 
 ## Variables & Types
 
