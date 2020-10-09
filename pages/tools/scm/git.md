@@ -53,6 +53,16 @@ git reset HEAD~
 git reset --mixed HEAD~
 ```
 
+## Rebase
+
+Rebasing feature on to dev
+```bash
+git checkout feature
+git rebase dev
+```
+
+[Rebase — One of the Most Powerful Git Commands](https://medium.com/osedea/git-rebase-powerful-command-507bbac4a234)
+
 ## Viewing the Commit History
 
 ```bash
