@@ -1,5 +1,8 @@
 ## Books & Resources
 
+* [Python Recipes](python-recipes)
+* [Python OOP](python-oop)
+
 Docs
 * [Type hints cheat sheet (Python 3)](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
 * [Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
@@ -371,7 +374,8 @@ while index < len(animals):
 `open(path_to_file, mode)`
 
 File open modes:
-| Mode | DEscription |
+
+| Mode | Description |
 |------|-------------|
 | r    | Open for reading (default) |
 | w    | Open for writing, truncating the file first |
