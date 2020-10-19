@@ -3,7 +3,7 @@
 ## Acrhitecture
 
 * [Great application design concepts](pages/architecture/great-design)
-* Microservices
+* [Microservices](pages/architecture/microservices)
 * API design
   * [REST](pages/architecture/rest/index)
 * Design Patters
@@ -49,6 +49,7 @@
 
 ## Infrastructure
 
+* [Docker](pages/infrastructure/docker)
 * [SaltStack](pages/infrastructure/saltstack)
 
 ## Data structures

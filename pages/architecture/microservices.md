@@ -6,3 +6,5 @@ But highly coupled architectures require heavy coordination between systems and 
 ## Links
 
 * https://microservices.io/
+* https://martinfowler.com/articles/microservices.html
+* https://aws.amazon.com/microservices/
