@@ -1,3 +1,5 @@
+# Everyday
+
 ## Powershell
 
 ```powershell
@@ -19,4 +21,10 @@ watch -d du -m <folder_path>
 
 #check files size
 ls -lh <folder_path>
+
+# count files in folder
+
+ls | wc -l
+find <directory> -type f | wc -l
+tree <directory>
 ```
