@@ -8,6 +8,7 @@ Docs
 * [Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 * [The Python Standard Library](https://docs.python.org/3/library/)
 * [Idioms and Anti-Idioms in Python](https://docs.python.org/3.1/howto/doanddont.html)
+* [Python Design Patterns](https://www.geeksforgeeks.org/python-design-patterns/?ref=lbp)
 
 Books
 * Python Succinctly book
