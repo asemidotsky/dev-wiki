@@ -55,6 +55,7 @@ Mocks
 * [pytest: How to mock in Python](https://changhsinlee.com/pytest-mock/)
 * [Python – Getting Started with Python Mock](https://myadventuresincoding.wordpress.com/2011/02/26/python-python-mock-cheat-sheet/)
 * [An Introduction to Mocking in Python](https://www.toptal.com/python/an-introduction-to-mocking-in-python)
+* [Python Mock Cookbook](https://chase-seibert.github.io/blog/2015/06/25/python-mocking-cookbook.html)
 * [unittest.mock — mock object library](https://docs.python.org/3/library/unittest.mock.html)
 
 ## Variables & Types
