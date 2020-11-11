@@ -322,3 +322,35 @@ sudo service ssh start
 # On Ubuntu 16.04 you can use systemctl, the systemd command for managing services:
 sudo systemctl start ssh
 ```
+
+## Environment variables
+
+```bash
+# show all
+printenv
+# or
+set
+
+# show single value
+printenv <var_name>
+echo $NAME
+
+# set variable for user session
+export NAME=VALUE
+
+# persisting env var for a user
+vi ~/.bash_profile
+export JAVA_HOME=/opt/openjdk11
+## apply changes
+source ~/.bash_profile
+
+# to permanently add a new environment variable in Ubuntu
+sudo nano /etc/environment
+if you want to add FOO=bar, then just write FOO=bar in a new line
+Once saved, logout and login again
+
+# remove
+unset VARIABLE_NAME
+```
+
+[How to Set Environment Variables in Linux](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/)
