@@ -1,7 +1,11 @@
 ## Resources
 
 * https://www.saltstack.com/
+* [SaltStack Get Started](https://docs.saltstack.com/en/getstarted/)
+* [SaltStack Fundamentals](https://docs.saltstack.com/en/getstarted/fundamentals/)
+* [SaltStack Configuration Management](https://docs.saltstack.com/en/getstarted/config/index.html)
 * [SALT IN 10 MINUTES](https://docs.saltstack.com/en/master/topics/tutorials/walkthrough.html)
+* [Execution Modules](https://docs.saltstack.com/en/latest/ref/modules/all/index.html)
 
 ## Salt files
 
@@ -41,6 +45,12 @@ salt '*' cmd.run 'ls -l /etc'
 salt '*' pkg.install vim
 
 salt '*' network.interfaces
+
+# TARGETING
+##  with grains
+salt -G 'os:Ubuntu' test.ping
+## combined
+salt -C 'G@os:Ubuntu and minion* or S@192.168.50.*' test.ping
 ```
 
 **Changing command output format**
@@ -56,7 +66,7 @@ Doing so allows you to see the minion log messages specific to the command you a
 
 ### Salt master
 
-Used ports 4505 and 4506.
+Uses ports 4505 (Publisher) and 4506 (Request Server).
 
 ```bash
 # start salt master process
@@ -116,7 +126,7 @@ Salt is for:
 Terminology:
 * Master - the centrilized machine
 * Syndication master
-* Minions - all host (master is minion too)
+* Minions - all hosts (master is minion too)
 * Targeting options
 * Globs to matching targets
 
@@ -160,6 +170,25 @@ Grains can also be statically set, this makes it easy to assign values to minion
 A common practice is to assign grains to minions to specify what the role or roles a minion might be. These static grains can be set in the minion configuration file or via the grains.setval function.
 
 ## States
+
+## Pillars
+
+```bash
+# refresh
+salt '*' saltutil.refresh_pillar
+```
+Salt pillar keys are available in a dictionary in Salt states:
+
+```yaml
+vim installed:
+  pkg.installed:
+    - name: {{ pillar['editor'] }}
+```
+
+Pass pillar in command line:
+```bash
+salt '*' state.apply ftpsync pillar='{"ftpusername": "test", "ftppassword": "12121"}'
+```
 
 {% endraw %}
 

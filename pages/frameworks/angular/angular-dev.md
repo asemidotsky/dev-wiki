@@ -491,10 +491,10 @@ export class BetterHighlightDirective implements OnInit {
 
 ### HostListener
 
-To make directive reactive.
+To make directive reactive to events.
 
 ```ts
-import { Directive, ElementRef, RendererV2, HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appBetterHighlight]'
@@ -632,6 +632,24 @@ export class SomeComponent {
 }
 ```
 
+In Angular 6+ you can:
+
+```ts
+@Injectable({providedIn: 'root'})
+export class MyService { ... }
+
+// it is the same as
+export class MyService { ... }
+// and
+import { MyService } from './path/to/my.service';
+
+@NgModule({
+    ...
+    providers: [MyService]
+})
+export class AppModule { ... }
+```
+
 Angular use **Hierarchical Injector**.
 
 1. **AppModule level** - same Instance of Service is available **Application-wide**
@@ -642,4 +660,35 @@ Service registration on lower level is override service registration on higher l
 
 > You can use EventEmiters in services to provide some publish-subscriber behaviour.
 
+## Routing
+
+### Setting up and loading Routes
+
+1. Add `const appRoutes: Routes`
+1. Add `RouterModule.forRoot(appRoutes)`
+1. Add `<router-outlet>` - place for displaying components
+
+```ts
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'servers', component: ServersComponent }
+]
+
+@NgModule({
+  declarations: [
+    ...
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [ServersService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
 {% endraw %}
+

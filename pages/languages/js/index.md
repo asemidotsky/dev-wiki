@@ -532,6 +532,7 @@ fruits instanceof Array     // returns true
 * **slice()** - slices out a piece of an array into a new array
 * **sort()** - sorts an array alphabetically
 * **reverse()** - reverses the elements in an array.
+* **find()** - find item in array (JS6)
 
 ```js
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -572,6 +573,9 @@ var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(3); // new array: Apple,Mango
 // selects elements from the start argument, and up to (but not including) the end argument.
 var citrus1 = fruits.slice(1, 3); // new array: Orange,Lemon
+
+// find()
+let obj = arr.find(o => o.name === 'Alex');
 ```
 
 #### Sorting an Array

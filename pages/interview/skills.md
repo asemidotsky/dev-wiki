@@ -1,3 +1,5 @@
+# Interview skills
+
 * Coach the team on software best practices (design, coding, troubleshooting, work breakdown, work estimation, refactor strategies, automated testing, etc.)
 * Experience developing complex software systems that have been successfully delivered to customers
 * Knowledge of professional software engineering practices & best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations
@@ -30,6 +32,11 @@ Front-end
 ## Computer Science fundamentals
 
 * object-oriented design
+    * abstraction
+    * composition
+    * aggregation
+    * assotiation
+    * multilevel inheritance
 * data structures
 * algorithm design
 * problem solving
@@ -39,14 +46,19 @@ Front-end
 
 • Experience building large scale, high-performance systems in a complex, multi-tiered, distributed environment
 • Strong coding skill in at least one modern programming language such as or
-• Computer Science fundamentals in object-oriented design, algorithm design, problem solving, and complexity analysis
+• Computer Science fundamentals in object-oriented design, data structures, algorithm design, problem solving, and complexity analysis
 
 Preferred qualifications
 
-• Experience to lead teams and guide engineers inside and outside the team for design
-• Understanding of Amazon technologies like DynamoDB, AWS, S3
-• Understanding of integration technologies like web services, messaging queues
+* Self-directed and capable of working effectively in a dynamic environment
+* Experience to lead teams and guide engineers inside and outside the team for design
+* Understanding of Amazon technologies like DynamoDB, AWS, S3
+* Understanding of integration technologies like web services, messaging queues
 • Understanding of No-Sql and RDBMS database technologies
 • Experience with an AB testing framework
 • Experience with MapReduce concepts and Hadoop
+
+Tech
+
+* JavaScript, Python
 
