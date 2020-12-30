@@ -1,11 +1,51 @@
 # Security guidelines
 
-## Security design principles
+## Security core concepts
 
-Confidentiality
+### Confidentiality
 
 Data classification: Public, Non-public
 
+![Protection mechanisms](security/protection-mechanisms.png)
+
+### Integrity
+
+Validation to ensure integrity:
+* Parity Bit
+* Cyclic Redundancy Checking (CRC) = checksum
+* Hashing
+* Digital fingerprint
+
+### Availability
+
+Recovery Time Objective (RTO)
+
+### Authentication and Authorization
+
+Authentication types:
+* Anonymous (public access)
+* Basic
+* Digest
+* Integrated (Windows) - challenge/response
+* Client certificates
+* Forms
+* Token-Based Authentication - used in conjunction with username and passwords
+* Smart Cards
+* Biometrics
+
+Authorization:
+* Discretionary Access Control (DAC)
+    * Restrict access to objects
+    * Identity based access control
+    * Role based access control
+    * Access control lists (ACL)
+* Nondiscretionary AC (NDAC)
+* Mandatory Access Control (MAC)
+* Role Based Access Control (RBAC)
+
+Accounting (Audit logs)
+
+## Security design principles
 
 ## Links
 
