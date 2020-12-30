@@ -42,6 +42,13 @@ Front-end
 * problem solving
 * complexity analysis
 
+## Technology agnostic fundamentals
+
+1. Cloud computing
+1. NO SQL concepts
+1. Software agility principles, best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations
+1. TCP/IP networking
+
 ## Amazon
 
 • Experience building large scale, high-performance systems in a complex, multi-tiered, distributed environment

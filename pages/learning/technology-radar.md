@@ -7,6 +7,10 @@
 
 On this page you can see the cutting edge and popular technologies.
 
+## General frameworks
+
+* .NET Core
+
 ## Web
 
 * Large: Angular, React
@@ -115,6 +119,37 @@ IDE: VS Code, WebStorm
 
 Details
 
+### San Diego
+
+| Tech      | Rating    |
+|-----------|-----------|
+| C#, .NET  |    2       |
+| ASP.NET MVC |    2    |
+| JS (ES6)  |      4    |
+| TS        |           |
+| Python    |    1      |
+| Java      |    1      |
+| Ruby      |           |
+| Go        |    3      |
+| Node      |    3      |
+| GraphQL   |     1     |
+| React     |     4     |
+| Angular   |           |
+| Mongo     |     2     |
+| Sql Server |    2     |
+| Elastic Search | 1    |
+| Redis     |     1     |
+| RabbitMQ  |     1     |
+| Kafka     |     1     |
+| Docker    |           |
+| Kubernetes|           |
+| AWS       |     2     |
+| Azure     |     1     |
+| Google Cloud |  1      |
+| Alghoritms, Data-Structures | |
+| Linux     |           |
+| Material UI |   1     |
+
 ### San Francisco
 
 * JavaScript, Go, Python, Ruby, Java
@@ -127,35 +162,6 @@ Details
 
 Articles:
 * [Most In-Demand Skills in San Francisco](https://sanfranciscobootcamps.com/most-in-demand-skills-in-san-francisco/)
-
-### San Diego
-
-| Tech      | Rating    |
-|-----------|-----------|
-| C#, .NET  |           |
-| ASP.NET MVC |    2    |
-| JS (ES6)  |      2    |
-| TS        |           |
-| Python    |     1     |
-| Java      |           |
-| Ruby      |           |
-| Go        |           |
-| Node      |           |
-| GraphQL   |           |
-| React     |     2     |
-| Angular   |           |
-| Mongo     |           |
-| Sql Server |    2     |
-| Elastic Search | 1    |
-| Redis     |     1     |
-| RabbitMQ  |     1     |
-| Docker    |           |
-| Kubernetes|           |
-| AWS       |           |
-| Azure     |           |
-| Alghoritms, Data-Structures | |
-| Linux     |           |
-
 
 
 
