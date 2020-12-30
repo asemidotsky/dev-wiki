@@ -69,10 +69,13 @@ ssh-add ~/.ssh/id_rsa
 
 ```bash
 # if you changed the port number in your sshd configuration
-$ ssh -p port_number remote_host
+$ ssh user@remote_host -p port_number
 
 # execute a single command on a remote system
-$ ssh remote_host command_to_run
+$ ssh user@remote_host command_to_run
+
+# pass ssh password from file (not secure)
+sshpass -f /path/to/myfile ssh user@remote_host
 ```
 
 ## Manipulating Files
