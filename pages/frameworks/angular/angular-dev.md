@@ -690,5 +690,79 @@ const appRoutes: Routes = [
 export class AppModule { }
 ```
 
+### Navigating with Router Links
+
+`routerLink="/"` directive
+
+```html
+  <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+  <li><a routerLink="/servers" routerLinkActive="active" >Servers</a></li>
+  <li><a [routerLink]="['/users']" routerLinkActive="active" >Users</a></li>
+```
+
+`routerLinkActive` - to mark active
+
+### Navigating programmatically
+
+```ts
+  this.router.navigate(['/users']);
+```
+
+### Route parameters
+
+```ts
+const appRoutes: Routes = [
+  { path: 'users/:id', component: UsersComponent }
+]
+
+// to get route param value
+this.route.snapshot.params['id']
+// route is ActivatedRoute
+
+this.route.params.subscribe(
+  (params: Params) => {
+    this.user.id = params['id'];
+    this.user.name = params['name'];
+  }
+);
+```
+
+### Query Parameters and Fragments
+
+```html
+<a
+  [routerLink]="['/servers', 5, 'edit']"
+  [queryParams]="{allowEdit: '1'}"
+  fragment="loading"
+  ...>
+  {{ server.name }}
+</a>
+```
+
+```ts
+this.router.navigate(['/servers', id, 'edit'], {queryParams: {allowEdit: '1'}, fragment: 'loading'})
+
+// to get
+this.route.snapshot.queryParams
+this.route.snapshot.fragment
+```
+
+### Nested (child) routes
+
+```ts
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UsersComponent, children: [
+    { path: ':id/:name', component: UserComponent}
+  ] },
+  { path: 'servers', component: ServersComponent, children: [
+    { path: ':id', component: ServerComponent },
+    { path: ':id/edit', component: EditServerComponent },
+  ] }
+]
+```
+
+In `users` and `servers` component templates add `<router-outlet></router-outlet>`
+
 {% endraw %}
 
