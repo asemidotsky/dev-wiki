@@ -6,7 +6,8 @@
 * SaltStack, YAML
 * Docker, Docker-Compose
 * Ubuntu, Linux
-* bash, PowerShell
+* Bash, PowerShell
+* Angular
 
 Tools
 * VirtualBox
