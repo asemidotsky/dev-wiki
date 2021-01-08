@@ -47,6 +47,17 @@ Accounting (Audit logs)
 
 ## Security design principles
 
+* Least Privileges
+* Separation of Duties
+* Defense in Depth (layering security controls)
+* Fail-safe
+* Economy of Mechanism
+* Complete Mediation
+* Open Design
+* Least Common Mechanisms
+* Psychological Acceptability
+* Weakest Link
+
 ## Links
 
 * [Password Storage Cheat Sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
