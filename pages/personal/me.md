@@ -1,6 +1,10 @@
 ## 2021
 
-My focus in 2021
+### Technology focus
+
+Learn more:
+* Azure
+* Docker/Kubernetes
 
 Languages
 * Python
@@ -11,7 +15,7 @@ Languages
 
 Frameworks
 * Angular, NgRX
-* FastAPI, Flask
+* FastAPI, Flask, Django
 
 Techonologies
 * Docker
@@ -26,3 +30,7 @@ Fundamentals
 * Patterns
 * Architecture Patterns
 * Microservices
+
+### Not technology focus:
+* Project/Domain should be interested: more coding/architecture, less managing work
+* Do only what you like to do, if not so - look for a new project

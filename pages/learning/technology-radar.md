@@ -24,7 +24,7 @@ Web Frameworks:
 
 * ASP.NET Core
 * [Ruby on Rails](https://rubyonrails.org/)
-* [Spring](https://spring.io/)
+* [Spring](https://spring.io/) (Java)
 * Express
 * Django
 * Flask
@@ -36,6 +36,7 @@ Web Frameworks:
 * TypeScript
 * C#
 * Go
+* Java
 * Rust
 
 ## Databases
@@ -150,6 +151,12 @@ Details
 | Linux     |           |
 | Material UI |   1     |
 
+Salary:
+- Senior - GD: 106 (79-135), 122 (97-155)
+- Lead - GD: 112 (84-144) LIN: 133 (103-185)
+- Principal - GD: 119 (89-151) LIN: 160 (123-200)
+- Architect - GD: 121 (96-151) LIN: 142 (104-194)
+
 ### San Francisco
 
 * JavaScript, Go, Python, Ruby, Java
@@ -163,7 +170,17 @@ Details
 Articles:
 * [Most In-Demand Skills in San Francisco](https://sanfranciscobootcamps.com/most-in-demand-skills-in-san-francisco/)
 
+## Salaries
 
+Based on LinkedIn and Glassdoor salaries.
+
+SE - Software Engineer
+
+| Role | Hosuton Median | Houston Range | Austin Medium | Austin Range |
+|------------------------|--------|--------|------------|-------|
+| Lead SE |      110     | 85 - 145      | 126 | 87 - 166 |
+| Principal SE | 145     |  102 - 183     | 131 | 105 - 180 |
+| Software Architect |   139     |  95 - 174     |  150  | 115 - 195 |
 
 
 

@@ -1,5 +1,11 @@
 # My personal history
 
+## 2021
+
+* January
+  * cloud init
+  * CIDR notation
+
 ## 2020
 
 * Python: FastAPI
