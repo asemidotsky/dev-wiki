@@ -258,7 +258,17 @@ put file.txt
 
 Type the following command to see IPv4 port(s), enter:
 
-`lsof -Pnl +M -i4`
+```bash
+lsof -Pnl +M -i4
+# or
+sudo lsof -i -P -n | grep LISTEN
+sudo netstat -tulpn | grep LISTEN
+sudo lsof -i:22 ## see a specific port such as 22 ##
+sudo nmap -sTU -O IP-address-Here
+
+# in latest versions
+ss -tulw
+```
 
 Type the following command to see IPv6 listing port(s), enter:
 
