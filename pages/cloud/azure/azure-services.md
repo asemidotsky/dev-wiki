@@ -151,3 +151,159 @@ module.exports = df.orchestrator(function* (context) {
     return outputs;
 })
 ```
+
+### Azure Functions Core Tools
+
+The Azure Functions Core Tools are a set of command-line tools that you can use to develop and test Azure Functions on your local computer.
+
+The Core Tools feature a variety of functions-related capabilities, but their primary purpose is to:
+
+* Generate the files and folders you need to develop functions on your local computer
+* Run your functions locally so you can test and debug them
+* Publish your functions to Azure
+
+The Core Tools are packaged as a single command-line utility named _func_.
+
+Run function as background process in Cloud Shell:
+```
+func start &> ~/output.txt &
+```
+
+Develop & Test locally with Core Tools and then:
+1. Create Azure Function App resource using Azure CLI, Azure Power Shell or Azure Portal
+1. Publish local function app project to resource
+
+```bash
+# step 1
+
+RESOURCEGROUP=learn-90b0409d-d217-4a99-a4bc-32a4448d0830
+STORAGEACCT=learnstorage$(openssl rand -hex 5)
+FUNCTIONAPP=learnfunctions$(openssl rand -hex 5)
+
+az storage account create \
+  --resource-group "$RESOURCEGROUP" \
+  --name "$STORAGEACCT" \
+  --kind StorageV2 \
+  --location centralus
+
+az functionapp create \
+  --resource-group "$RESOURCEGROUP" \
+  --name "$FUNCTIONAPP" \
+  --storage-account "$STORAGEACCT" \
+  --runtime node \
+  --consumption-plan-location centralus \
+  --functions-version 2
+
+# step 2
+
+cd ~/loan-wizard
+func azure functionapp publish "$FUNCTIONAPP"
+```
+
+### Visual Studio Code
+
+In the Cloud Shell, run the following command and copy the tenant ID to your clipboard.
+
+`az account list --query "[?name=='Concierge Subscription'].tenantId" -o tsv`
+
+1. Open settings in Visual Studio Code. On Windows or Linux, select File > Preferences > Settings. On macOS, select Code > Preferences > Settings.
+2. Navigate through User Settings > Extensions > Azure configuration
+3. Enter the tenant in the Azure: Tenant textbox.
+
+Select Subscription:
+1. Click on the Azure extension icon.
+1. Under the Functions heading, click on Select Subscriptions.
+
+Press **F1** and you can select commands:
+* Azure: Sign Out
+* Azure: Sign In
+* Azure Functions: Deploy to Function App
+* Azure Functions: Upload local settings
+* Azure Storage: Configure Static Website
+* Azure Storage: Deploy to Static Website
+* Azure Storage: Browse static website
+* Azure Functions: Open in portal
+
+## Azure API Management
+
+ You can use API Management to integrate different microservices and present them to client applications with consistent behavior at a single URL.
+
+ The Azure API management service is hosted in the Azure cloud and is positioned between your APIs and the Internet. An **Azure API gateway** is an instance of the Azure API management service.
+
+ * **API documentation.** Documentation of APIs enables calling clients to quickly integrate their solutions. API Management allows you to quickly expose the structure of your API to calling clients through modern standards like Open API. You can have more than one version of an API. With multiple versions, you can stage app updates as your consuming apps don't have to use the new version straight away.
+* **Rate limiting access.** If your API could potentially access a large amount of data, it's a good idea to limit the rate at which clients can request data. Rate limiting helps maintain optimal response times for every client. API Management let you set rate limits as a whole or for specific individual clients.
+* **Health monitoring.** APIs are consumed by remote clients. So it can be difficult to identify potential problems or errors. API Management lets you view error responses and log files, and filter by types of responses.
+* **Modern formats like JSON.** APIs have used many different data exchange formats over the years from XML to CSV and many more. API Management enables you to expose these formats using modern data models like JSON.
+* **Connections to any API.** In many businesses, APIs are located across different countries and use different formats. API Management lets you add all of these disparate APIs into single modern interface.
+* **Analytics.** As you develop your APIs, it's useful to see how often your APIs are being called and by which types of systems. API Management allows you to visualize this data within the Azure portal.
+* **Security.** Security is paramount when dealing with system data. Unauthorized breaches can cost companies money, time lost in reworking code, and reputational loss. Security tools that you can use with Azure API management include OAuth 2.0 user authorization, and integration with Azure Active Directory.
+
+The API gateway is the endpoint that:
+
+* Accepts API calls and routes them to the backend.
+* Verifies API keys, JWT tokens, certificates, and other credentials.
+* Enforces usage quotas and rate limits.
+* Transforms your API on the fly without code modifications.
+* Caches backend responses where set up.
+* Logs call metadata for analytics purposes.
+
+Subscription keys are used to restrict access to an API.
+
+Subscription scopes:
+* All APIs
+* Single API
+* Product
+
+```bash
+curl --header "Ocp-Apim-Subscription-Key: <key string>" https://<apim gateway>.azure-api.net/api/path
+
+curl https://<apim gateway>.azure-api.net/api/path?subscription-key=<key string>
+```
+
+### API Management policies
+
+In Azure API Management, policies execute at four different times:
+
+* **Inbound**. These policies execute when a request is received from a client.
+* **Backend**. These policies execute before a request is forwarded to a managed API.
+* **Outbound**. These policies execute before a response is sent to a client.
+* **On-Error**. These policies execute when an exception is raised.
+
+```xml
+<policies>
+    <inbound>
+        <base />
+        <check-header name="Authorization" failed-check-httpcode="401" failed-check-error-message="Not authorized" ignore-case="false">
+        </check-header>
+    </inbound>
+    <backend>
+        <base />
+    </backend>
+    <outbound>
+        <base />
+        <json-to-xml apply="always" consider-accept-header="false" parse-date="false" />
+    </outbound>
+    <on-error>
+        <base />
+    </on-error>
+</policies>
+```
+
+Policy scopes:
+* Global scope
+* Product scope
+* API policy scope
+* Operation policy scope
+
+**Using an external cache**
+
+API Management instances usually have an internal cache, which is used to store prepared responses to requests. However, if you prefer, you can use an external cache instead. One possible external cache system that you can use is the Azure Cache for Redis service.
+
+You might choose to use an external cache because:
+
+* You want to avoid the cache being cleared when the API Management service is updated.
+* You want to have greater control over the cache configuration than the internal cache allows.
+* You want to cache more data than can be store in the internal cache.
+
+Another reason to configure an external cache is that you want to use caching with the consumption pricing tier. This tier follows serverless design principal and you should use it with serverless web APIs. For this reason, it has no internal cache. If you want to use caching with an API Management instance in the consumption tier, you must use an external cache.
+
