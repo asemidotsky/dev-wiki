@@ -1,6 +1,7 @@
 # Angular Index
 
 * [Fundamentals](angular-dev)
+* [Tests](angular-tests)
 * [Tools](angular-tools)
 
 ## Manage environments
