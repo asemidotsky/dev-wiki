@@ -125,6 +125,8 @@ Choose Event Hubs if:
 * You need aggregation or analytics on your event stream.
 * You need reliable messaging or resiliency.
 
+
+
 ## Service Bus
 
 Azure Service Bus **topics** are like queues, but can have multiple subscribers. When a message is sent to a topic instead of a queue, multiple components can be triggered to do their work.
