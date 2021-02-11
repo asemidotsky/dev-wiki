@@ -7,3 +7,6 @@
 * Build Good Communication Skills
 * Be Prompt and Active at Standups/Meetings
 * Deal with Distractions
+
+The main:
+* Learn fundamentals, not only frameworks

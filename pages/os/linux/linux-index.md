@@ -35,6 +35,8 @@ SSH keys should be generated on the computer you wish to log in from. This is us
 
 ```bash
 ssh-keygen -t rsa
+# or
+ssh-keygen -m PEM -t rsa -b 4096
 ```
 
 Press enter to accept the defaults. Your keys will be created at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa.
@@ -49,6 +51,8 @@ You can copy the public key to the remote server by issuing this command:
 
 ```bash
 ssh-copy-id remote_username@remote_host
+#
+ssh-copy-id -i ~/.ssh/id_rsa.pub azureuser@myserver
 ```
 
 ### Adding SSH key to the ssh-agent
@@ -76,6 +80,21 @@ $ ssh user@remote_host command_to_run
 
 # pass ssh password from file (not secure)
 sshpass -f /path/to/myfile ssh user@remote_host
+```
+
+## Commands
+
+```bash
+```
+
+### Repeat command
+
+```bash
+# 1
+while true; do echo -n "This is a test of while loop";date ; sleep 5; done
+
+# 2
+for i in {1..10}; do sudo service salt-minion status | grep Active ; date ; sleep 5; done
 ```
 
 ## Manipulating Files
@@ -334,6 +353,8 @@ sudo service ssh start
 
 # On Ubuntu 16.04 you can use systemctl, the systemd command for managing services:
 sudo systemctl start ssh
+
+systemctl list-units
 ```
 
 ## Environment variables
@@ -367,3 +388,16 @@ unset VARIABLE_NAME
 ```
 
 [How to Set Environment Variables in Linux](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/)
+
+## Disks
+
+```bash
+# Initialize the disk
+(echo n; echo p; echo 1; echo ; echo ; echo w) | sudo fdisk /dev/sdc
+
+# Write a file system to the partition
+sudo mkfs -t ext4 /dev/sdc1
+
+# Finally, we need to mount the drive to the file system. Let's assume we will have a data folder. Let's create the mount point folder and mount the drive
+sudo mkdir /data && sudo mount /dev/sdc1 /data
+```

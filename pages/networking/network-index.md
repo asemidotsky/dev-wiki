@@ -10,6 +10,7 @@ Segments (Transport) -> Packets (Network) -> Frames (Data Link)
 * [Router](https://www.cloudflare.com/learning/network-layer/what-is-routing/)
 * [Switch](https://www.cloudflare.com/learning/network-layer/what-is-a-network-switch/)
 * [What are layer 3 DDoS attacks?](https://www.cloudflare.com/learning/ddos/layer-3-ddos-attacks/)
+* [Understanding IP Addresses, Subnets, and CIDR Notation for Networking](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking)
 
 ## Subnet
 
