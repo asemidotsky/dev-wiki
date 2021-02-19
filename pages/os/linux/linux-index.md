@@ -84,12 +84,33 @@ sshpass -f /path/to/myfile ssh user@remote_host
 
 ## Commands
 
+### Command chaining
+
+**The Semicolon (;) Operator**: `ls ; pwd ; whoami` -  allows you to execute multiple commands in succession, regardless of whether each previous command succeeds
+
+**The Logical AND Operator (&&)** - If you want the second command to only run if the first command is successful, separate the commands with the logical AND operator: `mkdir MyFolder && cd MyFolder`
+
+**The Logical OR Operator (||)** - Sometimes you might want to execute a second command only if the first command does not succeed. `[ -d ~/MyFolder ] || mkdir ~/MyFolder`
+
+ * A ; B  – Run A and then B, regardless of the success or failure of A
+ * A && B  – Run B only if A succeeded
+ * A || B  – Run B only if A failed
+
+Combination:
 ```bash
+[ -f ~/sample.txt ] && echo “File exists.” || touch ~/sample.txt
 ```
 
 ### Repeat command
 
 ```bash
+# 1 - watch
+watch -n 10 -t free -m
+# -n - interval, -t - hide header, -d – highlights the changes in the command output
+
+# monitoring copy process
+cp ubuntu-15.10-desktop-amd64.iso /home/tecmint/ & watch -n 0.1 du -s /home/tecmint/ubuntu-15.10-desktop-amd64.iso
+
 # 1
 while true; do echo -n "This is a test of while loop";date ; sleep 5; done
 
@@ -400,4 +421,17 @@ sudo mkfs -t ext4 /dev/sdc1
 
 # Finally, we need to mount the drive to the file system. Let's assume we will have a data folder. Let's create the mount point folder and mount the drive
 sudo mkdir /data && sudo mount /dev/sdc1 /data
+```
+
+## MEAN stack install
+
+```bash
+# mongo
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install -y mongodb
+sudo systemctl status mongodb
+
+# nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt install nodejs
 ```
