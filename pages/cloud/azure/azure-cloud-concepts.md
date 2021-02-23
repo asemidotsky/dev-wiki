@@ -31,6 +31,25 @@ These two approaches to investment are referred to as:
 * Private (Azure Stack)
 * Hybrid
 
+Public:
+* Service consumption through on-demand or subscription model
+* No up-front investment of hardware
+* Automation
+* Geographic dispersity
+* Reduced hardware maintenance
+
+Private:
+* Pre-existing environment
+* Legacy applications
+* Data sovereignty and security
+* Regulatory compliance / certification
+
+Hybrid:
+* Existing hardware investment
+* Regulatory requirements
+* Unique operating environment
+* Migration
+
 ## Types of cloud services
 
 **Infrastructure as a service (IaaS)**
@@ -40,6 +59,10 @@ IaaS is commonly used in the following scenarios:
 * Migrating workloads
 * Test and development
 * Storage, backup, and recovery
+* Website hosting
+* Web apps
+* High-performance computing
+* Big data analysis
 
 **Platform as a service (PaaS)**
 

@@ -31,3 +31,32 @@ An update domain is a logical group of hardware that can undergo maintenance or 
 ### Sizing your VM
 
 ![Choose VM size](compute/choose_vm_size.png)
+
+## Azure CLI commands
+
+```bash
+# create vm
+az vm create \
+  --resource-group learn-b461975d-e925-4f29-8288-a54fa6cc59ed \
+  --name MeanStack \
+  --image Canonical:UbuntuServer:16.04-LTS:latest \
+  --admin-username azureuser \
+  --generate-ssh-keys
+
+# open port
+az vm open-port \
+  --port 80 \
+  --resource-group learn-b461975d-e925-4f29-8288-a54fa6cc59ed \
+  --name MeanStack
+
+# save public address to env var
+ipaddress=$(az vm show \
+  --name MeanStack \
+  --resource-group learn-b461975d-e925-4f29-8288-a54fa6cc59ed \
+  --show-details \
+  --query [publicIps] \
+  --output tsv)
+
+# connect
+ssh azureuser@$ipaddress
+```
