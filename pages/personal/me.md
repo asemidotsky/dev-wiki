@@ -27,6 +27,7 @@ Techonologies
 
 Fundamentals
 * Data Structures & Alghoritms
+* Computer science fundamentals
 * Patterns
 * Architecture Patterns
 * Microservices

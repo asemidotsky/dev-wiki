@@ -4,11 +4,13 @@
 * [Python OOP](python-oop)
 
 Docs
+* [Glossary](https://docs.python.org/3/glossary.html)
 * [Type hints cheat sheet (Python 3)](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
 * [Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 * [The Python Standard Library](https://docs.python.org/3/library/)
 * [Idioms and Anti-Idioms in Python](https://docs.python.org/3.1/howto/doanddont.html)
 * [Python Design Patterns](https://www.geeksforgeeks.org/python-design-patterns/?ref=lbp)
+* [Coroutines and Tasks](https://docs.python.org/3/library/asyncio-task.html#coroutine)
 
 Books
 * Python Succinctly book
@@ -57,6 +59,18 @@ Mocks
 * [An Introduction to Mocking in Python](https://www.toptal.com/python/an-introduction-to-mocking-in-python)
 * [Python Mock Cookbook](https://chase-seibert.github.io/blog/2015/06/25/python-mocking-cookbook.html)
 * [unittest.mock — mock object library](https://docs.python.org/3/library/unittest.mock.html)
+
+## Virtual Environments
+
+[docs](https://docs.python.org/3/tutorial/venv.html)
+
+Inside your python project folder execute:
+```bash
+# create virtual env in folder `.venv`
+python -m venv .venv
+# Activate env
+.venv\Scripts\Activate.ps1
+```
 
 ## Variables & Types
 

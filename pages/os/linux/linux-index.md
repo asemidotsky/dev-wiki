@@ -435,3 +435,33 @@ sudo systemctl status mongodb
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install nodejs
 ```
+
+## Find and replace text within a file
+
+Use Stream EDitor (sed) as follows:
+`sed -i 's/old-text/new-text/g' input.txt`
+
+Another examples:
+```bash
+sed 's/word1/word2/g' input.file
+## *bsd/macos sed syntax#
+sed 's/word1/word2/g' input.file > output.file
+sed -i 's/word1/word2/g' input.file
+sed -i -e 's/word1/word2/g' -e 's/xx/yy/g' input.file
+## use + separator instead of / ##
+sed -i 's+regex+new-text+g' file.txt
+sed 's+http://+https://www.cyberciti.biz+g' input.txt
+# or
+sed 's/http:\/\//https:\/\/www.cyberciti.biz/g' input.txt
+```
+
+Options:
+* `-i` - update file
+* The `g/` means global replace i.e. find all occurrences of foo and replace with bar using sed. If you removed the /g only first occurrence is changed
+*
+
+## Popular command list
+
+| Task | Command |
+|------|---------|
+| Find and replace text within a file | `sed -i 's/old-text/new-text/g' input.txt` |

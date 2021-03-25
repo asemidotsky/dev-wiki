@@ -1,5 +1,7 @@
 # Python Object Oriented Programming
 
+[Classes doc](https://docs.python.org/3/tutorial/classes.html#class-objects)
+
 ## Properties
 
 ```python

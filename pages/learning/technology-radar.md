@@ -7,6 +7,15 @@
 
 On this page you can see the cutting edge and popular technologies.
 
+## Design, Architecture, Approaches
+
+* Always: computer science fundamentals / data structures / algorithms
+* Microservice architectures
+* Domain driven design
+* Messaging with Kafka, RabbitMQ
+* GraphQL
+* RESTful API
+
 ## General frameworks
 
 * .NET Core
@@ -26,6 +35,7 @@ Web Frameworks:
 * [Ruby on Rails](https://rubyonrails.org/)
 * [Spring](https://spring.io/) (Java)
 * Express
+* NestJS
 * Django
 * Flask
 
@@ -50,8 +60,9 @@ Web Frameworks:
 
 ## Messaging
 
+* Apache Kafka (Confluent)
 * RabbitMQ
-* Kafka
+* ActiveMQ
 * .NET Service bus: NServiceBus, MassTransit, EasyNetQ
 
 ## Cloud
@@ -75,8 +86,8 @@ CI/CD: TeamCity, Bamboo, Azure DevOps;
 Monitoring: Grafana, Kibana;
 Logs: Seq, ElasticSearch, Splunk;
 
-* Salt
 * Docker, K8S
+* Salt
 * Ansible
 * Capistrano
 * Bcfg2

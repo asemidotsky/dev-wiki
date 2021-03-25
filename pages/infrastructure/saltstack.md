@@ -64,6 +64,8 @@ The examples so far have described running commands from the Master using the **
 
 Doing so allows you to see the minion log messages specific to the command you are running (which are not part of the return data you see when running the command from the Master using salt), making it unnecessary to tail the minion log.
 
+`salt-call` does not need the salt-minion process to be running to work. It fetches the states from the master and executes them ad hoc
+
 ### Salt master
 
 Uses ports 4505 (Publisher) and 4506 (Request Server).
@@ -89,10 +91,23 @@ salt-key -d <minion_id>
 
 ### Minion
 
+[Install](https://repo.saltstack.com/#ubuntu)
+
 ```bash
 # show minion's public key fingerprint
 salt-call key.finger --local
+
+# to run minion in debug mode.
+# don't forget to stop salt-minion service before:
+# sudo systemctl stop salt-minion
+sudo salt-minion -l debug
 ```
+
+Minion config files:
+* `/etc/salt/minion`
+* `/etc/salt/minion_id` - minion id
+
+Another quick test you can run to test communication between your minion and master is to execute your test from the minion: `sudo salt-call test.ping`
 
 ### Debug state
 
@@ -116,6 +131,22 @@ test:
   - nested:
       foo: bar
 ```
+
+### Salt upgrade
+
+#### Minion upgrade
+
+```bash
+# to get a list of what version of salt your minions are running
+sudo salt \* test.version
+# or
+sudo salt-run manage.versions
+
+# to upgrade
+sudo salt \* pkg.install salt-minion refresh=True
+sudo salt \* cmd.run 'apt-get -y install salt-minion'
+```
+
 
 ## What is Salt ?
 

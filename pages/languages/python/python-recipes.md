@@ -72,3 +72,41 @@ class MyTestCase(unittest.TestCase):
         mock_b.get_name.return_value = 'guest'
         self.assertFalse(a.is_authorized())
 ```
+
+## Async, Coroutines, Tasks
+
+### Running event loop in a separate thread
+
+```python
+import asyncio
+import threading
+from typing import Awaitable, List
+
+def join_t(*threads: threading.Thread) -> List[None]:
+    return [t.join() for t in threads]
+
+def start_threads(*threads: threading.Thread) -> List[None]:
+    return [t.start() for t in threads]
+
+def event_thread(worker: Awaitable, *args, **kwargs) -> threading.Thread:
+    def _worker(*args, **kwargs):
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        try:
+            loop.run_until_complete(worker(*args, **kwargs))
+        finally:
+            loop.close()
+    return threading.Thread(target=_worker, args=args, kwargs=kwargs)
+
+async def mycoro(*args, **kwargs) -> None:
+    print(f"using {threading.get_ident()}: ", (args, kwargs))
+
+
+def main():
+    workers = [event_thread(mycoro, "arg1", "arg2", kwarg1=1, kwarg2=2) for i in range(10)]
+    start_threads(*workers)
+    join_t(*workers)
+
+if __name__ == '__main__':
+    main()
+```

@@ -43,3 +43,33 @@ az iot hub monitor-events --output table --hub-name {YourIoTHubName}
 # send message to device
 az iot device c2d-message send -d simDevice --data "Hello World" --props "key0=value0;key1=value1" -n {YourIoTHubName}
 ```
+
+## Azure PowerShell
+
+* Connect-AzAccount - connect
+* Get-AzContext - get current subscription
+* Select-AzSubscription -SubscriptionId '53dde41e-916f-49f8-8108-558036f826ae'
+* Get-AzResourceGroup | Format-Table
+* New-AzResourceGroup -Name <name> -Location <location>
+* Get-AzResource -ResourceGroupName ExerciseResources
+* Create VM:
+```powershell
+New-AzVm
+    -ResourceGroupName 4acf3baa-2c33-4884-99e0-8843f050763a
+    -Name "testvm-eus-01"
+    -Credential (Get-Credential)
+    -Location "East US"
+    -Image UbuntuLTS -OpenPorts 22
+
+# Query VM
+$vm = (Get-AzVM -Name "testvm-eus-01" -ResourceGroupName learn-4acf3baa-2c33-4884-99e0-8843f050763a)
+
+# Ip address
+$vm | Get-AzPublicIpAddress
+
+# Shutdown
+Stop-AzVM -Name $vm.Name -ResourceGroup $vm.ResourceGroupName
+
+# Remove
+Remove-AzVM -Name $vm.Name -ResourceGroup $vm.ResourceGroupName
+```

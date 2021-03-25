@@ -6,6 +6,8 @@
 * Ability to take a project from scoping requirements through actual launch of the project
 * Experience in communicating with users, other technical teams, and management to collect requirements, describe software product features, and technical designs
 * You take pride in building beautiful products
+* Participate in full software lifecycle development including gathering requirements, designing the application, data storage design, proof-of-concept and prototype development, framework development, code reviews, testing and deployment.
+* Experience designing, building and operating robust distributed systems using micro-services or SOA
 
 ## Knowledge, Skills And Abilities
 
