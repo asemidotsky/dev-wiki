@@ -6,6 +6,7 @@
 * [Azure Storage](azure-storage)
 * [Azure IoT](iot/azure-iot)
 * [Azure Tools](azure-tools)
+* [Azure Costs](azure-costs)
 * [Cloud Shell](cloud-shell)
 
 # Azure cloud
