@@ -125,7 +125,24 @@ Choose Event Hubs if:
 * You need aggregation or analytics on your event stream.
 * You need reliable messaging or resiliency.
 
+An entity that sends data to the Event Hubs is called a _publisher_, and an entity that reads data from the Event Hubs is called a _consumer_ or a _subscriber_.
 
+An event is a small packet of information (a datagram) that contains a notification. Events can be published individually, or in batches, but a single publication (individual or batch) can't exceed 1 MB.
+
+### Publishers and subscribers
+
+Event publishers are any app or device that can send out events using either HTTPS or Advanced Message Queuing Protocol (AMQP) 1.0.
+
+For publishers that send data frequently, AMQP has better performance. However, it has a higher initial session overhead, because a persistent bidirectional socket and transport-level security (TLS) or SSL/TLS has to be set up first.
+
+For more intermittent publishing, HTTPS is the better option. Though HTTPS requires additional overhead for each request, there isn't the session initialization overhead.
+
+Event subscribers are apps that use one of two supported programmatic methods to receive and process events from an Event Hub.
+* EventHubReceiver - A simple method that provides limited management options.
+* EventProcessorHost - An efficient method that we'll use later in this module.
+
+**Consumer groups**
+An Event Hub consumer group represents a specific view of an Event Hub data stream. By using separate consumer groups, multiple subscriber apps can process an event stream independently, and without affecting other apps. However, the use of many consumer groups isn't a requirement, and for many apps, the single default consumer group is sufficient.
 
 ## Service Bus
 
