@@ -1,5 +1,9 @@
 # Security guidelines
 
+* [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html)
+* [Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/)
+* [Source Code Analysis Tools](https://owasp.org/www-community/Source_Code_Analysis_Tools)
+
 ## Security core concepts
 
 ### Confidentiality
