@@ -73,3 +73,38 @@ Stop-AzVM -Name $vm.Name -ResourceGroup $vm.ResourceGroupName
 # Remove
 Remove-AzVM -Name $vm.Name -ResourceGroup $vm.ResourceGroupName
 ```
+
+## Azure Resource Manager
+
+A resource group is a logical container for resources deployed on Azure.
+Resource groups can't be nested
+
+* Use resource groups to organize Azure resources
+* Use tags to organize resources
+* Apply policies to enforce standards in your Azure environments
+* Use resource locks to protect critical Azure resources from accidental deletion
+* Secure resources with role-based access control
+
+**Use resource groups for organization**
+
+* Consistent naming convention
+    * You can start with using an understandable naming convention. You named our resource group msftlearn-core-infrastructure-rg. You've given some indication of what it's used for (msftlearn), the types of resources contained within (core-infrastructure), and the type of resource it is itself (rg). This descriptive name gives us a better idea of what it is.
+
+There are a few factors that can play into the strategy you use to organize resources: authorization, resource life cycle, and billing.
+
+**Use policies to enforce standards**
+
+* Policies can enforce things such as only allowing specific types of resources to be created, or only allowing resources in specific Azure regions
+* You can enforce naming conventions across your Azure environment.
+* You can also enforce that specific tags are applied to resources.
+
+**Secure resources with role-based access control**
+
+RBAC provides fine-grained access management for Azure resources, enabling you to grant users the specific rights they need to perform their jobs. RBAC is considered a core service and is included with all subscription levels at no cost.
+
+Best Practices for RBAC
+* Segregate duties within your team and grant only the amount of access to users that they need to perform their jobs. Instead of giving everybody unrestricted permissions in your Azure subscription or resources, allow only specific actions at a particular scope.
+* When planning your access control strategy, grant users the lowest privilege level that they need to do their work.
+* Use Resource Locks to ensure critical resources aren't modified or deleted (as you'll see in the next unit).
+
+**Use resource locks to protect resources**
