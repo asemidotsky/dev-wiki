@@ -7,11 +7,13 @@
 * [SALT IN 10 MINUTES](https://docs.saltstack.com/en/master/topics/tutorials/walkthrough.html)
 * [Execution Modules](https://docs.saltstack.com/en/latest/ref/modules/all/index.html)
 
+{% raw %}
+
 ## Salt files
 
-master config is located in `/etc/salt/`
-
-{% raw %}
+**Salt master**:
+- master config is located in `/etc/salt/`
+- salt states base folder `/srv/salt`
 
 ## Popular commands
 
@@ -24,6 +26,10 @@ salt \*minion cmd.run 'docker ps'
 
 # apply state
 salt \*minion state.apply utils.sync_all
+
+# show all states
+salt '*' state.show_sls '*' # on master
+salt-call state.show_sls '*' # on minions
 
 # show all minions
 ls -1 /var/cache/salt/master/minions

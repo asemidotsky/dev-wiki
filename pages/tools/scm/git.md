@@ -1,6 +1,7 @@
 # Git
 
 [Learn Git](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+[git-scm.com](https://git-scm.com/)
 
 ## Configuration
 
@@ -35,8 +36,10 @@ git config --list
 * git status
 * git pull/push
 * git clone
+* git checkout -b new_branch_name
 * git -add .
 * git commit -m "Commit message is here"
+* git push --set-upstream origin dev/asem/component/sonar-fixes
 * git fetch --dry-run  = Show what would be done, without making any changes
 * git status -uno = to check if your local branch is up-to-date with the origin one
 * git update-index --chmod=+x foo.sh - add executable permission on Linux

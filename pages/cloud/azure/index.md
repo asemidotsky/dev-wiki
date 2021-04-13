@@ -4,6 +4,7 @@
 * [Azure Services](azure-services)
 * [Azure Messaging](azure-messaging)
 * [Azure Storage](azure-storage)
+* [Azure Security](azure-security)
 * [Azure IoT](iot/azure-iot)
 * [Azure Tools](azure-tools)
 * [Azure Costs](azure-costs)
