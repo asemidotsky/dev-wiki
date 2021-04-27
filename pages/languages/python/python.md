@@ -2,6 +2,7 @@
 
 * [Python Recipes](python-recipes)
 * [Python OOP](python-oop)
+* [Python Tests](python-tests)
 
 Docs
 * [Glossary](https://docs.python.org/3/glossary.html)
@@ -11,6 +12,7 @@ Docs
 * [Idioms and Anti-Idioms in Python](https://docs.python.org/3.1/howto/doanddont.html)
 * [Python Design Patterns](https://www.geeksforgeeks.org/python-design-patterns/?ref=lbp)
 * [Coroutines and Tasks](https://docs.python.org/3/library/asyncio-task.html#coroutine)
+* [setup.py vs requirements.txt](https://caremad.io/posts/2013/07/setup-vs-requirement/)
 
 Books
 * Python Succinctly book
@@ -47,6 +49,21 @@ VSCode:
 pip list -v
 # show package info
 pip show <package_name>
+# build wheel
+python -m pip --disable-pip-version-check wheel -w dist --no-deps .
+
+# installing .whl
+pip install wheel_file.whl
+python -m wheel install wheel_file.whl
+
+# install dev dependencies
+pip install -e .[dev]
+## setup.cfg must have:
+[options.extras_require]
+dev =
+    pylint
+    pytest
+    pytest-cov
 ```
 
 ## Tests
