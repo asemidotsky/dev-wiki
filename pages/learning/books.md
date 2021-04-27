@@ -9,3 +9,7 @@
 * [Docker: Up & Running](https://www.amazon.com/gp/product/1491917571/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=whatpixel-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1491917571&linkId=7bd4245fb409c1806df2a86067463a25)
 * [Docker in Practive](https://www.amazon.com/gp/product/1617292729/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=whatpixel-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1617292729&linkId=0e75d2ee5d7d5ff98fca837800a93fa5) - need Docker basic knowledge
 * [More](https://whatpixel.com/best-docker-books/) and [more](https://www.vminstall.com/best-docker-books/)
+
+## Software Design
+
+[Clean Architecture: A Craftsman's Guide to Software Structure and Design]()
