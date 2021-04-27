@@ -129,6 +129,8 @@ An entity that sends data to the Event Hubs is called a _publisher_, and an enti
 
 An event is a small packet of information (a datagram) that contains a notification. Events can be published individually, or in batches, but a single publication (individual or batch) can't exceed 1 MB.
 
+[Features and terminology in Azure Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features)
+
 ### Publishers and subscribers
 
 Event publishers are any app or device that can send out events using either HTTPS or Advanced Message Queuing Protocol (AMQP) 1.0.

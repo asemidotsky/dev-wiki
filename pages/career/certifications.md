@@ -8,6 +8,8 @@
 
 * [AZ-204 Exam page](https://docs.microsoft.com/en-us/learn/certifications/exams/az-204)
 * [AZ-204 Study Guide: Developing Solutions for Microsoft Azure](https://www.thomasmaurer.ch/2020/03/az-204-study-guide-developing-solutions-for-microsoft-azure/)
+* [AZ-204 Practice Exam Test 2021](https://skillcertpro.com/product/developing-solutions-for-microsoft-azure-az-204-practice-exam-test/)
+* [My AZ-204](certification-exams/az-204)
 
 ### Azure Architect
 
