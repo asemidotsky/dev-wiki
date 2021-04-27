@@ -146,3 +146,12 @@ tar -C C:/ -xvf package.tar.gz
 * --partial - By default, rsync will delete any partially transferred file if the transfer is interrupted. In some circumstances it is more desirable to keep partially transferred files. Using the --partial option tells rsync to keep the partial file which should make a subsequent transfer of the rest of the file much faster.
 
 [rsync - man page](https://linux.die.net/man/1/rsync)
+
+## Chrome
+
+```
+sudo apt update
+sudo apt upgrade
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+```
