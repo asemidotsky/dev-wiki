@@ -17,3 +17,7 @@ However, existing high-performance and highly available services on the Web are 
 
 * HTTP Status Codes [RFC7231 HTTP/1.1](https://tools.ietf.org/html/rfc7231) and [RFC7540 HTTP/2](https://tools.ietf.org/html/rfc7540).
 * Error responses [RFC 7807: Problem Details for HTTP APIs](https://tools.ietf.org/html/rfc7807)
+
+## Links
+
+* [Web Fundamentals: Google's opinionated reference for building amazing web experiences.](https://developers.google.com/web/fundamentals)
