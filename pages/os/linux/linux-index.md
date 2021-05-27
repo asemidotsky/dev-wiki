@@ -132,6 +132,7 @@ mv oldfile.txt newfile.txt
 ```
 $ du -sh
 $ sudo du -h --max-depth=1 /var
+$ du -hd 1 /
 
 # 5 largest directories in the /var
 $ sudo du -h /var/ | sort -rh | head -5

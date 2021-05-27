@@ -1,6 +1,7 @@
 # Linux tools
 
 * ssh-keygen - ssh keys generator
+* ssh-keyscan 163.185.10.12 - show ssh keys
 * xclip - command line copy & paste tool
 * [sftp](https://linuxconfig.org/how-to-setup-sftp-server-on-ubuntu-20-04-focal-fossa-linux) - file transfer
 

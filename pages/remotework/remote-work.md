@@ -27,6 +27,9 @@
       * Other specific to project
 1. Back-up plan in case you lose power or internet access
 
+Headsets:
+* [Bose QuietComfort 35 II Wireless Bluetooth Headphones](https://www.amazon.com/Bose-QuietComfort-Wireless-Headphones-Cancelling/dp/B0756CYWWD)
+
 ## Personal routine
 
 * Don't use work day for housework and activities not related to the work.

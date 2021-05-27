@@ -57,6 +57,24 @@ salt '*' network.interfaces
 salt -G 'os:Ubuntu' test.ping
 ## combined
 salt -C 'G@os:Ubuntu and minion* or S@192.168.50.*' test.ping
+
+
+# Copy file from master to minion
+copy_my_files:
+  file.managed:
+    - name: /etc/nginx/nginx.conf
+    - source: salt://nginx.conf
+    - makedirs: True
+
+deploy linter configuration:
+  file.recurse:
+    - name: "/usr/local/linter"
+    - source: salt://devtools/files/linter
+    - makedirs: True
+    - replace: True
+    - clean: True
+
+sudo salt-cp '*' /srv/salt/test.txt /home/username/test.txt
 ```
 
 **Changing command output format**
