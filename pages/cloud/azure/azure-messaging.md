@@ -1,5 +1,7 @@
 # Azure messaging
 
+* [Storage queues and Service Bus queues - compared and contrasted](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)
+
 **Message or Event ?**
 
 Sender -> Receiver
