@@ -69,3 +69,15 @@ docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
 apt-get update
 apt-get -y install curl
 ```
+
+## Docker Registry
+
+```bash
+# Get repositories (images) list
+curl -X GET https://myregistry:5000/v2/_catalog
+> {"repositories":["redis","ubuntu"]}
+
+# Get image tags
+curl -X GET https://myregistry:5000/v2/ubuntu/tags/list
+> {"name":"ubuntu","tags":["14.04"]}
+```

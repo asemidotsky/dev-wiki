@@ -58,6 +58,10 @@ python -m pip --disable-pip-version-check wheel -w dist --no-deps .
 pip install wheel_file.whl
 python -m wheel install wheel_file.whl
 
+# install from local sources
+pip install -e
+python setup.py develop
+
 # install dev dependencies
 pip install -e .[dev]
 ## setup.cfg must have:

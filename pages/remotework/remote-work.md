@@ -66,6 +66,14 @@ Schedule calls to collaborate, make important decisions as a team, or to brainst
 * Direct discussions and keep participants focused on the subject and agenda;
 * Moderate participants and always displace side topics to separate meetings to be conducted later (make notes to not forget and schedule them);
 
+## Best practices of managing remote teams
+
+* Building Trust
+* Removing Roadblocks
+* Communicating frequently and openly
+* Recognizing and celebrating team achievements
+* Catch up on non-work-related topics in dedicated time
+
 ## Practices
 
 * RACI matrix

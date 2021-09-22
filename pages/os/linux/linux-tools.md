@@ -4,6 +4,7 @@
 * ssh-keyscan 163.185.10.12 - show ssh keys
 * xclip - command line copy & paste tool
 * [sftp](https://linuxconfig.org/how-to-setup-sftp-server-on-ubuntu-20-04-focal-fossa-linux) - file transfer
+* [How to Set up SSH Tunneling (Port Forwarding)](https://linuxize.com/post/how-to-setup-ssh-tunneling/)
 
 ## Linux - Windows
 
@@ -156,3 +157,41 @@ sudo apt upgrade
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
+
+## Curl
+
+* You can see the request that curl sent by adding the `-v` option
+
+```bash
+# GET
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://hostname/resource
+
+# POST
+curl --data "param1=value1&param2=value2" http://hostname/resource
+
+# FILE UPLOAD
+curl --form "fileupload=@filename.txt" http://hostname/resource
+
+# RESTful HTTP Post:
+curl -X POST -d @filename http://hostname/resource
+
+# For logging into a site (auth):
+curl -d "username=admin&password=admin&submit=Login" --dump-header headers http://localhost/Login
+curl -L -b headers http://localhost/
+
+# POST 2
+curl --location --request POST 'https://server:9000' \
+--header 'X-Auth-Token: b26433169229f8890a1982e3b5b7bdf652740afe' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: session_id=b26433169229f8890a1982e3b5b7bdf652740afe' \
+--data-raw '{
+    "fun": "cmd.run",
+    "client": "local",
+    "tgt": "*local-cm",
+    "arg": ["sudo tool.exe check >/dev/null 2>&1; echo $?"]
+}'
+```
+
+## Alpine Linux
+
+Install app - `sudo apk add pciutils`

@@ -110,3 +110,20 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+## Arrays
+
+Check if string contains any element from array:
+```python
+repo = 'npm-local-feed'
+# 1
+if any(v in repo for v in ["npm", "choco", "nuget"]):
+    do()
+# 2
+if bool([v for v in ["npm", "choco", "nuget"] if(v in repo)]):
+    do()
+
+# 3
+if re.match('.*(npm|choco|nuget).*', repo):
+    do()
+```

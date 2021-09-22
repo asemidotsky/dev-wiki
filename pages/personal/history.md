@@ -2,6 +2,8 @@
 
 ## 2021
 
+* July
+  * Cypress E2E test framework
 * January
   * cloud init
   * CIDR notation

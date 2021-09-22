@@ -191,6 +191,8 @@ chgrp <group_name> sales.report
 
 ## Permissions
 
+[Linux File Permissions and Ownership Explained with Examples](https://linuxhandbook.com/linux-file-permissions/)
+
 `-rw-rw-r--`
 
 A representation of the file's access permissions. The first character is the type of file. A "-" indicates a regular (ordinary) file. A "d" indicates a directory. The second set of three characters represent the read, write, and execution rights of the file's owner. The next three represent the rights of the file's group, and the final three represent the rights granted to everybody else.
@@ -217,10 +219,14 @@ The breakdown of permissions looks like this:
 * g – group
 * o – other
 
-The ‘other’ entry is the dangerous one, as it effectively gives everyone permission for the folder/file. The permissions you can give to a file or folder are:
-* r – read
-* w – write
-* x – execute
+The ‘other’ entry is the dangerous one, as it effectively gives everyone permission for the folder/file.
+The permissions you can give to a file or folder are:
+* r – Can view or copy file contents
+* w – Can modify file content
+* x – Can run the file (if its executable)
+
+Usefull commands:
+- `groups` to show user groups
 
 **Change ownership**
 ```
@@ -419,9 +425,22 @@ unset VARIABLE_NAME
 
 # Write a file system to the partition
 sudo mkfs -t ext4 /dev/sdc1
+# or
+mkfs.ext4 /dev/sda1 -b 1024
 
 # Finally, we need to mount the drive to the file system. Let's assume we will have a data folder. Let's create the mount point folder and mount the drive
 sudo mkdir /data && sudo mount /dev/sdc1 /data
+```
+
+Again
+```bash
+# Show all disks and partitions
+lsblk
+# Show partitions
+blkid
+
+# 1. Create a partition of the disk
+sudo fdisk /dev/sdc
 ```
 
 ## MEAN stack install

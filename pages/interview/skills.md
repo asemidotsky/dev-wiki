@@ -43,6 +43,7 @@ Front-end
 * algorithm design
 * problem solving
 * complexity analysis
+* TDD, SOLID, GOF
 
 ## Technology agnostic fundamentals
 
@@ -50,6 +51,7 @@ Front-end
 1. NO SQL concepts
 1. Software agility principles, best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations
 1. TCP/IP networking
+1. Agile: Lean, Scrum
 
 ## Amazon
 
@@ -70,4 +72,8 @@ Preferred qualifications
 Tech
 
 * JavaScript, Python
+
+## Links
+
+* https://better.engineering/career-ladder/
 

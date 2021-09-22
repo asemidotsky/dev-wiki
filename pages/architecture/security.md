@@ -62,6 +62,14 @@ Accounting (Audit logs)
 * Psychological Acceptability
 * Weakest Link
 
+## OWASP Top 10
+
+### A5 Security Misconfiguration
+
+Stick with defaults.
+Patches
+
+
 ## Links
 
 * [Password Storage Cheat Sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)

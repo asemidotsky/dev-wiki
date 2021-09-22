@@ -23,6 +23,10 @@ Labs CSRC) the Unix philosophy is the following:
 
 * Your tests should live together with the tested modules, keeping them in sync.
 
+## Security
+
+* One of the best practices around handling configuration is to have secret injected via an environment variable into your application
+
 ## Links
 
 * [12factor](https://12factor.net/)
