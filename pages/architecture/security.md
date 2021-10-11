@@ -69,6 +69,14 @@ Accounting (Audit logs)
 Stick with defaults.
 Patches
 
+## SAST, DAST analysis tools
+
+* Veracode
+* AppScan on Cloud
+* Web Header Scans
+* Qualys
+* WhiteSource
+* QPExpress dashboards
 
 ## Links
 
