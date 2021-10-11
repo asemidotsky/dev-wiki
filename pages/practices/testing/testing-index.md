@@ -1,5 +1,46 @@
 # Testing
 
+## Testing types
+
+* Functional testing
+* Nonfunctional testing
+* Penetration
+* Fuzzing
+* Scanning
+* Simulation testing
+* Failure testing
+* Regression testing
+
+## Software testing artifacts
+
+* Test plan
+* Tracibility matrix
+* Test case
+* Test script
+* Test suite
+* Test data
+* Test harness
+
+### Security testing
+
+* White-box testing
+* Black-box testing
+* Gray-box testing
+
+### Attack surface validation
+
+Important to document attack surface, or application risks, throughout development.
+Attack surface validation identifies:
+* Parts of application to test for vulnerabilities
+* Identify high risk code
+* Identify changes so threat assessment can be performed
+
+## Standarts
+
+* ISO 9126, replaced by ISO 25010: 2011
+* OSSTMM - www.osstmm.org, https://www.isecom.org/OSSTMM.3.pdf
+* SEI
+
 **What should I test in my application? How many tests should I have?**
 
 The answer varies across use-cases, but as a rule of thumb, you can follow the guidelines set by the **test pyramid**.
