@@ -187,6 +187,9 @@ members <group_name>
 
 # change group for directory
 chgrp <group_name> sales.report
+
+# change password
+sudo passwd root
 ```
 
 ## Permissions
@@ -441,6 +444,18 @@ blkid
 
 # 1. Create a partition of the disk
 sudo fdisk /dev/sdc
+```
+
+### Delete partition
+
+```bash
+# 1. show partitions
+fdisk -l
+# 2. select the disk that contains the partition you intend to delete
+sudo fdisk /dev/sdb
+# 3. to delete partition, run the d command in the fdisk command-line utility
+# 4. reload the partition table to verify that the partition has been deleted. To do so, run the p command
+# 5. run the w command to write and save changes made to the disk
 ```
 
 ## MEAN stack install
