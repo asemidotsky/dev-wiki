@@ -9,6 +9,14 @@
 * Participate in full software lifecycle development including gathering requirements, designing the application, data storage design, proof-of-concept and prototype development, framework development, code reviews, testing and deployment.
 * Experience designing, building and operating robust distributed systems using micro-services or SOA
 
+## Technical skills
+
+## Managing skills
+
+## Soft skills
+
+* Always try to get to the root of the issue, not the symptoms
+
 ## Knowledge, Skills And Abilities
 
 * Strong knowledge in Object-oriented Design and Analysis (OOA and OOD) and Solid Principal

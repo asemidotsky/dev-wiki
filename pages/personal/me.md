@@ -12,6 +12,7 @@ Languages
 * C#
 * Javascript
 * TypeScript
+* Functional languages
 
 Frameworks
 * Angular, NgRX
@@ -35,3 +36,7 @@ Fundamentals
 ### Not technology focus:
 * Project/Domain should be interested: more coding/architecture, less managing work
 * Do only what you like to do, if not so - look for a new project
+
+## What I am looking for
+
+* Business/domain area should be interested to me, not just money anymore

@@ -12,6 +12,10 @@
 
 The main:
 * Learn fundamentals, not only frameworks
+* Don't focus only on programming skills, learn business, domain area of the company.
+* Do more than write code, read code too. Read the libraries you're using and understand how they work. Review diffs and ask questions if things are confusing.
+* Don't sit back and wait to be told exactly what to do. Be self directed and learn the domain so that you can make decisions
+* Be proactive about communicating both with our customers, your peers, and with management. If you see something that we can do better, let people know
 
 ## Great skills
 
