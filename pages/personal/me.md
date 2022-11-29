@@ -12,7 +12,7 @@ Languages
 * C#
 * Javascript
 * TypeScript
-* Functional languages
+* Functional languages: F#, Kotlin
 
 Frameworks
 * Angular, NgRX
@@ -34,9 +34,19 @@ Fundamentals
 * Microservices
 
 ### Not technology focus:
-* Project/Domain should be interested: more coding/architecture, less managing work
+* Project/Domain should be interested: more coding/architecture/infrastructure, less managing work
 * Do only what you like to do, if not so - look for a new project
 
-## What I am looking for
+## What I love to build
 
+* New development of distributed systems, not support projects
+* Microservices, containers, NoSQL databases, messaging, architecture
+* **Develop of Core and Services, infrastructure libraries**
+* Design new applications and app architecture. Data/Domain objects design, data flows.
+* High-loaded systems ?
 * Business/domain area should be interested to me, not just money anymore
+* San Diego or remote
+
+### Companies
+
+* [Thoughtworks](https://www.thoughtworks.com/)

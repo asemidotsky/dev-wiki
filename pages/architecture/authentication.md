@@ -26,3 +26,4 @@ Regarding usage, JWT is used at Internet scale. This highlights the ease of clie
 
 * [Microsoft identity platform documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/)
 * [The Ultimate Authentication Playbook](https://www.okta.com/blog/2019/02/the-ultimate-authentication-playbook/)
+* [User Authentication and Authorization in modern Web Development](https://www.ryadel.com/en/user-authentication-authorization-web-development-login-auth-identity/)

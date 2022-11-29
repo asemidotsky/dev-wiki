@@ -245,5 +245,44 @@ Pass pillar in command line:
 salt '*' state.apply ftpsync pillar='{"ftpusername": "test", "ftppassword": "12121"}'
 ```
 
+## Examples
+
+`cat /usr/local/lib/python3.8/dist-packages/jazz/salt/orch/random.sls`
+
+```yaml
+#!py
+import random
+import string
+from collections import OrderedDict
+
+def run():
+  length = int(__salt__['pillar.get']('len'))
+  letters = string.ascii_letters + string.digits
+  config = OrderedDict()
+
+  config.update({
+    'test state': {
+      'test.show_notification': [
+        {'name': 'test'},
+        {'text': ''.join(random.choices(letters, k=length))}
+      ]
+    }
+  })
+  return config
+```
+
+```bash
+# to call it in synchronous mode
+sudo salt-run --async state.orch orch.random "pillar={'len':'1048576'}"
+
+# to call it in asynchronous mode
+sudo salt-run --async state.orch orch.random
+sudo salt-run jobs.print_job 20220518202558772514
+sudo salt-run jobs.lookup_jid 20220518202558772514
+sudo salt-run jobs.lookup_jid 20220518205004943360 --out=highstate --output=json
+```
+
+p.s. after creating state don't forget to execute: `sudo salt-call state.apply utils.sync_all`
+
 {% endraw %}
 

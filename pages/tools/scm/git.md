@@ -97,3 +97,10 @@ Option  | Description of Output
 %s | Subject
 
 [more](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+
+## Count lines of code
+
+```bash
+git ls-files docker-doremi-ui/ | grep -E ".*(ts|js)" | xargs wc -l
+git ls-files docker-doremi-backend/ | grep -E "*.(py)$" | xargs wc -l
+```

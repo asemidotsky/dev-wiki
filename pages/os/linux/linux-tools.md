@@ -150,6 +150,8 @@ tar -C C:/ -xvf package.tar.gz
 [rsync - man page](https://linux.die.net/man/1/rsync)
 [11 simple rsync examples that you can use to be more productive](https://www.lostsaloon.com/technology/11-simple-rsync-examples-that-you-can-use-to-be-more-productive/)
 
+`sudo rsync -ra --info=progress2 /var/www/localhost/htdocs/ /media/usb`
+
 ## Chrome
 
 ```
@@ -167,6 +169,9 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 # GET
 curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://hostname/resource
 
+# Disable SSL checks
+-k, --insecure
+
 # POST
 curl --data "param1=value1&param2=value2" http://hostname/resource
 
@@ -181,6 +186,14 @@ curl -d "username=admin&password=admin&submit=Login" --dump-header headers http:
 curl -L -b headers http://localhost/
 
 # POST 2
+curl -k -X POST https://100.124.79.6:5131/login \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "u",
+    "password": "p",
+    "eauth": "pam"
+}'
+
 curl --location --request POST 'https://server:9000' \
 --header 'X-Auth-Token: b26433169229f8890a1982e3b5b7bdf652740afe' \
 --header 'Content-Type: application/json' \

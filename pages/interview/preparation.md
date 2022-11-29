@@ -11,3 +11,8 @@
     1. Health insurance
     1. 401K match
 1. Estimate salary for your role/position
+
+https://www.dailycodingproblem.com/
+
+Courses
+* https://practice.geeksforgeeks.org/courses/complete-interview-preparation

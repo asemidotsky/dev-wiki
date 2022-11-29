@@ -22,16 +22,7 @@ npm install
 
 ### Common CLI commands
 
-```
-// creating component
-
-ng g c dir/folder --skipTests true
-```
-
-
-Commands:
-
-* `ng g c dir/componentName --skipTests true` - create component `componentName` in directory `dir` and prevent creation of the test file.
+* `ng g c dir/componentName --skip-tests true --module moduleName` - create component `componentName` in directory `dir` and prevent creation of the test file.
 
 ## Debugging
 

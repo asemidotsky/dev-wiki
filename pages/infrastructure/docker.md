@@ -36,6 +36,17 @@ docker run -it [myimage]
 docker exec -t --user www-data container bash -c "ls -la"
 ```
 
+## Get container environment variables
+
+```bash
+docker exec mycontainer /usr/bin/env
+docker exec mycontainer /bin/sh -c /usr/bin/env
+docker exec mycontainer printenv my_env_var
+
+docker inspect mycontainer --format "{{.Config.Env}}"
+docker inspect mycontainer | jq -r '.[].Config.Env[]|select(match("^my_env_var"))|.[index("=")+1:]'
+```
+
 ## Clear images
 
 [How To Remove Docker Images, Containers, and Volumes](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)

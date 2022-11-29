@@ -96,3 +96,8 @@ https://roadmunk.com/
 https://awwapp.com/
 https://miro.com
 http://whiteboard.microsoft.com/
+
+## Healthy habits
+
+1. Rest every hour, stretching
+1.

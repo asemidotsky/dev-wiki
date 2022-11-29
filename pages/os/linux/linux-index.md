@@ -6,6 +6,9 @@
 * [Tools](linux-tools)
 * [Ubuntu desktop](ubuntu-desktop)
 
+Articles:
+* [All You Need To Know About Processes in Linux - Comprehensive Guide](https://www.tecmint.com/linux-process-management/)
+
 ## Get test environment
 
 * https://webminal.org/ - it has CentOS distribution
@@ -237,6 +240,27 @@ sudo chown -R bethany /DATA/SHARE
 ```
 bethany- is a user name
 
+## Work with processes
+
+```bash
+$ ls /proc
+or
+$ ls /proc | less
+
+# Below is the list of files for systemd process with PID 1
+$ ls /proc/1
+
+# monitor processes
+ps aux
+top
+glances
+
+# To find out the PID of a process, you can use pidof
+pidof firefox
+
+ps -p PID -o format
+```
+
 ## Kill process
 
 ```bash
@@ -314,6 +338,7 @@ lsof -Pnl +M -i4
 sudo lsof -i -P -n | grep LISTEN
 sudo netstat -tulpn | grep LISTEN
 sudo lsof -i:22 ## see a specific port such as 22 ##
+sudo fuser 80/tcp # then find process: ps
 sudo nmap -sTU -O IP-address-Here
 
 # in latest versions

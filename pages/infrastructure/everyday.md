@@ -27,4 +27,6 @@ ls -lh <folder_path>
 ls | wc -l
 find <directory> -type f | wc -l
 tree <directory>
+tree --du -h
+tree -hF
 ```

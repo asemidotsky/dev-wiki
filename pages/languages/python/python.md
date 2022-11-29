@@ -62,6 +62,8 @@ python -m wheel install wheel_file.whl
 pip install -e
 python setup.py develop
 
+Running pip install -e /path/to/package installs the package in a way, that you can edit the package, and when a new import call looks for it, it will import the edited package code. This can be very useful for package development. Only use the -e flag if you need to edit the package source code.
+
 # install dev dependencies
 pip install -e .[dev]
 ## setup.cfg must have:

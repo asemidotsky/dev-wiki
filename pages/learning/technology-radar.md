@@ -84,7 +84,7 @@ Web Frameworks:
 
 CI/CD: TeamCity, Bamboo, Azure DevOps;
 Monitoring: Grafana, Kibana;
-Logs: Seq, ElasticSearch, Splunk;
+Logs: Seq, ElasticSearch, Splunk, New Relic;
 
 * Docker, K8S
 * Salt

@@ -3,3 +3,5 @@
 * Ask for help, but try to solve things on your own first
 * Life is full of tradeoffs. As you make them, consider the decisions you would make if you were the owner.
 * When you're done, do the things you enjoy to recharge to be ready to work again tomorrow.
+
+Pluralsight Skills Assessment
