@@ -5,6 +5,9 @@
 ```powershell
 # show services
 gsv *slb*
+
+# version
+$PSVersionTable.PSVersion
 ```
 
 ## Linux
@@ -30,3 +33,9 @@ tree <directory>
 tree --du -h
 tree -hF
 ```
+
+## Debian
+
+apt-get update
+apt-get install mlocate
+updatedb # for locate

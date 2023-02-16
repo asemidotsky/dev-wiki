@@ -92,3 +92,20 @@ curl -X GET https://myregistry:5000/v2/_catalog
 curl -X GET https://myregistry:5000/v2/ubuntu/tags/list
 > {"name":"ubuntu","tags":["14.04"]}
 ```
+
+## Configure Docker REST API
+
+1. Open the file `/lib/systemd/system/docker.service`
+1. Modify the following line:
+```
+ExecStart=/usr/bin/docker daemon -H fd:// -H tcp://0.0.0.0:2375
+```
+1. Reload the configuration and restart the Docker daemon:
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker.service
+
+curl http://localhost:2375/version
+```
+
+https://docs.docker.com/engine/security/protect-access/

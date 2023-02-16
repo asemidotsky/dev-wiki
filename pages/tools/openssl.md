@@ -18,6 +18,9 @@ penssl.exe pkcs12 -info -in [certname.pfx] | openssl.exe x509 -noout -ext subjec
 # To convert a PFX file to a PEM file that contains both the certificate and private key, the following command needs to be used:
 openssl pkcs12 -in filename.pfx -out cert.pem -nodes
 
+# key + cert to PFX
+openssl.exe pkcs12 -export -out www.doremi.evs.slb.com.pfx -inkey www.doremi.evs.slb.com.key -in www.doremi.evs.slb.com.cer
+
 # We can extract the private key form a PFX to a PEM file with this command:
 openssl pkcs12 -in filename.pfx -nocerts -out key.pem
 
@@ -26,6 +29,21 @@ openssl pkcs12 -in filename.pfx -clcerts -nokeys -out cert.pem -name "FriendlyNa
 
 # Removing the password from the extracted private key:
 openssl rsa -in key.pem -out server.key
+```
+
+## Generate cert for localhost
+
+https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/
+```
+openssl genrsa -out localhost-ca.key -des3 2048
+openssl req -x509 -sha256 -new -nodes -days 3650 -key localhost-ca.key -out localhost-ca.pem
+```
+
+## More
+
+```bash
+# .cer certificate to .pem?
+openssl x509 -inform der -in certificate.cer -out certificate.pem
 ```
 
 ## Links
