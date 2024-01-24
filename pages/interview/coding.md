@@ -1,3 +1,14 @@
+## Tools
+
+1. codeshare.io
+1. sharepad.io - is a very simple and free alternative to coderpad.
+1. codesession.io
+1. codeinterview.io
+1. replit.com
+1. coderpad.io
+
+https://www.woventeams.com/the-best-free-coding-interview-tool-in-2022/
+
 ## Useful functions c#
 
 * Linq, Aggregate functions
