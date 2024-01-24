@@ -22,6 +22,12 @@ JSON parsers are common in most programming languages because they map directly 
 
 Regarding usage, JWT is used at Internet scale. This highlights the ease of client-side processing of the JSON Web token on multiple platforms, especially mobile.
 
+## OAuth 2.0 Scopes
+
+* Scopes are a way for an application to request limited access to someone’s account.
+* Scopes are not a way to build a permission system.
+* It’s a way to limit what an access token can do within the context of what a user can already do.
+
 ## Links
 
 * [Microsoft identity platform documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/)

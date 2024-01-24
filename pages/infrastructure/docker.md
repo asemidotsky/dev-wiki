@@ -97,11 +97,14 @@ curl -X GET https://myregistry:5000/v2/ubuntu/tags/list
 
 1. Open the file `/lib/systemd/system/docker.service`
 1. Modify the following line:
+
+```bash
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:2375 --tlsverify --tlscacert=/etc/docker/ssl/ca.pem --tlscert=/etc/docker/ssl/server-cert.pem --tlskey=/etc/docker/ssl/server-key.pem
 ```
-ExecStart=/usr/bin/docker daemon -H fd:// -H tcp://0.0.0.0:2375
-```
+
 1. Reload the configuration and restart the Docker daemon:
-```
+
+```bash
 sudo systemctl daemon-reload
 sudo systemctl restart docker.service
 
