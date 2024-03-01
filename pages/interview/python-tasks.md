@@ -14,7 +14,7 @@ Use https://vscode.dev/ as your IDE.
 Modules
 
 - Network module:
-  - Define abstract interface of NetworkEntity.
+  - Define abstract interface of NetworkDevice.
   - This entity should have name, manufactured date and type properties. Type can have only next values: Router, Firewall, Switch
   - Network entity has next operations:
     - `deploy` with one parameter - environment name
@@ -22,7 +22,7 @@ Modules
     - `restart`
   - Implement simple `NetworkRuleValidator` service what has one method `validate` with single parameter of type `NetworkRule`. Simulate validation as summarazing all numbers between 1 and length of the rule name. return this value from validate method.
 - Firewall module:
-  - Define Firewall class which is NetworkEntity
+  - Define Firewall class which is NetworkDevice
   - Implement network entity operations and add one more abstract operation - `apply firewall rules`
   - Implement 2 different type of firewalls: PaloAlto and OpnSense
   - Firewall has to use NetworkRuleValidator for rule validation when `deploy` method is called
