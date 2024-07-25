@@ -1,6 +1,6 @@
 # Table of contents
 
-## Acrhitecture
+## Architecture
 
 * [Great application design concepts](pages/architecture/great-design)
 * [Microservices](pages/architecture/microservices)
@@ -10,8 +10,6 @@
 * Enterprise Patterns
 * [Cloud](pages/cloud/index)
   * [Azure](pages/cloud/azure/index)
-  * AWS
-  * Google Cloud
 * [Authentication](pages/architecture/authentication)
 
 ## Languages
@@ -33,10 +31,7 @@
   * ASP.NET Web Api
   * ASP.NET MVC
 * [NodeJS](pages/frameworks/nodejs/nodejs-index)
-* Angular
-  * [Angular 2](pages/frameworks/angular/angular-index)
-  * [Migration to Angular 2](pages/frameworks/angular/migration)
-  * AngularJS (1.x)
+* [Angular](pages/frameworks/angular/angular-index)
 * React
 * Testing
   * [Mocha](pages/frameworks/mocha)
@@ -76,7 +71,6 @@
 * C#
 * SQL
 * Angular
-* AngularJS
 
 ## Operating systems
 
