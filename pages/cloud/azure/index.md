@@ -1,19 +1,21 @@
+# Azure cloud
+
+* Azure - Public Cloud
+* Azure Stack - Private Cloud
+
 * [Azure Cloud Concepts](azure-cloud-concepts)
 * [Azure Architecture](azure-architecture)
+* [Azure Virtual Network](azure-virtual-network)
 * [Azure Compute](azure-compute)
 * [Azure Services](azure-services)
 * [Azure Messaging](azure-messaging)
 * [Azure Storage](azure-storage)
 * [Azure Security](azure-security)
 * [Azure IoT](iot/azure-iot)
+* [Azure Load Balancer](azure-load-balancer)
 * [Azure Tools](azure-tools)
 * [Azure Costs](azure-costs)
 * [Cloud Shell](cloud-shell)
-
-# Azure cloud
-
-* Azure - Public Cloud
-* Azure Stack - Private Cloud
 
 ## Azure
 
