@@ -47,6 +47,12 @@ docker inspect mycontainer --format "{{.Config.Env}}"
 docker inspect mycontainer | jq -r '.[].Config.Env[]|select(match("^my_env_var"))|.[index("=")+1:]'
 ```
 
+## Container group operations
+
+```bash
+sudo docker stop $(sudo docker ps -aq --filter name=doremi-*)
+```
+
 ## Clear images
 
 [How To Remove Docker Images, Containers, and Volumes](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
@@ -112,3 +118,8 @@ curl http://localhost:2375/version
 ```
 
 https://docs.docker.com/engine/security/protect-access/
+
+## Manage secrets in Docker
+
+* Docker Swarm has support for manage secrets
+*

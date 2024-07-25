@@ -13,7 +13,9 @@ Segments (Transport) -> Packets (Network) -> Frames (Data Link)
 * [Understanding IP Addresses, Subnets, and CIDR Notation for Networking](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking)
 
 Tools:
+
 * [Subnet Calculator](https://www.subnet-calculator.com/)
+* [Visual Subnet Calculator](https://www.davidc.net/sites/default/subnets/subnets.html)
 * [CIDR range finder](https://www.ultratools.com/tools/netMask)
 * [IP address to binary octets converter](http://www.csgnetwork.com/ipaddconv.html)
 
@@ -35,4 +37,3 @@ Class A networks can connect millions of devices. Class B networks and Class C n
 ## Subnet
 
 [What is a subnet? | How subnetting works](https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/)
-

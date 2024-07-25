@@ -23,9 +23,11 @@ openssl.exe pkcs12 -export -out www.doremi.evs.slb.com.pfx -inkey www.doremi.evs
 
 # We can extract the private key form a PFX to a PEM file with this command:
 openssl pkcs12 -in filename.pfx -nocerts -out key.pem
+openssl pkcs12 -nodes -in filename.pfx -out key.key -nodes -passin pass:blablabla
 
 # Exporting the certificate only:
 openssl pkcs12 -in filename.pfx -clcerts -nokeys -out cert.pem -name "FriendlyName"
+openssl pkcs12 -in filename.pfx -clcerts -nokeys -out cert.pem -nodes -passin pass:blablabla
 
 # Removing the password from the extracted private key:
 openssl rsa -in key.pem -out server.key
@@ -34,10 +36,15 @@ openssl rsa -in key.pem -out server.key
 ## Generate cert for localhost
 
 https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/
-```
+
+```bash
 openssl genrsa -out localhost-ca.key -des3 2048
 openssl req -x509 -sha256 -new -nodes -days 3650 -key localhost-ca.key -out localhost-ca.pem
 ```
+
+## Self-signed with own Root CA
+
+[Generate an Azure Application Gateway self-signed certificate with a custom root CA](https://learn.microsoft.com/en-us/azure/application-gateway/self-signed-certificates)
 
 ## More
 

@@ -461,6 +461,7 @@ sudo mkdir /data && sudo mount /dev/sdc1 /data
 ```
 
 Again
+
 ```bash
 # Show all disks and partitions
 lsblk
@@ -502,6 +503,7 @@ Use Stream EDitor (sed) as follows:
 `sed -i 's/old-text/new-text/g' input.txt`
 
 Another examples:
+
 ```bash
 sed 's/word1/word2/g' input.file
 ## *bsd/macos sed syntax#
@@ -516,9 +518,14 @@ sed 's/http:\/\//https:\/\/www.cyberciti.biz/g' input.txt
 ```
 
 Options:
+
 * `-i` - update file
 * The `g/` means global replace i.e. find all occurrences of foo and replace with bar using sed. If you removed the /g only first occurrence is changed
 *
+
+## Performance analysis
+
+`sudo grep oom /var/log/syslog`
 
 ## Popular command list
 
