@@ -31,6 +31,17 @@ Be sure to test that everything comes up fine after a reboot.
 
 I still believe Docker's out of the box behavior is dangerous and many more people will continue to unintentionally expose internal services to the outside world due to Docker punching holes in otherwise safe iptables configs.
 
+## Allow rules
+
+```bash
+# allow traffic from 10.0.0.46 on TCP port 3308.
+sudo ufw allow from 10.0.0.46 proto tcp to any port 3308
+# to delete this rule
+sudo ufw delete allow from 10.0.0.46 proto tcp to any port 3308
+sudo ufw delete allow from 100.107.135.155 proto tcp to any port 3308
+sudo ufw status
+```
+
 ## Deny rules
 
 ## Logs

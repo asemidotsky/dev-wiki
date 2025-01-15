@@ -19,7 +19,7 @@ penssl.exe pkcs12 -info -in [certname.pfx] | openssl.exe x509 -noout -ext subjec
 openssl pkcs12 -in filename.pfx -out cert.pem -nodes
 
 # key + cert to PFX
-openssl.exe pkcs12 -export -out www.doremi.evs.slb.com.pfx -inkey www.doremi.evs.slb.com.key -in www.doremi.evs.slb.com.cer
+openssl.exe pkcs12 -export -out www.doremi.evs.slb.com.pfx -inkey www.doremi.evs.slb.com.key -in www.doremi.evs.slb.com.cer -passout pass:"myp123"
 
 # We can extract the private key form a PFX to a PEM file with this command:
 openssl pkcs12 -in filename.pfx -nocerts -out key.pem

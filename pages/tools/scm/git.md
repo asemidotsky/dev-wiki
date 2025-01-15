@@ -64,6 +64,7 @@ git checkout feature
 git rebase dev
 ```
 
+[(Sourcetree) Rebasing](https://www.coursera.org/lecture/version-control-with-git/sourcetree-rebasing-Miziw)
 [Rebase — One of the Most Powerful Git Commands](https://medium.com/osedea/git-rebase-powerful-command-507bbac4a234)
 
 ## Viewing the Commit History

@@ -149,7 +149,7 @@ $ sudo du -h /var/ | sort -rh | head -5
 
 ## Users
 
-## Groups
+### Groups
 
 Linux groups are organization units that are used to organize and administer user accounts in Linux. The primary purpose of groups is to define a set of privileges such as reading, writing, or executing permission for a given resource that can be shared among the users within the group.
 
@@ -181,6 +181,7 @@ sudo usermod -g groupname username
 
 # show user groups
 id username
+groups username
 
 # see who is in group
 grep <group_name> /etc/group
@@ -195,7 +196,13 @@ chgrp <group_name> sales.report
 sudo passwd root
 ```
 
-## Permissions
+### Add user to sudo group
+
+```bash
+sudo usermod -aG sudo username
+```
+
+### Permissions
 
 [Linux File Permissions and Ownership Explained with Examples](https://linuxhandbook.com/linux-file-permissions/)
 
@@ -459,6 +466,28 @@ mkfs.ext4 /dev/sda1 -b 1024
 # Finally, we need to mount the drive to the file system. Let's assume we will have a data folder. Let's create the mount point folder and mount the drive
 sudo mkdir /data && sudo mount /dev/sdc1 /data
 ```
+
+### Preparing Azure VM attached disk
+
+```bash
+# find disk
+lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
+# make partition and format
+sudo parted /dev/sdc --script mklabel gpt mkpart xfspart xfs 0% 100%
+sudo mkfs.xfs /dev/sdc1
+sudo partprobe /dev/sdc1
+# mount file system
+sudo mkdir /mnt/data
+sudo mount /dev/sdc1 /mnt/data
+
+# find disk UUID
+sudo blkid
+
+# add to /etc/fstab to automount after reboot
+UUID=33333333-3b3b-3c3c-3d3d-3e3e3e3e3e3e   /mnt/data   xfs   defaults,nofail   1   2
+```
+
+To ensure that the drive is remounted automatically after a reboot, it must be added to the /etc/fstab file. It's also highly recommended that the UUID (Universally Unique Identifier) is used in /etc/fstab to refer to the drive rather than just the device name (such as, /dev/sdc1). If the OS detects a disk error during boot, using the UUID avoids the incorrect disk being mounted to a given location. Remaining data disks would then be assigned those same device IDs. To find the UUID of the new drive, use the blkid utility:
 
 Again
 

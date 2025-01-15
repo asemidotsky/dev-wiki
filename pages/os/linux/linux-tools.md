@@ -206,6 +206,12 @@ curl --location --request POST 'https://server:9000' \
 }'
 ```
 
+## WGET
+
+```bash
+wget --no-check-certificate https://10.1.0.100:5131/login
+```
+
 ## Alpine Linux
 
 Install app - `sudo apk add pciutils`

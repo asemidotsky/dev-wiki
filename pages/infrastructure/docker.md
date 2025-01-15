@@ -122,4 +122,22 @@ https://docs.docker.com/engine/security/protect-access/
 ## Manage secrets in Docker
 
 * Docker Swarm has support for manage secrets
-*
+
+## Docker Engine without Docker Desktop on Windows
+
+* https://www.paulsblog.dev/how-to-install-docker-without-docker-desktop-on-windows/
+
+## WSL 2
+
+[Basic commands for WSL](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
+
+From admin command prompt:
+
+```bash
+# to check wsl version
+wsl -l -v
+
+# from inside of WSL vm
+uname
+uname -r
+```
