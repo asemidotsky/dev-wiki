@@ -212,6 +212,16 @@ curl --location --request POST 'https://server:9000' \
 wget --no-check-certificate https://10.1.0.100:5131/login
 ```
 
+## Time sync
+
+```bash
+# for NTP to check status
+timedatectl
+
+# chronyd
+chronyc tracking
+```
+
 ## Alpine Linux
 
 Install app - `sudo apk add pciutils`

@@ -40,7 +40,7 @@ salt-run manage.status
 salt-run manage.down
 
 # will list all minions that whose public keys you've accepted on your master.
-salt-key -L
+sudo salt-key -L
 
 # minion versions
 salt-run manage.versions

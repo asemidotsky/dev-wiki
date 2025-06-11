@@ -59,6 +59,7 @@ git reset --mixed HEAD~
 ## Rebase
 
 Rebasing feature on to dev
+
 ```bash
 git checkout feature
 git rebase dev

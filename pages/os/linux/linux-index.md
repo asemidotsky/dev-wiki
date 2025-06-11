@@ -340,7 +340,7 @@ put file.txt
 Type the following command to see IPv4 port(s), enter:
 
 ```bash
-lsof -Pnl +M -i4
+sudo lsof -Pnl +M -i4
 # or
 sudo lsof -i -P -n | grep LISTEN
 sudo netstat -tulpn | grep LISTEN
@@ -377,10 +377,6 @@ will list the full path to every file belonging to the nodejs package
 * type `jobs` to seeall jobs
 * `bg #` - run job # in background
 * `fg #` - bring job with # number to foreground
-
-## Links
-
-* [SSH/TransferFiles](https://help.ubuntu.com/community/SSH/TransferFiles)
 
 ## Device mounting
 
@@ -561,3 +557,7 @@ Options:
 | Task | Command |
 |------|---------|
 | Find and replace text within a file | `sed -i 's/old-text/new-text/g' input.txt` |
+
+## Links
+
+* [SSH/TransferFiles](https://help.ubuntu.com/community/SSH/TransferFiles)

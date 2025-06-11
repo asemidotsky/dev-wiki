@@ -1,5 +1,12 @@
 # OpenSSL
 
+## Verify certs
+
+```bash
+# Verify the server's certificate
+openssl s_client -showcerts -connect <server_address>:443
+```
+
 ## Check a PKCS#12 file (.pfx or .p12)
 
 ```bash
