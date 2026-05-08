@@ -64,6 +64,10 @@ docker system prune
 # To additionally remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command:
 docker system prune -a
 
+docker image prune -a
+docker volume prune
+docker system prune -a --volumes
+
 # Removing only images
 docker images -a # locate
 docker rmi Image Image # remove
@@ -74,6 +78,46 @@ docker image prune # clean
 
 # removing by pattern
 docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
+```
+
+## Docker logs
+
+```bash
+# to see latest logs
+docker logs --since 30s -f <container_name_or_id>
+docker logs --tail 20 -f <container_name_or_id>
+```
+
+To know how much space your containers logs are using:
+
+```bash
+du -chs /var/lib/docker/containers/*/*json.log
+```
+
+If `/var/lib/docker/overlay2` taking to much space:
+
+```bash
+# 1. Check which containers use the most overlay2 space
+docker ps -a --size
+# See per-directory usage in overlay2
+sudo du -h --max-depth=1 /var/lib/docker/overlay2 | sort -h
+```
+
+You can [configure docker](https://docs.docker.com/engine/logging/drivers/json-file/) to automatically rotate logs with the following in an `/etc/docker/daemon.json` file:
+
+```json
+{
+  "log-driver": "json-file",
+  "log-opts": {"max-size": "10m", "max-file": "3"}
+}
+```
+
+To clean all logs without stopping the containers:
+
+```bash
+sudo sh -c 'truncate -s 0 /var/lib/docker/containers/*/*-json.log'
+# or just for cleaning logs for a specific container:
+truncate -s 0 $(docker inspect --format='{{.LogPath}}' <container_name_or_id>)
 ```
 
 ## Install app in container
@@ -109,6 +153,10 @@ Path: `/etc/docker/daemon.json`
   }
 }
 ```
+
+## Docker performance
+
+
 
 ## Configure Docker REST API
 
@@ -148,9 +196,54 @@ From admin command prompt:
 # to check wsl version
 wsl -l -v
 
+# update
+wsl --update
+
+wsl -d Ubuntu hostname -I
+
 # from inside of WSL vm
 uname
 uname -r
+```
+
+WSL config `notepad $env:USERPROFILE\.wslconfig`
+
+```
+[wsl2]
+networkingMode=mirrored
+localhostForwarding=true
+memory=8GB
+processors=4
+```
+
+Distro config in `/etc/wsl.conf`
+
+Toubleshooting
+
+Inside WSL:
+
+```bash
+# See listener
+ss -lntp
+
+# Check IP
+ip addr show eth0 | grep 'inet '
+
+# Simple test server (Python), to isolate app issues:
+python3 -m http.server 8000 --bind 0.0.0.0
+```
+
+On Windows:
+
+```bash
+# Does localhost forwarding work?
+Test-NetConnection -ComputerName localhost -Port 8000
+
+# See WSL status
+wsl.exe --status
+
+# Allow inbound rules (adjust port)
+netsh advfirewall firewall add rule name="WSL Test 8000" dir=in action=allow protocol=TCP localport=8000 profile=private,domain
 ```
 
 ## Inspect Docker image content

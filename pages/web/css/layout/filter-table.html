@@ -1,0 +1,57 @@
+<html>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .filter {
+            margin: 5px;
+            background-color: lightgreen;
+        }
+
+        .filter-item {
+            margin: 5px;
+        }
+
+        .table-container {
+            height: 100%;
+            display: block;
+            overflow-y: scroll;
+            margin: 5px;
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const tableContainer = document.querySelector('.table-container');
+            let tableHTML = '<table border="1" style="width:100%; border-collapse: collapse;">';
+            tableHTML += '<tr><th>Name</th><th>Date</th></tr>';
+            for (let i = 1; i <= 50; i++) {
+                tableHTML += `<tr><td>Item ${i}</td><td>2024-06-${(i % 30) + 1}</td></tr>`;
+            }
+            tableHTML += '</table>';
+            tableContainer.innerHTML = tableHTML;
+        };
+    </script>
+    <body>
+        <div class="main">
+            <div class="filter">
+                <div class="filter-item">
+                    <label for="f1">Name:</label>
+                    <input type="text" id="f1">
+                </div>
+
+                <div class="filter-item">
+                    <label for="f2">Date:</label>
+                    <input type="text" id="f2">
+                </div>
+
+            </div>
+            <div class="table-container">
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -37,6 +37,7 @@ git config --list
 * git pull/push
 * git clone
 * git checkout -b new_branch_name
+* git checkout -b wiki origin/master
 * git -add .
 * git commit -m "Commit message is here"
 * git push --set-upstream origin dev/asem/component/sonar-fixes
@@ -56,13 +57,31 @@ git reset HEAD~
 git reset --mixed HEAD~
 ```
 
+## Fetch
+
+```bash
+# --prune removes references to branches that no longer exist on the remote.
+git fetch --all --prune
+```
+
 ## Rebase
 
-Rebasing feature on to dev
+Rebasing feature on master
 
 ```bash
 git checkout feature
-git rebase dev
+git rebase master
+
+# rebase with auto accept ours
+git checkout --ours .
+git add .
+git rebase --continue
+```
+
+Some automation for wiki branches:
+
+```bash
+git fetch && git checkout wiki && git rebase origin/master && git push --force-with-lease
 ```
 
 [(Sourcetree) Rebasing](https://www.coursera.org/lecture/version-control-with-git/sourcetree-rebasing-Miziw)

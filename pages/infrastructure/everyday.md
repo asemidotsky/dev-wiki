@@ -27,8 +27,20 @@ sudo iftop
 
 # check folder size
 watch -d du -m <folder_path>
+sudo du -hxd 1 /  # top level
 du -hs /path/to/directory
 du -h --max-depth=1 ./
+sudo du -h --max-depth=1 / | sort -h # from root /
+
+sudo du -sh /var/log/journal # system logs
+
+# find the top 50 biggest files on the system
+sudo find / -type f -printf "%s %p\n" 2>/dev/null | sort -nr | head -50
+
+# docker related space
+docker system df
+sudo du -h --max-depth=1 /var/lib/docker | sort -h
+
 
 #check files size
 ls -lh <folder_path>
